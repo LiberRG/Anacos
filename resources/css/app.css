@@ -1,0 +1,185 @@
+/* TODO Libertad: cargar las tipografías que correspondan. Si son Google fonts, como en 
+la siguiente línea y si son tipografías propias, añádelas en la carpeta /resources/fonts
+y las importas */
+/*La fuente que se usa en este proyecto (Proxima Nova) es de adobe fonts y se necesita licencia para bajarla*/
+/* @import url('https://fonts.googleapis.com/css2?family=Open+nova:wght@400;700&display=swap'); */
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@font-face {
+    font-family: "Proxima-Nova";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../fonts/ProximaNova-Regular.otf) format("opentype");
+}
+@font-face {
+    font-family: "Proxima-Nova";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(../fonts/ProximaNova-Bold.otf) format("opentype");
+}
+
+@layer base {
+    :root {
+        /* // TODO Libertad: poner los colores que correspondan */
+        --color-azul: 0 127 255;
+        --color-gris-oscuro: 74 74 74;
+        --color-gris-claro: 147 147 142;
+        --color-gris-calido: 248 246 240;
+        --color-gris-patrocinio: 22 22 21;
+        --color-blanco: 255 255 255;
+        --color-negro: 22 22 21;
+        --color-rojo: 175 11 11;
+        --color-ocre: 195 148 0;
+        --color-ocre-claro: 250 228 159;
+    }
+}
+
+/*
+Estilos de texto
+º*/
+@layer base {
+    html {
+        @apply text-gris-oscuro;
+        font-size: 14px;
+        @media screen(xs) {
+            font-size: 16px;
+        }
+        @media screen(md) {
+            font-size: 18px;
+        }
+        
+    }
+    body {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+    }
+    .h1 {
+        @apply font-sans text-2xl font-bold leading-tight;
+        @media screen(sm) {
+            @apply text-2xl leading-tight;
+        }
+        @media screen(md) {
+            @apply text-2xl leading-tight;
+        }
+        @media screen(lg) {
+            @apply text-3xl leading-tight;
+        }
+        @media screen(xl) {
+            @apply text-3xl leading-tight;
+        }
+        @media screen(2xl) {
+            @apply text-3xl leading-tight;
+        }
+        @media screen(3xl) {
+            @apply text-3xl leading-tight;
+        }
+    }
+    .h2 {
+        @apply font-sans text-xl font-bold leading-tight;
+        @media screen(sm) {
+            @apply text-xl leading-tight;
+        }
+        @media screen(md) {
+            @apply text-xl leading-tight;
+        }
+        @media screen(lg) {
+            @apply text-2xl leading-tight;
+        }
+        @media screen(xl) {
+            @apply text-2xl leading-tight;
+        }
+        @media screen(2xl) {
+            @apply text-2xl leading-tight;
+        }
+        @media screen(3xl) {
+            @apply text-3xl leading-tight;
+        }
+    }
+    .h3 {
+        @apply font-sans text-lg font-normal leading-tight;
+        @media screen(sm) {
+            @apply text-lg leading-tight;
+        }
+        @media screen(md) {
+            @apply text-xl leading-tight;
+        }
+        @media screen(lg) {
+            @apply text-xl leading-tight;
+        }
+        @media screen(xl) {
+            @apply text-xl;
+        }
+        @media screen(xl) {
+            @apply text-xl;
+        }
+        @media screen(2xl) {
+            @apply text-2xl leading-tight;
+        }
+    }
+
+    .boton {
+        @apply font-sans text-lg rounded-lg py-2 px-10 bg-ocre-claro;
+        &:hover {
+            @apply bg-ocre/[0.6];
+        }
+    }
+    .listado {
+        @apply font-sans text-sm;
+    }
+    .minimo {
+        @apply font-sans;
+        font-size: 0.6666rem;
+        line-height: normal;
+    }
+    a.alt{ }
+    /* a:not(.alt):hover { @apply text-azul; }*/
+    /* a.alt:not(:hover) {
+        @apply text-azul;
+    } */
+
+    .prose a {
+        &:not(:hover) {
+            @apply text-azul;
+        }
+        &:hover {
+            @apply text-gris-oscuro;
+        }
+    }
+    .card {
+        min-width: 18rem;
+    }
+    p{
+        @apply text-base;
+    }
+
+    .gridA{
+        @apply grid;
+        grid-template-areas: 
+            "a b"
+            "c b"
+            "d b"
+    }
+    .video {
+        grid-area: a;
+    }
+    .obj{
+        grid-area: b;
+    }
+    .coord{
+        grid-area: c;
+    }
+    .devel{
+        grid-area: d;
+    }
+
+}
+/* Fin de estilos de texto */
+
+[x-cloak] {
+    display: none !important;
+}
