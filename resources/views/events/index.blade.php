@@ -6,7 +6,6 @@
     {{-- Página de inicio, con el mosaico de eventos --}}
     <article class="flex flex-row justify-center items-end lg:my-10 container">
         <div class="hidden lg:inline">
-            @svg("logo-gedet-365-vertical")
         </div>
 
         <div class="border rounded-xl border-solid border-gris-claro/[0.5] p-1 lg:p-2 h-fit lg:basis-2/6 w-full">

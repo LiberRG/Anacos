@@ -27,15 +27,21 @@ y las importas */
     :root {
         /* // TODO Libertad: poner los colores que correspondan */
         --color-azul: 0 127 255;
-        --color-gris-oscuro: 74 74 74;
-        --color-gris-claro: 147 147 142;
         --color-gris-calido: 248 246 240;
-        --color-gris-patrocinio: 22 22 21;
-        --color-blanco: 255 255 255;
-        --color-negro: 22 22 21;
+        --color-gris-patrocinio: 22 22 21;        
         --color-rojo: 175 11 11;
         --color-ocre: 195 148 0;
         --color-ocre-claro: 250 228 159;
+
+        
+        --color-blanco: 255 255 255;
+        --color-gris-claro: 250 250 250;
+        --color-gris-oscuro: 225 228 231;
+        --color-azul-claro: 145 182 215;
+        --color-azul-oscuro: 36 110 176;
+        --color-magenta-oscuro: 178 36 112 ;
+        --color-verde-oscuro: 32 142 29;
+        --color-negro: 22 22 21;
     }
 }
 
@@ -44,7 +50,7 @@ Estilos de texto
 º*/
 @layer base {
     html {
-        @apply text-gris-oscuro;
+        @apply text-negro;
         font-size: 14px;
         @media screen(xs) {
             font-size: 16px;

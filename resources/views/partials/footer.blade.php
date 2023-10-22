@@ -1,12 +1,14 @@
-<footer class="bg-gris-claro/[.15] ">
-    <div class="container h-28 flex flex-row justify-between items-center ">
-        <div class="grow">
-            <img class="w-24" src="/img/logo-gedet.png" alt="logo">
+<footer class="bg-azul-claro">
+    <div class="container h-14 flex flex-row justify-between items-center ">
+        <div class="grow text-blanco">
+            @svg("logo-anacos-galicia", "h-12 w-auto hidden lg:inline")
+            @svg("logo-anacos", "h-6 w-auto lg:hidden")            
         </div>
-        <div class="flex justify-between">
-            <a class="text-sm m-3 hidden md:inline" href="">Contacta</a>
-            <a  class="text-sm m-3" href="">Politica de cookies</a>
-            <a class="text-sm m-3" href="">Aviso legal</a>
+        <div class="flex justify-between gap-3">
+            <a class="text-sm" href="">@svg("ico-cookie", "h-9 w-auto")</a>
+            <a class="text-sm" href="">@svg("ico-ubicacion", "h-9 w-auto")</a>
+            <a class="text-sm" href="">@svg("ico-telefono", "h-9 w-auto")</a>
+            <a class="text-sm" href="">@svg("ico-instagram", "h-9 w-auto")</a>
         </div>
     </div>
 </footer>
