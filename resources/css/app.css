@@ -50,23 +50,15 @@ Estilos de texto
 º*/
 @layer base {
     html {
-        @apply text-negro;
-        font-size: 14px;
-        @media screen(xs) {
-            font-size: 16px;
-        }
-        @media screen(md) {
-            font-size: 18px;
-        }
-        
+        @apply text-negro font-sans;
     }
     body {
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
     }
     .h1 {
-        @apply font-sans text-2xl font-bold leading-tight;
-        @media screen(sm) {
+        @apply text-4xl font-bold leading-tight;
+        /* @media screen(sm) {
             @apply text-2xl leading-tight;
         }
         @media screen(md) {
@@ -83,11 +75,11 @@ Estilos de texto
         }
         @media screen(3xl) {
             @apply text-3xl leading-tight;
-        }
+        } */
     }
     .h2 {
-        @apply font-sans text-xl font-bold leading-tight;
-        @media screen(sm) {
+        @apply font-sans text-2xl font-bold leading-tight;
+        /* @media screen(sm) {
             @apply text-xl leading-tight;
         }
         @media screen(md) {
@@ -104,11 +96,11 @@ Estilos de texto
         }
         @media screen(3xl) {
             @apply text-3xl leading-tight;
-        }
+        } */
     }
     .h3 {
         @apply font-sans text-lg font-normal leading-tight;
-        @media screen(sm) {
+        /* @media screen(sm) {
             @apply text-lg leading-tight;
         }
         @media screen(md) {
@@ -125,63 +117,47 @@ Estilos de texto
         }
         @media screen(2xl) {
             @apply text-2xl leading-tight;
-        }
+        } */
     }
 
     .boton {
-        @apply font-sans text-lg rounded-lg py-2 px-10 bg-ocre-claro;
+        @apply text-azul-oscuro text-base rounded-lg py-2 px-10 bg-blanco border border-azul-oscuro h-fit;
         &:hover {
-            @apply bg-ocre/[0.6];
+            @apply bg-blanco/[0.6];
         }
     }
-    .listado {
-        @apply font-sans text-sm;
-    }
-    .minimo {
-        @apply font-sans;
-        font-size: 0.6666rem;
-        line-height: normal;
-    }
-    a.alt{ }
-    /* a:not(.alt):hover { @apply text-azul; }*/
-    /* a.alt:not(:hover) {
-        @apply text-azul;
-    } */
 
-    .prose a {
-        &:not(:hover) {
-            @apply text-azul;
-        }
-        &:hover {
-            @apply text-gris-oscuro;
-        }
-    }
     .card {
         min-width: 18rem;
     }
-    p{
-        @apply text-base;
+
+    .p{
+        @apply text-base pl-3 py-1;
     }
 
-    .gridA{
+    /* .gridA{
         @apply grid;
         grid-template-areas: 
             "a b"
             "c b"
             "d b"
     }
+
     .video {
         grid-area: a;
     }
+
     .obj{
         grid-area: b;
     }
+
     .coord{
         grid-area: c;
     }
+
     .devel{
         grid-area: d;
-    }
+    } */
 
 }
 /* Fin de estilos de texto */
