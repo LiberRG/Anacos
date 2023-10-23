@@ -10,13 +10,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- TODO: Browser Color - Chrome, Firefox OS, Opera -->
-    {{-- <meta name="theme-color" content="#0AD0FF"> --}}
-    <!-- TODO: Browser Color - iOS Safari -->
-    {{-- <meta name="apple-mobile-web-app-status-bar-style" content="#0AD0FF"> --}}
-
-    <link rel="shortcut icon" type="image/png" href="{{ env('APP_URL') . '/favicon.png' }}">
-    <link rel="shortcut icon" sizes="192x192" href="{{ env('APP_URL') . '/favicon.png' }}">
+    <link rel="shortcut icon" href="/img/isotipo-anacos.png">    
 
     <title>@yield('meta_title', config('app.name'))</title>
 
@@ -43,14 +37,29 @@
 
 </head>
 
-<body class="antialiased flex flex-col h-full @yield('page-class')">
-    @include('partials.header')
-    <main class="flex-grow">
-        <div>
-            @yield('content')
-        </div>
-    </main>
-    @include('partials.footer')
+<body class="antialiased flex flex-col h-full @yield('page-class')" name="@yield('page-class')">
+    
+@if( "mapIndex" == "mapIndex" )        
+            <main class="flex-grow">
+                <div>
+                    @yield('content')
+                </div>
+            </main>
+            @include('partials.header')
+    @else
+        @include('partials.header')
+        <main class="flex-grow">
+            <div>
+                @yield('content')
+            </div>
+        </main>
+        @include('partials.footer')
+    @endif
 </body>
+<script>
+    function nameClass(){ 
+        nameClass: document.querySelector("body").getAttribute("name"),
+    };
 
+</script>
 </html>

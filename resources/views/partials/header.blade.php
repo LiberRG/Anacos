@@ -1,5 +1,4 @@
-<div x-data="{ open: false }">
-    <!--arreglar el desplegable movil para que todas bajen en el mismo momento, no usar en los div de categorias min-w-max -->
+<div x-data="{ open: false }">    
     <div x-data="header()">
         <nav class="bg-azul-claro flex flex-row justify-between items-center py-3 z-50 sticky sm:px-8 px-4">
             <a href="/" class="bg-blanco rounded-full border-4 border-blanco">@svg("isotipo-anacos", 'w-12 h-auto')</a>

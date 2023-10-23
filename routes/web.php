@@ -12,12 +12,12 @@ require __DIR__.'/auth.php';
 | Web Routes
 |--------------------------------------------------------------------------
 */
-Route::view('/', 'events.index')->name('events.index');
-Route::view('login', 'auth.login')->name('login');
-Route::view('recuperar-contrasena', 'auth.forgot-password')->name('password.request');
-Route::view('busqueda', 'sessions.index')->name('sessions.index');
-Route::view('sesion', 'sessions.view')->name('sessions.view');
-// TODO: hay seis vistas diseñadas, pero la de: «Para poder acceder al contenido debe…» aún no la hacemos porque no sé si la vamos a hacer como una ventana emergente o como una vista única
+Route::view('/', 'map.index')->name('map.index');
+Route::view('events', 'events.index')->name('events.index');
+Route::view('planea', 'sessions.index')->name('sessions.index');
+Route::view('inpirate', 'sessions.view')->name('sessions.view');
+Route::view('descubre', 'sessions.view')->name('sessions.view');
+
 
 Route::get('limpiar-cache', function(){
     Illuminate\Support\Facades\Artisan::call("cache:clear");

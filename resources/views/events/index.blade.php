@@ -3,8 +3,8 @@
 @section('page-class', 'eventsIndex')
 
 @section('content')
-    {{-- Página de inicio, con el mosaico de eventos --}}
-    <article class="flex flex-row justify-center items-end lg:my-10 container">
+     Página de inicio, con el mosaico de eventos 
+     {{-- <article class="flex flex-row justify-center items-end lg:my-10 container">
         <div class="hidden lg:inline">
         </div>
 
@@ -58,5 +58,5 @@
             <p class="text-end p-1">GEDET 365 está patrocinado por</p>
             <img class="p-1 h-14 w-auto" src="/img/patrocinador.png" alt="patrocinio">
         </div>
-    </aside>
+    </aside> --}}
 @endsection

@@ -10,7 +10,7 @@ module.exports = {
     "./resources/**/*.blade.php",
     "./resources/**/*.js",
   ],
-  // TODO Libertad: de aquí para abajo quita los estilos que no queramos y añade lo que necesites
+  
   theme: {
     container: {
       center: true,
