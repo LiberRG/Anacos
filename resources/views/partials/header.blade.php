@@ -1,6 +1,6 @@
 <div x-data="{ open: false }">    
     <div x-data="header()">
-        <nav class="bg-azul-claro flex flex-row justify-between items-center py-3 z-50 sticky sm:px-8 px-4">
+        <nav class="bg-azul-claro flex flex-row justify-between items-center py-3 z-50 sticky top-0 sm:px-8 px-4">
             <a href="/" class="bg-blanco rounded-full border-4 border-blanco">@svg("isotipo-anacos", 'w-12 h-auto')</a>
     
             <div x-cloak class="md:inline text-blanco" x-bind:class="open ? 'inline-block':'hidden'">
@@ -10,26 +10,26 @@
                         text-lg font-bold md:font-normal
                         p-5 xl:px-8 2xl:px-10">
                         <button name="planea" @click="desplegable($event)" class="uppercase min-w-[25%] md:min-w-max hover:md:text-magenta-oscuro" x-bind:class="planea ? 'md:text-magenta-oscuro' : 'md:text-blanco'">
-                            Planea
+                            Vive
                         </button>
                         <div class="font-normal min-w-max flex flex-col
                         text-start " x-bind:class="planea ? 'md:absolute md:right-0 md:top-20 md:bg-azul-claro/[0.8] md:z-50 md:w-2/5 lg:w-1/3' :'md:hidden'">
-                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('events.index') }}">
+                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('vive.index') }}">
                                 Alojamiento
                             </a>
-                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('events.index') }}">
+                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('vive.index') }}">
                                 Servicios turísticos
                             </a>
-                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('events.index') }}">
+                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('vive.index') }}">
                                 Como llegar
                             </a>
-                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('events.index') }}">
+                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('vive.index') }}">
                                 Cultura y tradiciones
                             </a>
-                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('events.index') }}">
+                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('vive.index') }}">
                                 Sabores del lugar
                             </a>
-                            <a class="p hover:text-azul-oscuro md:p-5" href="">
+                            <a class="p hover:text-azul-oscuro md:p-5" href="{{ route('vive.index') }}">
                                 Paisajes
                             </a>
                         </div>
@@ -42,16 +42,16 @@
                         </button>
                         <div class="font-normal min-w-max flex flex-col
                         text-start " x-bind:class="inspira ? 'md:absolute md:right-0 md:top-20 md:bg-azul-claro/[0.8] md:z-50 md:w-2/5 lg:w-1/3' :'md:hidden'">
-                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('events.index') }}">
+                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('inspira.index') }}">
                                 Colección Galiza máxica
                             </a>
-                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('events.index') }}">
+                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('inspira.index') }}">
                                 Colección Sons
                             </a>
-                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('events.index') }}">
+                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('inspira.index') }}">
                                 Colección Ollar da natureza
                             </a>
-                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('events.index') }}">
+                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('inspira.index') }}">
                                 colección A liberdade do toxo
                             </a>
                             <a class="p hover:text-azul-oscuro md:p-5" href="">
@@ -67,11 +67,11 @@
                         </button>
                         <div class="font-normal min-w-max flex flex-col
                         text-start " x-bind:class="juega ? 'md:absolute md:right-0 md:top-20 md:bg-azul-claro/[0.8] md:z-50 md:w-2/5 lg:w-1/3' :'md:hidden'">
-                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('events.index') }}">
+                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('descubre.juego1') }}">
                                 Empareja y descubre
                             </a>
     
-                            <a class="p hover:text-azul-oscuro md:p-5" href="">
+                            <a class="p hover:text-azul-oscuro md:p-5" href="{{ route('descubre.juego2') }}">
                                 Otro
                             </a>
                         </div>

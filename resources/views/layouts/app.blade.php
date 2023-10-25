@@ -1,7 +1,5 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}"
-    class="h-full scroll-smooth"
->
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full scroll-smooth">
 
 <head class="scroll-smooth">
     <meta charset="utf-8">
@@ -10,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" href="/img/isotipo-anacos.png">    
+    <link rel="shortcut icon" href="/img/isotipo-anacos.png">
 
     <title>@yield('meta_title', config('app.name'))</title>
 
@@ -29,7 +27,11 @@
     <meta property="twitter:description" content="@yield('meta_description')">
 
     <!-- Styles -->
-    <style>[x-cloak] { display: none !important; }</style>
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
     <!-- Scripts -->
@@ -37,29 +39,11 @@
 
 </head>
 
-<body class="antialiased flex flex-col h-full @yield('page-class')" name="@yield('page-class')">
-    
-@if( "mapIndex" == "mapIndex" )        
-            <main class="flex-grow">
-                <div>
-                    @yield('content')
-                </div>
-            </main>
-            @include('partials.header')
-    @else
-        @include('partials.header')
-        <main class="flex-grow">
-            <div>
-                @yield('content')
-            </div>
-        </main>
-        @include('partials.footer')
-    @endif
+<body class="antialiased flex flex-col h-full @yield('page-class')">
+    @include('partials.header')
+    <main class="flex-grow">
+            @yield('content')
+    </main>
+    @include('partials.footer')
 </body>
-<script>
-    function nameClass(){ 
-        nameClass: document.querySelector("body").getAttribute("name"),
-    };
-
-</script>
 </html>

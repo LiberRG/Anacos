@@ -1,4 +1,4 @@
-<footer class="bg-azul-claro relative" x-data="footer()">
+<footer class="bg-azul-claro" x-data="footer()">
     <div class="container h-14 flex flex-row justify-between items-center">
         <div class="grow text-blanco">
             @svg("logo-anacos-galicia", "h-12 w-auto hidden lg:inline")
@@ -17,7 +17,7 @@
         </div>
     </div>
 
-    <div class="bg-azul-claro/[0.8] font-normal absolute right-0 bottom-14 w-full text-start text-blanco z-10 ">
+    <div x-cloak class="bg-azul-claro/[0.8] font-normal absolute right-0 bottom-14 w-full text-start text-blanco z-10 ">
         <div class="container flex justify-end">
 
             <div x-bind:class="cookie ? 'py-4' :'hidden'">

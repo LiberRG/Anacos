@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.appInicio')
 
 @section('page-class', 'mapIndex')
 

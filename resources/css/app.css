@@ -124,37 +124,40 @@ Estilos de texto
         }
     }
 
-    .card {
-        min-width: 18rem;
-    }
-
     .p{
         @apply text-base pl-3 py-1;
     }
 
-    /* .gridA{
-        @apply grid;
-        grid-template-areas: 
-            "a b"
-            "c b"
-            "d b"
+    /*Clases Juego 1*/
+    * {
+        transition: all 0.5s;
+    }
+    
+
+    .card {
+        transform-style: preserve-3d;
     }
 
-    .video {
-        grid-area: a;
+    .cara {
+        backface-visibility: hidden;
+    }   
+
+    .drowCard {
+        transform: rotateY(180deg);
     }
 
-    .obj{
-        grid-area: b;
-    }
+    @keyframes iniciar {
 
-    .coord{
-        grid-area: c;
-    }
+        20%,
+        90% {
+            transform: rotateY(180deg);
+        }
 
-    .devel{
-        grid-area: d;
-    } */
+        0%,
+        100% {
+            transform: rotateY(0deg);
+        }
+    }
 
 }
 

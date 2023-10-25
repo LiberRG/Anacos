@@ -8,7 +8,8 @@ Añadir enlaces
 
 ## Footer
 Hacer cookies
-
+## Juego
+Problema con la dimension del elemento descripcion
 
 ## Codigo
 estructura de codigo
