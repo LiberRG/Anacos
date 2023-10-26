@@ -39,10 +39,14 @@
 
 </head>
 
-<body class="antialiased flex flex-col h-full @yield('page-class')">
+<body class="antialiased relative @yield('page-class')">
+    <div>
+            <x-map id="01" pathImg="img/map-combarro.png"></x-map>
+    </div>
+    @include('partials.header')
     <main class="flex-grow">
             <div>@yield('content')</div>
     </main>
-    @include('partials.header')
+    @include('partials.footer')
 </body>
 </html>

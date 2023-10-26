@@ -13,9 +13,7 @@ class Filter extends Component
      */
     public function __construct(
         public string $id, 
-        public string $title, 
-        public array $option,
-
+        public string $pathImg,
     )
     {
         //

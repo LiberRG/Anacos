@@ -21,25 +21,24 @@
 "img/juego1/4.jpg",
 "Esta es una pequeña descripcion 4"],])
 
-<div class="flex justify-between gap-x-3 container py-5 h-full">
-    <div id="tablero" class="grow flex items-center flex-wrap">
-    @foreach ($dataJuego1 as $data)
-    <x-card></x-card>
-    <x-card></x-card>
-    @endforeach
-
+<div class="flex justify-between gap-x-5 container py-3 h-full relative">
+    <div id="tablero" class="grow flex items-center justify-evenly flex-wrap">
+        @foreach ($dataJuego1 as $data)
+        <x-card></x-card>
+        <x-card></x-card>
+        @endforeach
     </div>
-    <div class="flex flex-col gap-y-3 max-w-[25%]">
-        <div class="flex h-full w-full">
-            <div class="w-full h-5/6 bg-azul-claro flex items-end rounded-md my-auto p-3">
+    <div class="flex flex-col gap-y-3 w-1/3 h-[75vh] sticky top-24">
+        <div class="flex w-full h-full">
+            <div class="w-full h-[95%] bg-gris-oscuro flex items-end rounded-md my-auto p-3">
                 <div id="text-description"></div>
-                <div id="name-collection" class="text-blanco">
+                <div id="name-collection">
                     <h3 class="h3">Descubre</h3>
-                    <h2 class="h2">Combarro</h2>
+                    <h1 class="h1">Combarro</h1>
                 </div>
             </div>
         </div>
-        <button type="button" class="boton my-5 nuevo-juego min-w-full" onclick="dashboard()">
+        <button type="button" class="boton mt-3 min-w-max" onclick="dashboard()">
             Jugar de nuevo
         </button>
     </div>
@@ -48,7 +47,7 @@
 <script>
     var selects = []
     var description = []
-    var DATA_JUEGO = <?=json_encode($dataJuego1);?>;
+    var DATA_JUEGO = <?= json_encode($dataJuego1); ?>;
     var data = new Array
     window.addEventListener("DOMContentLoaded", dashboard(), false);
 
@@ -57,32 +56,39 @@
         selects = []
         document.getElementById("text-description").innerHTML = ""
         document.getElementById("name-collection").setAttribute("style", "diplay:inline")
-        
+
         for (let i = 0; i < DATA_JUEGO.length; i++) {
             for (let j = 0; j < DATA_JUEGO[i].length; j++) {
                 const element = DATA_JUEGO[i][j];
-                if(j == (DATA_JUEGO[i].length-1)){
+                if (j == (DATA_JUEGO[i].length - 1)) {
                     description.push(element)
                 } else {
-                    id= j+"-"+i
-                    data.push({id: id, img: element})
-                }                
-            }            
+                    id = j + "-" + i
+                    data.push({
+                        id: id,
+                        img: element
+                    })
+                }
+            }
         }
-        if(data.length>0){data.sort((img) => Math.random() - 0.8, )}
+        if (data.length > 0) {
+            data.sort((img) => Math.random() - 0.8, )
+        }
         let tablero = document.getElementById("tablero");
         cards = tablero.children
         for (let i = 0; i < data.length; i++) {
-            card= cards[i]
+            card = cards[i]
             if (card.querySelector('.card').style.transform != null) {
                 card.querySelector('.card').style.transform = null
             }
             console.log('hola')
-            card.addEventListener('click', ()=>{selectCard( data[i].id )})
-            card.querySelector('.card').id="card"+data[i].id
-            card.querySelector('img').src = data[i].img      
-       
-    }
+            card.addEventListener('click', () => {
+                selectCard(data[i].id)
+            })
+            card.querySelector('.card').id = "card" + data[i].id
+            card.querySelector('img').src = data[i].img
+
+        }
     }
 
     function selectCard(i) {

@@ -118,7 +118,7 @@ Estilos de texto
     }
 
     .boton {
-        @apply text-azul-oscuro text-base rounded-lg py-2 px-10 bg-blanco border border-azul-oscuro h-fit;
+        @apply text-azul-oscuro text-base rounded-lg py-2 px-10 bg-blanco border-2 border-azul-oscuro h-fit;
         &:hover {
             @apply bg-blanco/[0.6];
         }
