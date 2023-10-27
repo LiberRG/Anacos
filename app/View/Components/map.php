@@ -24,6 +24,6 @@ class Map extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.filter');
+        return view('components.map');
     }
 }
