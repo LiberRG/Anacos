@@ -1,6 +1,6 @@
 <div id="header" x-data="{ open: false }" class="sticky top-0 z-50">
     <div x-data="header()">
-        <nav class="bg-azul-claro flex flex-row justify-between items-center py-3 z-50 sm:px-8 px-4 relative">
+        <nav class="bg-azul-claro flex flex-row justify-between items-center py-3 z-50 sm:px-8 px-4 relative font-medium">
             <a href="/" class="bg-blanco rounded-full border-4 border-blanco">@svg("isotipo-anacos", 'w-12 h-auto')</a>
 
             <div x-cloak class="md:inline text-blanco" x-bind:class="open ? 'inline-block':'hidden'">
@@ -9,7 +9,7 @@
                     <spam class="flex items-start gap-x-6 flex-wrap md:inline
                         text-lg font-bold md:font-normal
                         p-5 xl:px-8 2xl:px-10">
-                        <button name="planea" @click="desplegable($event)" class="uppercase min-w-[25%] md:min-w-max hover:md:text-magenta-oscuro" x-bind:class="planea ? 'md:text-magenta-oscuro' : 'md:text-blanco'">
+                        <button name="planea" @click="desplegable($event)" class="uppercase min-w-[25%] md:min-w-max hover:md:text-magenta-oscuro font-semibold" x-bind:class="planea ? 'md:text-magenta-oscuro' : 'md:text-blanco'">
                             Vive
                         </button>
                         <div class="font-normal min-w-max flex flex-col
@@ -37,7 +37,7 @@
                     <spam class=" flex gap-x-6 items-start flex-wrap md:inline
                         text-lg font-bold md:font-normal
                         p-5 xl:px-8 2xl:px-10">
-                        <button name="inspira" @click="desplegable($event)" class="uppercase min-w-[25%] md:min-w-max hover:md:text-magenta-oscuro" x-bind:class="inspira ? 'md:text-magenta-oscuro' : 'md:text-blanco'">
+                        <button name="inspira" @click="desplegable($event)" class="uppercase min-w-[25%] md:min-w-max hover:md:text-magenta-oscuro font-semibold" x-bind:class="inspira ? 'md:text-magenta-oscuro' : 'md:text-blanco'">
                             Inspirate
                         </button>
                         <div class="font-normal min-w-max flex flex-col
@@ -62,7 +62,7 @@
                     <spam class=" flex gap-x-6 items-start flex-wrap md:inline
                         text-lg font-bold md:font-normal
                         p-5 xl:px-8 2xl:px-10">
-                        <button name="juega" @click="desplegable($event)" class="uppercase min-w-[25%] md:min-w-max hover:md:text-magenta-oscuro" x-bind:class="juega ? 'md:text-magenta-oscuro' : 'md:text-blanco'">
+                        <button name="juega" @click="desplegable($event)" class="uppercase min-w-[25%] md:min-w-max hover:md:text-magenta-oscuro font-semibold" x-bind:class="juega ? 'md:text-magenta-oscuro' : 'md:text-blanco'">
                             Descubre
                         </button>
                         <div class="font-normal min-w-max flex flex-col
@@ -101,7 +101,7 @@
 
 <script>
     window.onload = positionNav()
-    // window.scrollbar = positionNav()
+    window.onscroll = positionNav()
     function header() {
         return {
             planea: false,
