@@ -13,7 +13,7 @@
                             Vive
                         </button>
                         <div class="font-normal min-w-max flex flex-col
-                        text-start " x-bind:class="planea ? 'md:absolute md:right-0 md:bg-azul-claro/[0.9] md:z-50 md:w-2/5 lg:w-1/3' :'md:hidden'">
+                        text-start text-negro" x-bind:class="planea ? 'md:absolute md:right-0 md:bg-azul-claro/[0.9] md:z-50 md:w-2/5 lg:w-1/3' :'md:hidden'">
                             <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('vive.index') }}">
                                 Alojamiento
                             </a>
@@ -41,7 +41,7 @@
                             Inspirate
                         </button>
                         <div class="font-normal min-w-max flex flex-col
-                        text-start " x-bind:class="inspira ? 'md:absolute md:right-0 md:bg-azul-claro/[0.9] md:z-50 md:w-2/5 lg:w-1/3' :'md:hidden'">
+                        text-start text-negro" x-bind:class="inspira ? 'md:absolute md:right-0 md:bg-azul-claro/[0.9] md:z-50 md:w-2/5 lg:w-1/3' :'md:hidden'">
                             <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('inspira.index') }}">
                                 Colección Galiza máxica
                             </a>
@@ -66,7 +66,7 @@
                             Descubre
                         </button>
                         <div class="font-normal min-w-max flex flex-col
-                        text-start " x-bind:class="juega ? 'md:absolute md:right-0 md:bg-azul-claro/[0.9] md:z-50 md:w-2/5 lg:w-1/3' :'md:hidden'">
+                        text-start text-negro" x-bind:class="juega ? 'md:absolute md:right-0 md:bg-azul-claro/[0.9] md:z-50 md:w-2/5 lg:w-1/3' :'md:hidden'">
                             <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('descubre.juego1') }}">
                                 Empareja y descubre
                             </a>
@@ -100,8 +100,11 @@
 </div>
 
 <script>
-    window.onload = positionNav()
-    window.onscroll = positionNav()
+    window.onload = function(){
+        positionNav()
+        window.onscroll = () => {positionNav()}
+    }
+
     function header() {
         return {
             planea: false,

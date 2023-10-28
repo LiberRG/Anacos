@@ -29,13 +29,13 @@ module.exports = {
       colors: {
         "azul": "rgb(var(--color-azul) / <alpha-value>)",
         "gris-calido": "rgb(var(--color-gris-calido) / <alpha-value>)",
-        "gris-patrocinio": "rgb(var(--color-gris-patrocinio) / <alpha-value>)",
-        
+        "gris-patrocinio": "rgb(var(--color-gris-patrocinio) / <alpha-value>)",        
         "rojo": "rgb(var(--color-rojo) / <alpha-value>)",
         "ocre": "rgb(var(--color-ocre) / <alpha-value>)",
-        "ocre-claro": "rgb(var(--color-ocre-claro) / <alpha-value>)",
 
+        
         "blanco": "rgb(var(--color-blanco) / <alpha-value>)",
+        "ocre-claro": "rgb(var(--color-ocre-claro) / <alpha-value>)",
         "gris-claro": "rgb(var(--color-gris-claro) / <alpha-value>)",
         "gris-oscuro": "rgb(var(--color-gris-oscuro) / <alpha-value>)",
         "azul-claro": "rgb(var(--color-azul-claro) / <alpha-value>)",
@@ -43,7 +43,6 @@ module.exports = {
         "magenta-oscuro": "rgb(var(--color-magenta-oscuro) / <alpha-value>)",
         "verde-oscuro": "rgb(var(--color-verde-oscuro) / <alpha-value>)",
         "negro": "rgb(var(--color-negro) / <alpha-value>)",
-
 
         danger: colors.rose,
         primary: colors.blue,
@@ -57,7 +56,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ["Proxima-Nova", "sans-serif"],
+        sans: ["Quicksand", "sans-serif"],
       },
       typography: {
         DEFAULT: { // this is for prose class
@@ -70,7 +69,10 @@ module.exports = {
             },
           }],
         }
-      }
+      },
+      backgroundImage: {
+        'imagen-map': "url('/img/bg-imagen-map.jpg')",
+      },
     },
     screens: {
       '2xs': '375px',

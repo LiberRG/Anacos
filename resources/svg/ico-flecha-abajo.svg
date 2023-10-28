@@ -1,3 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="12" height="7.787" viewBox="0 0 12 7.787"  :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
-  <path data-name="Trazado 501" d="M8,9.787l-6-6L3.787,2,8,6.213,12.213,2,14,3.787Z" transform="translate(-2 -2)" fill="#212121"/>
-</svg>

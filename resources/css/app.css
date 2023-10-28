@@ -1,11 +1,12 @@
 /*La fuente que se usa en este proyecto (Proxima Nova) es de adobe fonts y se necesita licencia para bajarla*/
 /* @import url('https://fonts.googleapis.com/css2?family=Open+nova:wght@400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Quicksand:wght@400;500;600;700&display=swap');
 
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@font-face {
+/* @font-face {
     font-family: "Proxima-Nova";
     font-style: normal;
     font-weight: 400;
@@ -18,7 +19,7 @@
     font-weight: 700;
     font-display: swap;
     src: url(../fonts/ProximaNova-Bold.otf) format("opentype");
-}
+} */
 
 @layer base {
     :root {
@@ -27,9 +28,9 @@
         --color-gris-patrocinio: 22 22 21;        
         --color-rojo: 175 11 11;
         --color-ocre: 195 148 0;
-        --color-ocre-claro: 250 228 159;
         
         --color-blanco: 255 255 255;
+        --color-ocre-claro: 246 235 219;
         --color-gris-claro: 250 250 250;
         --color-gris-oscuro: 225 228 231;
         --color-azul-claro: 145 182 215;
@@ -45,10 +46,10 @@ Estilos de texto
 */
 @layer base {
     html {
-        @apply text-negro font-sans;
+        @apply text-negro font-sans font-medium;
     }
     body {
-        @apply text-negro font-sans bg-gris-claro;
+        @apply text-negro font-sans font-medium bg-gris-claro;
 
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
@@ -96,7 +97,7 @@ Estilos de texto
         } */
     }
     .h3 {
-        @apply font-sans text-lg font-normal leading-tight;
+        @apply font-sans text-lg font-medium leading-tight;
         /* @media screen(sm) {
             @apply text-lg leading-tight;
         }
@@ -118,47 +119,41 @@ Estilos de texto
     }
 
     .boton {
-        @apply text-azul-oscuro text-base rounded-lg py-2 px-10 bg-blanco border-2 border-azul-oscuro h-fit;
+        @apply text-azul-oscuro text-base font-semibold rounded-lg py-2 px-10 bg-blanco border-2 border-azul-oscuro h-fit;
         &:hover {
             @apply bg-blanco/[0.6];
         }
     }
 
     .p{
-        @apply text-base pl-3 py-1;
+        @apply text-base font-medium pl-3 py-1;
     }
 
     /*Clases Juego 1*/
     * {
         transition: all 0.5s;
-    }
-    
-
+    } 
     .card {
         transform-style: preserve-3d;
     }
-
     .cara {
         backface-visibility: hidden;
     }   
-
     .drowCard {
         transform: rotateY(180deg);
     }
-
     @keyframes iniciar {
-
         20%,
         90% {
             transform: rotateY(180deg);
         }
-
         0%,
         100% {
             transform: rotateY(0deg);
         }
     }
 
+    
 }
 
 /* Fin de estilos de texto */
