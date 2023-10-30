@@ -28,7 +28,7 @@
         <x-card></x-card>
         @endforeach
     </div>
-    <div class="flex flex-col gap-y-5 w-1/3 h-[75vh] sticky top-24">
+    <div class="flex flex-col gap-y-5 w-1/3 h-[76.3vh] sticky top-24">
         <div class="flex w-full h-full">
             <div class="w-full min-w-max h-[95%] bg-gris-oscuro flex items-end rounded-xl my-auto p-3">
                 <div id="text-description"></div>

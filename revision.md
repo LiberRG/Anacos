@@ -8,6 +8,10 @@ Añadir enlaces
 
 ## Footer
 Hacer cookies
+
+## Home
+Controlar mapa en movil
+
 ## Juego
 Problema con la dimension del elemento descripcion
 

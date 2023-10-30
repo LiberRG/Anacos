@@ -37,10 +37,10 @@
                     <spam class=" flex gap-x-6 items-start flex-wrap md:inline
                         text-lg font-bold md:font-normal
                         p-5 xl:px-8 2xl:px-10">
-                        <button name="inspira" @click="desplegable($event)" class="uppercase min-w-[25%] md:min-w-max hover:md:text-magenta-oscuro font-semibold" x-bind:class="inspira ? 'md:text-magenta-oscuro' : 'md:text-blanco'">
+                        <a name="inspira" href="{{ route('inspira.index') }}" class="uppercase min-w-[25%] md:min-w-max hover:md:text-magenta-oscuro font-semibold">
                             Inspirate
-                        </button>
-                        <div class="font-normal min-w-max flex flex-col
+                        </a>
+                        <!--<div class="font-normal min-w-max flex flex-col
                         text-start text-negro" x-bind:class="inspira ? 'md:absolute md:right-0 md:bg-azul-claro/[0.9] md:z-50 md:w-2/5 lg:w-1/3' :'md:hidden'">
                             <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('inspira.index') }}">
                                 Colección Galiza máxica
@@ -57,7 +57,7 @@
                             <a class="p hover:text-azul-oscuro md:p-5" href="">
                                 Colección Combarro
                             </a>
-                        </div>
+                        </div>-->
                     </spam>
                     <spam class=" flex gap-x-6 items-start flex-wrap md:inline
                         text-lg font-bold md:font-normal
@@ -147,7 +147,7 @@
         console.log(window.innerHeight)
 
         navDown.setAttribute("style", "bottom: 5rem")
-        if (document.getElementById('header').getBoundingClientRect().bottom >= window.innerHeight) {
+        if (document.getElementById('header').getBoundingClientRect().bottom >= window.innerHeight* 2/3) {
             navElements.forEach(element => {
                 element.setAttribute("style", "bottom: 5rem")
             });

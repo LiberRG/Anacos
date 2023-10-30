@@ -25,17 +25,17 @@
     :root {
         --color-azul: 0 127 255;
         --color-gris-calido: 248 246 240;
-        --color-gris-patrocinio: 22 22 21;        
+        --color-gris-patrocinio: 22 22 21;
         --color-rojo: 175 11 11;
         --color-ocre: 195 148 0;
-        
+
         --color-blanco: 255 255 255;
         --color-ocre-claro: 246 235 219;
         --color-gris-claro: 250 250 250;
         --color-gris-oscuro: 225 228 231;
         --color-azul-claro: 145 182 215;
         --color-azul-oscuro: 36 110 176;
-        --color-magenta-oscuro: 178 36 112 ;
+        --color-magenta-oscuro: 178 36 112;
         --color-verde-oscuro: 32 142 29;
         --color-negro: 22 22 21;
     }
@@ -48,12 +48,14 @@ Estilos de texto
     html {
         @apply text-negro font-sans font-medium;
     }
+
     body {
         @apply text-negro font-sans font-medium bg-gris-claro;
 
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
     }
+
     .h1 {
         @apply text-4xl font-bold leading-tight;
         /* @media screen(sm) {
@@ -75,6 +77,7 @@ Estilos de texto
             @apply text-3xl leading-tight;
         } */
     }
+
     .h2 {
         @apply font-sans text-2xl font-bold leading-tight;
         /* @media screen(sm) {
@@ -96,6 +99,7 @@ Estilos de texto
             @apply text-3xl leading-tight;
         } */
     }
+
     .h3 {
         @apply font-sans text-lg font-medium leading-tight;
         /* @media screen(sm) {
@@ -120,40 +124,59 @@ Estilos de texto
 
     .boton {
         @apply text-azul-oscuro text-base font-semibold rounded-lg py-2 px-10 bg-blanco border-2 border-azul-oscuro h-fit;
+
         &:hover {
             @apply bg-blanco/[0.6];
         }
     }
 
-    .p{
+    .p {
         @apply text-base font-medium pl-3 py-1;
     }
 
     /*Clases Juego 1*/
     * {
         transition: all 0.5s;
-    } 
+    }
+
     .card {
         transform-style: preserve-3d;
     }
+
     .cara {
         backface-visibility: hidden;
-    }   
+    }
+
     .drowCard {
         transform: rotateY(180deg);
     }
+
     @keyframes iniciar {
+
         20%,
         90% {
             transform: rotateY(180deg);
         }
+
         0%,
         100% {
             transform: rotateY(0deg);
         }
     }
 
-    
+    /* Apariencia scrollbar */
+    body::-webkit-scrollbar, div::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    body::-webkit-scrollbar-track, div::-webkit-scrollbar-track {
+        background: #E1E4E7;
+    }
+
+    body::-webkit-scrollbar-thumb, div::-webkit-scrollbar-thumb {
+        background-color: #91B6D7;
+        border-radius: 20px;
+    }
 }
 
 /* Fin de estilos de texto */

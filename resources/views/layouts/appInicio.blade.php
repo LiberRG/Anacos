@@ -40,16 +40,27 @@
 </head>
 
 <body class="antialiased relative @yield('page-class')">
-    @php($lugares = [
+    @php( $lugares = [
     ["id" => "01",
     "name" => "Combarro",
     "top" => "60",
     "left" => "16"],
+
+    ["id" => "02",
+    "name" => "Illas Cies",
+    "top" => "66",
+    "left" => "10"],
+
+    ["id" => "03",
+    "name" => "Playa catedrales",
+    "top" => "3",
+    "left" => "78"]
     ])
 
     <div x-data="{ explora: false }">
-        <div>
-            <x-map id="01" pathImg="img/map-combarro.png"></x-map>
+        <div class="h-[89.3vh]">
+            <!--<x-map id="01" pathImg="img/map-combarro.png"></x-map>-->  
+            <x-choose :lugares=$lugares></x-choose>     
         </div>
         @include('partials.header')
         <main class="flex-grow">
@@ -57,51 +68,7 @@
         </main>
         @include('partials.footer')
 
-
-        <div x-cloak x-bind:class="explora ? 'hidden' : 'inline'" class="flex justify-center item-center w-full h-full absolute inset-0 z-50 bg-imagen-map bg-cover">
-            <div class="flex flex-col justify-between items-center bg-blanco rounded-xl w-[75%] min-h-[65%] m-auto p-8 pt-4">
-                <div class="text-center">
-                    <h1 class="text-9xl font-bold text-azul-oscuro pb-3">Explora</h1>
-                    <h2 class="h2 text-azul-oscuro pb-5">¿Quieres descubrir los lugares único que nos inspiran y emocionan?</h2>
-                    <div class="flex justify-center gap-x-10">
-                        <div class="flex flex-col justify-between items-center pt-3">
-                            <p class="p w-full max-w-sm text-left">Elige el lugar que deseas explorar y atreveté a descubrir su historía.</p>
-                            <p class="p w-full max-w-sm text-left">En este mapa podrás navegar por cada uno de ellos.</p>
-                            <p class="p w-full max-w-sm text-left">Los paisajes, que representan a la perfección la magia de Galicia, se yerguen como observadores incansables del paso del tiempo y cuentan historias a aquellos dispuestos a escuchar.</p>
-                            <button type="button" class="boton m-5 min-w-max uppercase w-fit" @click="explora=!explora">
-                                Comenzamos
-                            </button>
-                        </div>
-
-
-                        <div class="relative">
-                            @svg("map-galicia")
-                            <div>
-                                <ul>
-                                    @foreach ($lugares as $lugar)
-                                    @php($style = "top: ". $lugar['top'] ."%; left: ". $lugar['left'] . "%")
-                                    <li class="group absolute text-magenta-oscuro font-semibold" style="{{ $style }}">
-                                        <span id="{{ $lugar['id'] }}" class="absolute group-hover:scale-150">@svg("ico-position-map", "w-7 h-auto")</span>
-                                        <span class="absolute -translate-x-1/3 translate-y-full p-1 hidden group-hover:inline">
-                                        {{ $lugar['name'] }}
-                                        </span>
-                                    </li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                            <!-- <li><a data-rel="id_8a2b2102-832c-11e5-b2f0-000c29c073e6" href="/que-visitar/destacados/parque-nacional-das-illas-atlanticas-de-galicia?langId=es_ES" onclick="registrarEvento('que-visitar','Menu principal - que facer -','Parque Nacional das Illas Atlánticas')">Parque Nacional das Illas Atlánticas</a></li> -->
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-
-    <script>
-
-    </script>
+    </div> 
 </body>
 
 </html>
