@@ -37,7 +37,7 @@
                     <spam class=" flex gap-x-6 items-start flex-wrap md:inline
                         text-lg font-bold md:font-normal
                         p-5 xl:px-8 2xl:px-10">
-                        <a name="inspira" href="{{ route('inspira.index') }}" class="uppercase min-w-[25%] md:min-w-max hover:md:text-magenta-oscuro font-semibold">
+                        <a name="inspira" href="{{ route('inspira.index') }}" class="text-center uppercase min-w-[25%] md:min-w-max hover:md:text-magenta-oscuro font-semibold">
                             Inspirate
                         </a>
                         <!--<div class="font-normal min-w-max flex flex-col
