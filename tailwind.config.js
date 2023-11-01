@@ -71,7 +71,7 @@ module.exports = {
         }
       },
       backgroundImage: {
-        'imagen-map': "url('/img/bg-imagen-map.jpg')",
+        'imagen-map': "url('/img/mapas/bg-imagen-map.jpg')",
       },
     },
     screens: {

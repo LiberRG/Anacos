@@ -2,6 +2,10 @@
 
 ## Tipografía
 
+## TODO
+Ojo con los metas REVISAAR
+Comentar codigo js 
+
 ## Header
 Arreglar el desplegable movil para que todas bajen en el mismo momento, no usar en los div de categorias min-w-max
 Añadir enlaces
@@ -13,13 +17,12 @@ Hacer cookies
 Controlar mapa en movil
 
 ## Juego
-Problema con la dimension del elemento descripcion
+Elemento descripcion en movil
 
 ## Codigo
-estructura de codigo
+Busca codigo para saber la estructura de codigo
 
 ## Previo
-Diferencias con la estructura previa
-
+Busca previo para ver las diferencias con la estructura previa
 routes auth.php no existe
 resources/views vacia

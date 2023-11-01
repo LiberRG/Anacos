@@ -7,22 +7,22 @@
 @php($dataJuego1 = [
 ["img/juego1/1.jpg",
 "img/juego1/1.jpg",
-"Esta es una pequeña descripcion 1"],
+"<b>Descripcion:</b><br>Esta es una pequeña descripcion 1"],
 
 ["img/juego1/2.jpg",
 "img/juego1/2.jpg",
-"Esta es una pequeña descripcion 2"],
+"<b>Descripcion:</b><br>Esta es una pequeña descripcion 2"],
 
 ["img/juego1/3.jpg",
 "img/juego1/3.jpg",
-"Esta es una pequeña descripcion 3"],
+"<b>Descripcion:</b><br>Esta es una pequeña descripcion 3"],
 
 ["img/juego1/4.jpg",
 "img/juego1/4.jpg",
-"Esta es una pequeña descripcion 4"],])
+"<b>Descripcion:</b><br>Esta es una pequeña descripcion 4"],])
 
-<div class="flex justify-between gap-x-8 container py-3 h-full relative">
-    <div id="tablero" class="grow flex items-center justify-evenly flex-wrap">
+<div class="flex justify-between gap-x-8 container py-3 h-[81.6vh] relative">
+    <div id="tablero" class="grow flex items-center justify-evenly flex-wrap overflow-y-auto">
         @foreach ($dataJuego1 as $data)
         <x-card></x-card>
         <x-card></x-card>
@@ -30,7 +30,7 @@
     </div>
     <div class="flex flex-col gap-y-5 w-1/3 h-[76.3vh] sticky top-24">
         <div class="flex w-full h-full">
-            <div class="w-full min-w-max h-[95%] bg-gris-oscuro flex items-end rounded-xl my-auto p-3">
+            <div class="w-full h-[95%] bg-gris-oscuro flex items-end rounded-xl my-auto p-3">
                 <div id="text-description"></div>
                 <div id="name-collection">
                     <h3 class="h3 font-normal">Descubre</h3>
@@ -48,11 +48,12 @@
     var selects = []
     var description = []
     var DATA_JUEGO = <?= json_encode($dataJuego1); ?>;
-    var data = new Array
+    var data = []
     window.addEventListener("DOMContentLoaded", dashboard(), false);
 
     function dashboard() {
 
+        data = []
         selects = []
         document.getElementById("text-description").innerHTML = ""
         document.getElementById("name-collection").setAttribute("style", "diplay:inline")
@@ -78,10 +79,9 @@
         cards = tablero.children
         for (let i = 0; i < data.length; i++) {
             card = cards[i]
-            if (card.querySelector('.card').style.transform != null) {
-                card.querySelector('.card').style.transform = null
+            if (card.querySelector('.card').style.transform == "rotateY(180deg)") {
+                card.querySelector('.card').style.transform = "rotateY(0deg)"
             }
-            console.log('hola')
             card.addEventListener('click', () => {
                 selectCard(data[i].id)
             })

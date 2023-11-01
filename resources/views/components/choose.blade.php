@@ -44,11 +44,11 @@
 
     function showInfo() {
         let modal = document.getElementById("modal");
-        modal.style.visibility = "hidden";        
+        modal.style.display = "none";        
         let xMap = document.querySelector("#map>div:last-child img");
         console.log(xMap)
         console.log(xMap.getAttribute("id"))
-        xMap.setAttribute("src", "img/map-combarro.png");
+        xMap.setAttribute("src", "img/mapas/map-combarro.png");
     }
 </script>
 

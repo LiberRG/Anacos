@@ -9,35 +9,35 @@
 "name"=>"Galiza máxica",
 "imgCollection" => "img/juego1/2.jpg",
 "description"=> "Esta es una pequeña descripcion 1",
-"products" => ["img/juego1/1.jpg", "img/juego1/1.jpg", "img/juego1/1.jpg","img/juego1/1.jpg"]
+"products" => ["img/juego1/1.jpg", "img/juego1/1.jpg", "img/juego1/1.jpg","img/juego1/1.jpg","img/juego1/1.jpg"]
 ],
 
 ["id" => "02",
 "name"=>"Sons",
 "imgCollection" => "img/juego1/2.jpg",
 "description"=> "Esta es una pequeña descripcion 2",
-"products" => ["img/juego1/1.jpg", "img/juego1/1.jpg", "img/juego1/1.jpg","img/juego1/1.jpg"]
+"products" => ["img/juego1/1.jpg", "img/juego1/1.jpg", "img/juego1/1.jpg","img/juego1/1.jpg","img/juego1/1.jpg"]
 ],
 
 ["id" => "03",
 "name"=>"Ollar da natureza",
 "imgCollection" => "img/juego1/2.jpg",
 "description"=> "Esta es una pequeña descripcion 3",
-"products" => ["img/juego1/1.jpg", "img/juego1/1.jpg", "img/juego1/1.jpg","img/juego1/1.jpg"]
+"products" => ["img/juego1/1.jpg", "img/juego1/1.jpg", "img/juego1/1.jpg","img/juego1/1.jpg","img/juego1/1.jpg"]
 ],
 
 ["id" => "04",
 "name"=>"A liberdade do toxo",
 "imgCollection" => "img/juego1/2.jpg",
 "description"=> "Esta es una pequeña descripcion 4",
-"products" => ["img/juego1/1.jpg", "img/juego1/1.jpg", "img/juego1/1.jpg","img/juego1/1.jpg"]
+"products" => ["img/juego1/1.jpg", "img/juego1/1.jpg", "img/juego1/1.jpg","img/juego1/1.jpg","img/juego1/1.jpg"]
 ],
 
 ["id" => "05",
 "name"=>"Combarro",
 "imgCollection" => "img/juego1/2.jpg",
-"description"=> "Esta es una pequeña descripcion 5",
-"products" => ["img/juego1/1.jpg", "img/juego1/1.jpg", "img/juego1/1.jpg","img/juego1/1.jpg"]
+"description"=> "En este evocador dibujo del mar, el artista captura la esencia tranquila y misteriosa del océano. La escena se despliega con tonos azules y verdes suaves, que se funden en un horizonte lejano y difuminado. Las olas del mar parecen cobrar vida con cada trazo.",
+"products" => ["img/juego1/1.jpg", "img/juego1/1.jpg", "img/juego1/1.jpg","img/juego1/1.jpg","img/juego1/1.jpg"]
 ]
 ])
 <div class="h-full flex flex-col md:flex-row gap-5 container md:h-[81.6vh] xl:max-w-6xl py-5">
@@ -46,7 +46,7 @@
             <!--<div class="bg-blanco rounded-full border-4 border-blanco w-fit my-2 mx-auto">
                 @svg("isotipo-anacos", 'w-8 h-auto')
             </div>-->
-            <h1 class="h1 uppercase">Anacos</h1>
+            <h1 class="h1 uppercase md:text-3xl lg:text-4xl">Anacos</h1>
             <h3 class="h3">Galicia</h3>
         </div>
         <div class="row-start-2 row-end-4 flex items-end bg-azul-claro text-blanco rounded-xl p-3">
@@ -58,18 +58,21 @@
     </div>
     <div class="flex flex-wrap gap-3 md:overflow-y-auto w-full h-full md:w-4/5 relative">
         @foreach ($collections as $collection)
-        <div x-data="{ desplegable: false }" class=" flex flex-col bg-blanco p-3 rounded-xl w-full" x-bind:class="desplegable ? 'h-full absolute':'h-[36.9vh]  sm:w-[48.9%] md:w-[45%] lg:w-[30%]'">
+        <div x-cloak x-data="{ desplegable: false }" class=" flex flex-col bg-blanco p-3 rounded-xl w-full" x-bind:class="desplegable ? 'h-full absolute justify-between':'h-[36.9vh]  sm:w-[48.9%] md:w-[45%] lg:w-[30%]'">
             <div class="flex justify-between w-full" x-bind:class="desplegable ? 'flex-row items-center' : 'flex-col-reverse h-full'">
                 <h2 class="h2 font-bold text-azul-oscuro">{{ $collection['name'] }}</h2>
                 <button class="self-end" @click="desplegable=!desplegable">@svg("ico-add", "w-10 h-auto text-azul-oscuro")</button>
             </div>
-            <div class="flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-3 lg:gap-8 my-3 h-full " x-bind:class="desplegable ?'inline-block' : 'hidden'">
-                <div class="w-[75%] xs:w-[36%] sm:w-[18%] md:w-[22%] lg:w-[33%] xl:w-1/3">
-                    <img class="rounded-xl" src="{{ $collection['imgCollection'] }}" alt="">
+            <div 
+            class="grow grid grid-cols-1 sm:grid-cols-3 gap-5 my-3 mx-auto justify-between w-full sm:w-[82%] md:w-[90%] lg:w-full"
+            x-bind:class="desplegable ?'inline-block' : 'hidden'">
+                <div class="lg:row-span-2 col-span-1 w-[40%] sm:w-full m-auto">
+                    <img class="rounded-xl h-full" src="{{ $collection['imgCollection'] }}" alt="">
                 </div>
-                <div class="grid lg:flex flex-wrap justify-center lg:justify-start grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 gap-3 lg:w-3/5">
+                <div class="col-span-2 row-span-1 self-end  font-normal"><p>{{ $collection['description'] }}</p></div>
+                <div class="grid lg:justify-start grid-cols-3 sm:grid-cols-5 gap-3 col-span-2 sm:col-span-3 lg:col-span-2 row-span-1">
                     @foreach ($collection['products'] as $product)
-                    <img class="rounded-xl w-auto lg:w-[26.5%] xl:w-[27%]" src="{{ $product }}" alt="">
+                    <img class="rounded-xl" src="{{ $product }}" alt="">
                     @endforeach
                 </div>
             </div>
