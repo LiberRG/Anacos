@@ -41,9 +41,9 @@
 
 <body class="antialiased h-full @yield('page-class')">
     @include('partials.header')
-    <main class="flex-grow">
+    <div class="flex-grow">
             @yield('content')
-    </main>
+    </div>
     @include('partials.footer')
 </body>
 </html>

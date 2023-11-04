@@ -63,9 +63,9 @@
             <x-choose :lugares=$lugares></x-choose>     
         </div>
         @include('partials.header')
-        <main class="flex-grow">
+        <div class="flex-grow">
             <div>@yield('content')</div>
-        </main>
+        </div>
         @include('partials.footer')
 
     </div> 

@@ -21,27 +21,27 @@
 "img/juego1/4.jpg",
 "<b>Descripcion:</b><br>Esta es una pequeña descripcion 4"],])
 
-<div class="flex justify-between gap-x-8 container py-3 h-[81.6vh] relative">
-    <div id="tablero" class="grow flex items-center justify-evenly flex-wrap overflow-y-auto">
+<div class="flex justify-between gap-x-8 container py-3 h-[81.6vh] xl:max-w-7xl relative">
+    <main id="tablero" class="grow flex items-center justify-evenly flex-wrap overflow-y-auto">
         @foreach ($dataJuego1 as $data)
         <x-card></x-card>
         <x-card></x-card>
         @endforeach
-    </div>
-    <div class="flex flex-col gap-y-5 w-1/3 h-[76.3vh] sticky top-24">
+    </main>
+    <aside class="flex flex-col gap-y-5 w-1/4 h-[76.3vh] sticky top-24">
         <div class="flex w-full h-full">
             <div class="w-full h-[95%] bg-gris-oscuro flex items-end rounded-xl my-auto p-3">
                 <div id="text-description"></div>
                 <div id="name-collection">
                     <h3 class="h3 font-normal">Descubre</h3>
-                    <h1 class="h1">Combarro</h1>
+                    <h1 id="titleDescubre" class="h1">Combarro</h1>
                 </div>
             </div>
         </div>
-        <button type="button" class="boton mt-3 min-w-max" onclick="dashboard()">
+        <button type="button" class="boton mt-3 px-3" onclick="dashboard()">
             Jugar de nuevo
         </button>
-    </div>
+    </aside>
 </div>
 
 <script>

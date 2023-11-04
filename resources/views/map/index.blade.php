@@ -3,7 +3,7 @@
 @section('page-class', 'mapIndex')
 
 @section('content')
-<div class="py-8">
+<main class="py-8">
     <article class="my-14">
         <h1 class="h1 text-center text-magenta-oscuro my-5 uppercase">El Patrimonio Gallego</h1>
         <section class="bg-gris-oscuro">
@@ -88,5 +88,5 @@
             <p class="text-xl text-center"><b>¡Ven y descubre la magia de Galicia!</b></p>
         </section>
     </article>
-</div>
+</main>
 @endsection
