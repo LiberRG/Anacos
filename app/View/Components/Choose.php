@@ -5,6 +5,7 @@ namespace App\View\Components;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
+use PhpParser\Node\Expr\Cast\Object_;
 
 class Choose extends Component
 {
@@ -12,7 +13,7 @@ class Choose extends Component
      * Create a new component instance.
      */
     public function __construct(
-        public Array $lugares,        
+        public Object $lugares,        
     )
     {
         //
