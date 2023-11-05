@@ -2,6 +2,16 @@
 
 @section('page-class', 'mapIndex')
 
+@section('contentMap')
+<div class="h-[89.3vh]">
+    @if(isset($lugar) && $lugar != null)
+    <x-map id="" pathImg="img/mapas/map-combarro.png"></x-map> 
+    @else
+    <x-choose :lugares=$lugares></x-choose> 
+    @endif
+</div>
+@endsection
+
 @section('content')
 <main class="py-8">
     <article class="my-14">

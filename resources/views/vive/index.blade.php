@@ -5,40 +5,6 @@
 @section('content')
 {{-- Página de vive --}}
 
-@php( $lugares = [
-["id" => "01",
-"name" => "Combarro",
-"top" => "60",
-"left" => "16"],
-
-["id" => "02",
-"name" => "Illas Cies",
-"top" => "66",
-"left" => "10"],
-
-["id" => "03",
-"name" => "Playa catedrales",
-"top" => "3",
-"left" => "78"]
-])
-@PHP($service=[
-"pathImg" => "img/juego1/4.jpg",
-"title" => "titulo",
-"description" => "description",
-"date" => " f ",
-"contact" => [
-"telefono" => "+34 111 222 444 555",
-"email" => "email@email.com",
-],
-"details"=> [
-"text" => "",
-"email" => "email@email.com",
-"web" => "www.web.com",
-"direction" => "calle cp y provincia",
-"score" => 3,
-],
-])
-
 <div class="h-full flex flex-col md:flex-row gap-5 container md:h-[81.6vh] xl:max-w-6xl py-5">
     <aside class="flex flex-col justify-between bg-gris-oscuro rounded-xl p-3 md:w-1/4 h- md:sticky top-24">
         <div class="flex flex-col justify-center items-center p-3 text-azul-oscuro">
@@ -73,7 +39,7 @@
     <main class="md:w-3/4">
         <div class="flex flex-wrap justify-evenly font-bold text-azul-oscuro w-full my-2 gap-3">
             @foreach ($lugares as $lugar)
-            <button class="">{{ $lugar['name'] }}</button>
+            <a class="" href="{{ route('vive.index', $lugar['name']) }}">{{ $lugar['name'] }}</a>
             @endforeach
         </div>
         <div class="overflow-y-auto">

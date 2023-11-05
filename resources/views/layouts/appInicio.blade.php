@@ -40,28 +40,9 @@
 </head>
 
 <body class="antialiased relative @yield('page-class')">
-    @php( $lugares = [
-    ["id" => "01",
-    "name" => "Combarro",
-    "top" => "60",
-    "left" => "16"],
-
-    ["id" => "02",
-    "name" => "Illas Cies",
-    "top" => "66",
-    "left" => "10"],
-
-    ["id" => "03",
-    "name" => "Playa catedrales",
-    "top" => "3",
-    "left" => "78"]
-    ])
-
+    
     <div x-data="{ explora: false }">
-        <div class="h-[89.3vh]">
-            <!--<x-map id="01" pathImg="img/map-combarro.png"></x-map>-->  
-            <x-choose :lugares=$lugares></x-choose>     
-        </div>
+        <div>@yield('contentMap')</div>
         @include('partials.header')
         <div class="flex-grow">
             <div>@yield('content')</div>

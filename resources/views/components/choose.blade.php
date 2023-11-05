@@ -18,7 +18,9 @@
                                     @foreach ($lugares as $lugar)
                                     @php($style = "top: ". $lugar['top'] ."%; left: ". $lugar['left'] . "%")
                                     <li class="group absolute text-magenta-oscuro font-semibold" style="{{ $style }}">
-                                        <span id="{{ $lugar['id'] }}" class="absolute group-hover:scale-150">@svg("ico-position-map", "w-7 h-auto")</span>
+                                        <a id="{{ $lugar['id'] }}" class="absolute group-hover:scale-150" href="{{ route('map.index',$lugar['name']) }}">
+                                            @svg("ico-position-map", "w-7 h-auto")
+                                        </a>
                                         <span class="absolute -translate-x-1/3 translate-y-full min-w-max p-1 hidden group-hover:inline">
                                             {{ $lugar['name'] }}
                                         </span>
@@ -30,27 +32,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
-    <x-map id="" pathImg=""></x-map> 
-</div>
-<script>
-        var positionSite = document.querySelectorAll("ul>li");
-        console.log(positionSite)
-        positionSite.forEach(site => {
-            site.addEventListener("click", showInfo)
-        });    
-
-    function showInfo() {
-        let modal = document.getElementById("modal");
-        modal.style.display = "none";        
-        let xMap = document.querySelector("#map>div:last-child img");
-        console.log(xMap)
-        console.log(xMap.getAttribute("id"))
-        xMap.setAttribute("src", "img/mapas/map-combarro.png");
-    }
-</script>
-
-
 </div>

@@ -4,31 +4,15 @@
 
 @section('content')
 {{-- Página de resultados de búsqueda, con el mosaico de sesiones.--}}
-@php($dataJuego1 = [
-["img/juego1/1.jpg",
-"img/juego1/1.jpg",
-"<b>Descripcion:</b><br>Esta es una pequeña descripcion 1"],
-
-["img/juego1/2.jpg",
-"img/juego1/2.jpg",
-"<b>Descripcion:</b><br>Esta es una pequeña descripcion 2"],
-
-["img/juego1/3.jpg",
-"img/juego1/3.jpg",
-"<b>Descripcion:</b><br>Esta es una pequeña descripcion 3"],
-
-["img/juego1/4.jpg",
-"img/juego1/4.jpg",
-"<b>Descripcion:</b><br>Esta es una pequeña descripcion 4"],])
 
 <div class="flex justify-between gap-x-8 container py-3 h-[81.6vh] xl:max-w-7xl relative">
-    <main id="tablero" class="grow flex items-center justify-evenly flex-wrap overflow-y-auto">
+    <main id="tablero" class="flex items-center justify-evenly flex-wrap overflow-y-auto basis-3/4">
         @foreach ($dataJuego1 as $data)
         <x-card></x-card>
         <x-card></x-card>
         @endforeach
     </main>
-    <aside class="flex flex-col gap-y-5 w-1/4 h-[76.3vh] sticky top-24">
+    <aside class="flex flex-col gap-y-5 basis-1/4 h-[76.3vh] sticky top-24">
         <div class="flex w-full h-full">
             <div class="w-full h-[95%] bg-gris-oscuro flex items-end rounded-xl my-auto p-3">
                 <div id="text-description"></div>
@@ -56,7 +40,7 @@
         data = []
         selects = []
         document.getElementById("text-description").innerHTML = ""
-        document.getElementById("name-collection").setAttribute("style", "diplay:inline")
+        document.getElementById("name-collection").setAttribute("style", "diplay:inline-block")
 
         for (let i = 0; i < DATA_JUEGO.length; i++) {
             for (let j = 0; j < DATA_JUEGO[i].length; j++) {
