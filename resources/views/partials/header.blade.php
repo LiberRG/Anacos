@@ -1,4 +1,4 @@
-<div id="header" x-data="{ open: false }" class="sticky top-0 z-50">
+<header id="header" x-data="{ open: false }" class="sticky top-0 z-50" role="banner">
     <div x-data="header()">
         <nav class="bg-azul-claro flex flex-row justify-between items-center py-3 z-50 sm:px-8 px-4 relative font-medium">
             <a href="/" class="bg-blanco rounded-full border-4 border-blanco">@svg("isotipo-anacos", 'w-12 h-auto')</a>
@@ -6,7 +6,7 @@
             <div x-cloak class="md:inline text-blanco" x-bind:class="open ? 'inline-block':'hidden'">
                 <div id="navDown" class="md:static md:inline w-full md:text-center grow" x-bind:class="open ? 'absolute right-0 text-start bg-azul-claro/[0.9] z-50 ' : '' ">
 
-                    <spam class="flex items-start gap-x-6 flex-wrap md:inline
+                    <span class="flex items-start gap-x-6 flex-wrap md:inline
                         text-lg font-bold md:font-normal
                         p-5 xl:px-8 2xl:px-10">
                         <button name="planea" @click="desplegable($event)" class="uppercase min-w-[25%] md:min-w-max hover:md:text-magenta-oscuro font-semibold" x-bind:class="planea ? 'md:text-magenta-oscuro' : 'md:text-blanco'">
@@ -33,8 +33,8 @@
                                 Paisajes
                             </a>
                         </div>
-                    </spam>
-                    <spam class=" flex gap-x-6 items-start flex-wrap md:inline
+                    </span>
+                    <span class=" flex gap-x-6 items-start flex-wrap md:inline
                         text-lg font-bold md:font-normal
                         p-5 xl:px-8 2xl:px-10">
                         <a name="inspira" href="{{ route('inspira.index') }}" class="text-center uppercase min-w-[25%] md:min-w-max hover:md:text-magenta-oscuro font-semibold">
@@ -58,8 +58,8 @@
                                 Colección Combarro
                             </a>
                         </div>-->
-                    </spam>
-                    <spam class=" flex gap-x-6 items-start flex-wrap md:inline
+                    </span>
+                    <span class=" flex gap-x-6 items-start flex-wrap md:inline
                         text-lg font-bold md:font-normal
                         p-5 xl:px-8 2xl:px-10">
                         <button name="juega" @click="desplegable($event)" class="uppercase min-w-[25%] md:min-w-max hover:md:text-magenta-oscuro font-semibold" x-bind:class="juega ? 'md:text-magenta-oscuro' : 'md:text-blanco'">
@@ -75,7 +75,7 @@
                                 Otro
                             </a>
                         </div>
-                    </spam>
+                    </span>
                 </div>
             </div>
 
@@ -97,7 +97,7 @@
         </div>
 
     </div>
-</div>
+</header>
 
 <script>
     window.onload = function(){

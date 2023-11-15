@@ -18,4 +18,5 @@ class MapController extends Controller
         return view('map.index', compact('lugares','lugar'));
         // return view('map.index', compact('lugares','mapa','sitio'));
     }
+    
 }

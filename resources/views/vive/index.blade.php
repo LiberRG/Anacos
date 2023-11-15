@@ -11,7 +11,7 @@
             <h1 class="h1 uppercase text-3xl">Anacos</h1>
             <h3 class="h3">Galicia</h3>
         </div>
-        <nav class="grow my-auto flex flex-col justify-center">
+        <nav class="grow my-auto flex flex-col justify-center" role="navigation">
             <a class="p hover:text-azul-oscuro md:py-3" href="{{ route('vive.index') }}">
                 Alojamiento
             </a>
@@ -36,7 +36,7 @@
             <h1 id="titleVive" class="h1">Galicia</h1>
         </div>
     </aside>
-    <main class="md:w-3/4">
+    <main class="md:w-3/4" role="main">
         <div class="flex flex-wrap justify-evenly font-bold text-azul-oscuro w-full my-2 gap-3">
             @foreach ($lugares as $lugar)
             <a class="" href="{{ route('vive.index', $lugar['name']) }}">{{ $lugar['name'] }}</a>

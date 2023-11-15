@@ -21,7 +21,7 @@
             </div>
         </div>
     </aside>
-    <main class="flex flex-wrap gap-3 md:overflow-y-auto w-full h-full md:w-4/5 relative">
+    <main class="flex flex-wrap gap-3 md:overflow-y-auto w-full h-full md:w-4/5 relative" role="main">
         @foreach ($collections as $collection)
         <div x-cloak x-data="{ desplegable: false }" class=" flex flex-col bg-blanco p-3 rounded-xl w-full" x-bind:class="desplegable ? 'h-full absolute justify-between':'h-[36.9vh]  sm:w-[48.9%] md:w-[45%] lg:w-[30%]'">
             <div class="flex justify-between w-full" x-bind:class="desplegable ? 'flex-row items-center' : 'flex-col-reverse h-full'">

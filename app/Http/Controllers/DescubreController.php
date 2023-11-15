@@ -23,6 +23,8 @@ class DescubreController extends Controller
             ["/img/juego1/4.jpg",
             "/img/juego1/4.jpg",
             "<b>Descripcion:</b><br>Esta es una pequeña descripcion 4"],];
+        $dataJuego1 = Juegopareja::all();
+        
         return view('descubre.juego1', compact('dataJuego1'));
     }
 }

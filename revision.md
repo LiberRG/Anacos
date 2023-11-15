@@ -26,3 +26,7 @@ Busca codigo para saber la estructura de codigo
 Busca previo para ver las diferencias con la estructura previa
 routes auth.php no existe
 resources/views vacia
+
+
+
+referentes = {!! json_encode($referentes->shuffle()->toArray()) !!};

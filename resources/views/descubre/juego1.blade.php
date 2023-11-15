@@ -6,7 +6,7 @@
 {{-- Página de resultados de búsqueda, con el mosaico de sesiones.--}}
 
 <div class="flex justify-between gap-x-8 container py-3 h-[81.6vh] xl:max-w-7xl relative">
-    <main id="tablero" class="flex items-center justify-evenly flex-wrap overflow-y-auto basis-3/4">
+    <main id="tablero" class="flex items-center justify-evenly flex-wrap overflow-y-auto basis-3/4" role="main">
         @foreach ($dataJuego1 as $data)
         <x-card></x-card>
         <x-card></x-card>
@@ -15,8 +15,17 @@
     <aside class="flex flex-col gap-y-5 basis-1/4 h-[76.3vh] sticky top-24">
         <div class="flex w-full h-full">
             <div class="w-full h-[95%] bg-gris-oscuro flex items-end rounded-xl my-auto p-3">
-                <div id="text-description"></div>
+                <div id="description">
+                    <div id="title-description"></div>
+                    <div id="text-description"></div>
+                </div>
                 <div id="name-collection">
+                    <div>
+                        <p>¿Jugamos a emparejar cartas?</p>
+                        <p>El juego es sencillo selecciona una carta y se te mostrará una imagen.</p>
+                        <p>Las imagenes están relacionadas de dos en dos según lo que representan.</p>
+                        <p>Intenta unir las parejas levantando las carta y haciendo memoria para recordar si ya la has visto antes</p>
+                    </div>
                     <h3 class="h3 font-normal">Descubre</h3>
                     <h1 id="titleDescubre" class="h1">Combarro</h1>
                 </div>
@@ -39,7 +48,8 @@
 
         data = []
         selects = []
-        document.getElementById("text-description").innerHTML = ""
+        document.getElementById("title-description").innerHTML = ""
+        document.getElementById("text-description").innerHTML = ""        
         document.getElementById("name-collection").setAttribute("style", "diplay:inline-block")
 
         for (let i = 0; i < DATA_JUEGO.length; i++) {
@@ -98,6 +108,7 @@
                 card2.style.transform = "rotateY(0deg)"
             } else {
                 document.getElementById("name-collection").setAttribute("style", "display:none")
+                document.getElementById("title-description").innerHTML = description[selects[0].slice(-1)] //añadir nombre
                 document.getElementById("text-description").innerHTML = description[selects[0].slice(-1)]
             }
 

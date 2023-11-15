@@ -13,7 +13,7 @@
 @endsection
 
 @section('content')
-<main class="py-8">
+<main class="py-8" role="main">
     <article class="my-14">
         <h1 class="h1 text-center text-magenta-oscuro my-5 uppercase">El Patrimonio Gallego</h1>
         <section class="bg-gris-oscuro">
