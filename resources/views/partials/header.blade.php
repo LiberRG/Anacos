@@ -9,60 +9,56 @@
                     <span class="flex items-start gap-x-6 flex-wrap md:inline
                         text-lg font-bold md:font-normal
                         p-5 xl:px-8 2xl:px-10">
-                        <button name="planea" @click="desplegable($event)" class="uppercase min-w-[25%] md:min-w-max hover:md:text-magenta-oscuro font-semibold" x-bind:class="planea ? 'md:text-magenta-oscuro' : 'md:text-blanco'">
-                            Vive
+                        <button name="planea" @click="desplegable($event)" 
+                        class="uppercase min-w-[25%] md:min-w-max hover:md:text-magenta-oscuro font-semibold
+                        @if (Route::currentRouteName() == "vive.index")
+                        text-magenta-oscuro
+                        @else
+                        text-blanco
+                        @endif 
+                        "                       
+                        x-bind:class="planea ? 'md:text-magenta-oscuro' : ''">
+                            Vive                  
                         </button>
                         <div class="font-normal min-w-max flex flex-col
-                        text-start text-negro" x-bind:class="planea ? 'md:absolute md:right-0 md:bg-azul-claro/[0.9] md:z-50 md:w-2/5 lg:w-1/3' :'md:hidden'">
-                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('vive.index') }}">
-                                Alojamiento
+                        text-start text-negro" x-bind:class="planea ? 'md:absolute md:right-0 md:bg-azul-claro/[0.9] md:z-50 md:w-2/5 lg:w-1/3' :'md:hidden'">                            
+                            @foreach (config('web.FILTRO_VIVE') as $filtro )
+                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco"
+                            @if (isset($lugar) && $lugar != null) 
+                            href= "{{ route('vive.index', [$filtro ,$lugar->nombre]) }}"
+                            @else
+                            href= "{{route('vive.index', $filtro)}}"
+                            @endif
+                            >
+                                {{$filtro}}
                             </a>
-                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('vive.index') }}">
-                                Servicios turísticos
-                            </a>
-                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('vive.index') }}">
-                                Como llegar
-                            </a>
-                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('vive.index') }}">
-                                Cultura y tradiciones
-                            </a>
-                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('vive.index') }}">
-                                Sabores del lugar
-                            </a>
-                            <a class="p hover:text-azul-oscuro md:p-5" href="{{ route('vive.index') }}">
-                                Paisajes
-                            </a>
+                            @endforeach
                         </div>
                     </span>
                     <span class=" flex gap-x-6 items-start flex-wrap md:inline
                         text-lg font-bold md:font-normal
                         p-5 xl:px-8 2xl:px-10">
-                        <a name="inspira" href="{{ route('inspira.index') }}" class="text-center uppercase min-w-[25%] md:min-w-max hover:md:text-magenta-oscuro font-semibold">
+                        <a name="inspira" href="{{ route('inspira.index') }}" class="text-center uppercase min-w-[25%] md:min-w-max hover:md:text-magenta-oscuro font-semibold
+                        @if (Route::currentRouteName() == "inspira.index")
+                        text-magenta-oscuro
+                        @else
+                        text-blanco
+                        @endif
+                        ">
                             Inspirate
                         </a>
-                        <!--<div class="font-normal min-w-max flex flex-col
-                        text-start text-negro" x-bind:class="inspira ? 'md:absolute md:right-0 md:bg-azul-claro/[0.9] md:z-50 md:w-2/5 lg:w-1/3' :'md:hidden'">
-                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('inspira.index') }}">
-                                Colección Galiza máxica
-                            </a>
-                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('inspira.index') }}">
-                                Colección Sons
-                            </a>
-                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('inspira.index') }}">
-                                Colección Ollar da natureza
-                            </a>
-                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco" href="{{ route('inspira.index') }}">
-                                colección A liberdade do toxo
-                            </a>
-                            <a class="p hover:text-azul-oscuro md:p-5" href="">
-                                Colección Combarro
-                            </a>
-                        </div>-->
                     </span>
                     <span class=" flex gap-x-6 items-start flex-wrap md:inline
                         text-lg font-bold md:font-normal
                         p-5 xl:px-8 2xl:px-10">
-                        <button name="juega" @click="desplegable($event)" class="uppercase min-w-[25%] md:min-w-max hover:md:text-magenta-oscuro font-semibold" x-bind:class="juega ? 'md:text-magenta-oscuro' : 'md:text-blanco'">
+                        <button name="juega" @click="desplegable($event)" class="uppercase min-w-[25%] md:min-w-max hover:md:text-magenta-oscuro font-semibold
+                        @if (Route::currentRouteName() == "descubre.juego1")
+                        text-magenta-oscuro
+                        @else
+                        text-blanco 
+                        @endif
+                        " 
+                        x-bind:class="juega ? 'md:text-magenta-oscuro' : 'md:text-blanco'">
                             Descubre
                         </button>
                         <div class="font-normal min-w-max flex flex-col

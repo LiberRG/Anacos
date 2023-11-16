@@ -4,8 +4,8 @@
 
 @section('contentMap')
 <div class="h-[89.3vh]">
-    @if(isset($lugar) && $lugar != null)
-    <x-map id="" pathImg="img/mapas/map-combarro.png"></x-map> 
+    @if(isset($lugar) && $lugar != null)    
+    <x-map :lugar=$lugar ></x-map>
     @else
     <x-choose :lugares=$lugares></x-choose> 
     @endif

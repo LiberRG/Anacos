@@ -40,6 +40,7 @@
 </head>
 
 <body class="antialiased h-full @yield('page-class')">
+    
     @include('partials.header')
     <div class="flex-grow">
             @yield('content')

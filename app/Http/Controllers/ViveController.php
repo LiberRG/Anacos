@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class ViveController extends Controller
 {
-    public function index($lugar = null){
+    public function index($filtro= null, $lugar = null){
         $lugares = [
             ["id" => "01",
             "name" => "Combarro",

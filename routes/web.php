@@ -24,7 +24,7 @@ require __DIR__.'/auth.php';
 Route::view('juego2', 'descubre.juego2')->name('descubre.juego2');
 
 Route::get('juego1', [DescubreController::class, 'juego1'])->name('descubre.juego1');
-Route::get('vive/{lugar?}', [ViveController::class, 'index'])->name('vive.index');
+Route::get('vive/{filtro?}/{lugar?}', [ViveController::class, 'index'])->name('vive.index');
 Route::get('inspira', [InspiraController::class, 'index'])->name('inspira.index');
 Route::get('/{lugar?}',[MapController::class,'index'])->name('map.index');
 
