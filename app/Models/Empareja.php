@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 class Empareja extends Model
 {
     use HasFactory;
-    public function ImgDiseño(){
+    public function imgDibujo(){
         return $this->HasOne(Imagen::class, 'id', 'imagen_id');
     }
 }

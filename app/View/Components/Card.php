@@ -11,8 +11,7 @@ class Card extends Component
     
     public function __construct(
         public string $id,      
-        public string $path,      
-        public ?string $alt =null,  
+        public string $path
         )
         {    }
 

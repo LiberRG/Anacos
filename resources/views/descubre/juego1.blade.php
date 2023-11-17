@@ -7,16 +7,16 @@
 
 <div class="flex justify-between items-center gap-x-8 container py-3 h-[86.6vh] xl:max-w-7xl relative">
     <main id="tablero" class="flex items-center justify-evenly flex-wrap overflow-y-auto basis-3/4 h-full" role="main">
-        @foreach ($dataJuego as $data)
-        <x-card id="card1-{{$data->id}}" path="{{$data->rutaImg}}"></x-card>
-        <x-card id="card2-{{$data->id}}" path="{{$data->ImgDiseño->rutaImg}}" alt="alt"></x-card>
+        
+        @foreach ($dataJuego as $data)        
+        <x-card id="{{$data[0]}}" path="{{$data[1]}}"></x-card>
         @endforeach
     </main>
     <aside class="flex flex-col gap-y-5 basis-1/4 h-[76.3vh] sticky top-24">
         <div class="flex w-full h-full">
-            <div class="w-full min-w-[200px] h-[95%] bg-gris-oscuro flex items-end rounded-xl my-auto p-5">
+            <div class="w-full min-w-[200px] h-[95%] bg-gris-oscuro flex items-center rounded-xl my-auto p-5">
                 <div id="description">
-                    <div id="title-description"></div>
+                    <div id="title-description" class="h2 pb-5"></div>
                     <div id="text-description"></div>
                 </div>
                 <div id="name-collection" class="h-full flex flex-col justify-between">
@@ -40,38 +40,37 @@
 </div>
 
 <script>
-    var data = []
     var selects = []
-    var description = []
-    
+    var description = <?= json_encode($description); ?>;
+    var data = []
     window.addEventListener("DOMContentLoaded", dashboard(), false);
 
     function dashboard() {
-
         data = []
         selects = []
+
         document.getElementById("title-description").innerHTML = ""
         document.getElementById("text-description").innerHTML = ""        
-        document.getElementById("name-collection").setAttribute("style", "diplay:inline-block")
-
+        document.getElementById("name-collection").setAttribute("style", "diplay:inline")
         let tablero = document.getElementById("tablero");
         cards = tablero.children
-        for (let i = 0; i < data.length; i++) {
+        console.log(cards)
+        for (let i = 0; i < cards.length; i++) {
             card = cards[i]
+            console.log(card)
             if (card.querySelector('.card').style.transform == "rotateY(180deg)") {
                 card.querySelector('.card').style.transform = "rotateY(0deg)"
             }
             card.addEventListener('click', () => {
-                selectCard(data[i].id)
+                id=cards[i].firstElementChild.id
+                selectCard(cards[i].firstElementChild.id)
             })
-            card.querySelector('.card').id = "card" + data[i].id
-            card.querySelector('img').src = data[i].img
 
         }
     }
 
     function selectCard(i) {
-        let selectCard = document.getElementById("card" + i)
+        let selectCard = document.getElementById(i)
 
         if (selectCard.style.transform != "rotateY(180deg)") {
             selectCard.style.transform = "rotateY(180deg)"
@@ -87,14 +86,19 @@
         setTimeout(() => {
 
             if (selects[0].slice(-1) != selects[1].slice(-1)) {
-                let card1 = document.getElementById("card" + selects[0])
-                let card2 = document.getElementById("card" + selects[1])
+                let card1 = document.getElementById(selects[0])
+                let card2 = document.getElementById(selects[1])
                 card1.style.transform = "rotateY(0deg)"
                 card2.style.transform = "rotateY(0deg)"
             } else {
                 document.getElementById("name-collection").setAttribute("style", "display:none")
-                document.getElementById("title-description").innerHTML = description[selects[0].slice(-1)] //añadir nombre
-                document.getElementById("text-description").innerHTML = description[selects[0].slice(-1)]
+                description.forEach(element => {
+                    if(element[0] == selects[0].slice(-1)){
+                        document.getElementById("title-description").innerHTML = element[1];
+                        document.getElementById("text-description").innerHTML = element[2];
+                    }
+                });
+                
             }
 
         }, 800);
