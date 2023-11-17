@@ -17,7 +17,7 @@
         </div>
     </div>
 
-    <div x-cloak class="bg-azul-claro/[0.9] font-medium absolute right-0 bottom-14 w-full text-start z-10 ">
+    <div x-cloak class="bg-azul-claro/[0.9] font-medium absolute right-0 bottom-20 w-full text-start z-10 ">
         <div class="container flex justify-center sm:justify-end">
 
             <div x-bind:class="cookie ? 'py-4' :'hidden'">

@@ -13,6 +13,25 @@ class ImagenSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        DB::table('imagens')->insert([
+            'rutaImg' => 'img/colecciones/horreo.jpg',
+            'alt' => ''
+            'categoria' => 'juego',
+        ]);
+        DB::table('imagens')->insert([
+            'rutaImg' => 'img/colecciones/queimada.jpg',
+            'alt' => ''
+            'categoria' => 'juego',
+        ]);
+        DB::table('imagens')->insert([
+            'rutaImg' => 'img/colecciones/meiga.jpg',
+            'alt' => ''
+            'categoria' => 'juego',
+        ]);
+        DB::table('imagens')->insert([
+            'rutaImg' => 'img/colecciones/castro.jpg',
+            'alt' => ''
+            'categoria' => 'juego',
+        ]);
     }
 }

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page-class', 'eventsIndex')
+@section('page-class', 'viveIndex')
 
 @section('content')
     {{-- Página de vive --}}
@@ -13,7 +13,7 @@
             </div>
             <nav class="grow my-auto flex flex-col justify-center" role="navigation">
                 @foreach (config('web.FILTRO_VIVE') as $filtro)
-                    <a class="p hover:text-azul-oscuro md:py-3" @if (isset($lugar) && $lugar != null) href= "{{ route('vive.index', $lugar->nombre) }}"
+                    <a class="p capitalize hover:text-azul-oscuro md:py-3" @if (isset($lugar) && $lugar != null) href= "{{ route('vive.index', $lugar->nombre) }}"
                             @else
                                 href= "{{ route('vive.index') }}" @endif>
                         {{ $filtro }}

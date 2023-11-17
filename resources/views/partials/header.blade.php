@@ -23,7 +23,7 @@
                         <div class="font-normal min-w-max flex flex-col
                         text-start text-negro" x-bind:class="planea ? 'md:absolute md:right-0 md:bg-azul-claro/[0.9] md:z-50 md:w-2/5 lg:w-1/3' :'md:hidden'">                            
                             @foreach (config('web.FILTRO_VIVE') as $filtro )
-                            <a class="p hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco"
+                            <a class="p capitalize hover:text-azul-oscuro md:p-5 md:border-b md:border-blanco"
                             @if (isset($lugar) && $lugar != null) 
                             href= "{{ route('vive.index', [$filtro ,$lugar->nombre]) }}"
                             @else
@@ -138,9 +138,6 @@
     function positionNav() {
         navElements = document.querySelectorAll("button+div.font-normal");
         navDown = document.getElementById("navDown")
-
-        console.log(document.getElementById('header').getBoundingClientRect().bottom)
-        console.log(window.innerHeight)
 
         navDown.setAttribute("style", "bottom: 5rem")
         if (document.getElementById('header').getBoundingClientRect().bottom >= window.innerHeight* 2/3) {

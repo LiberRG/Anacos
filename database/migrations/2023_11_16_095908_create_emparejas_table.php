@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('emparejas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('imagens_id');
+            $table->foreignId('imagen_id');
             $table->string('rutaImg');
             $table->string('descripcion');
         });

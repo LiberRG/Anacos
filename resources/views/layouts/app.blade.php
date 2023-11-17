@@ -39,10 +39,10 @@
 
 </head>
 
-<body class="antialiased h-full @yield('page-class')">
+<body class="antialiased flex flex-col justify-between h-full @yield('page-class')">
     
     @include('partials.header')
-    <div class="flex-grow">
+    <div class="">
             @yield('content')
     </div>
     @include('partials.footer')

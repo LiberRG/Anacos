@@ -18,7 +18,7 @@ return new class extends Migration
             $table->decimal('posicionTop');
             $table->decimal('posicionLeft');
             $table->string('descripcion')->nullable();
-            $table->foreignId('imagens_id')->nullable();
+            $table->foreignId('imagen_id')->nullable();
         });
     }
 

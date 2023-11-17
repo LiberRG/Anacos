@@ -1,29 +1,29 @@
 @extends('layouts.app')
 
-@section('page-class', 'sessionsIndex')
+@section('page-class', 'inspiraIndex')
 
 @section('content')
 {{-- Página de inspira. --}}
 
-<div class="h-full flex flex-col md:flex-row gap-5 container md:h-[81.6vh] xl:max-w-6xl py-5">
+<div class="h-full flex flex-col md:flex-row gap-5 container md:h-[81.6vh] xl:max-w-7xl py-5">
     <aside class="md:grid grid-rows-3 gap-5 md:w-1/4 md:sticky top-24">
-        <div class="row-span-1 flex-col justify-center items-center bg-gris-oscuro rounded-xl p-3 hidden md:flex">
+        <div class="row-span-1 flex-col justify-center items-center bg-gris-oscuro rounded-xl p-5 hidden md:flex">
             <!--<div class="bg-blanco rounded-full border-4 border-blanco w-fit my-2 mx-auto">
                 @svg("isotipo-anacos", 'w-8 h-auto')
             </div>-->
             <h1 class="h1 uppercase md:text-3xl lg:text-4xl">Anacos</h1>
             <h3 class="h3">Galicia</h3>
         </div>
-        <div class="row-start-2 row-end-4 flex items-end bg-azul-claro text-blanco rounded-xl p-3">
+        <div class="min-w-[200px] row-start-2 row-end-4 flex items-end bg-azul-claro text-blanco rounded-xl p-5">
             <div id="name-collection">
                 <h3 class="h3 font-normal">Inspirate</h3>
                 <h1 class="h1">Galicia</h1>
             </div>
         </div>
     </aside>
-    <main class="flex flex-wrap gap-3 md:overflow-y-auto w-full h-full md:w-4/5 relative" role="main">
+    <main class="flex flex-wrap gap-3 md:overflow-y-auto w-full h-full md:w-4/5 relative mx-3" role="main">
         @foreach ($collections as $collection)
-        <div x-cloak x-data="{ desplegable: false }" class=" flex flex-col bg-blanco p-3 rounded-xl w-full" x-bind:class="desplegable ? 'h-full absolute justify-between':'h-[36.9vh]  sm:w-[48.9%] md:w-[45%] lg:w-[30%]'">
+        <div x-cloak x-data="{ desplegable: false }" class=" flex flex-col bg-blanco p-5 rounded-xl w-full" x-bind:class="desplegable ? 'h-full absolute justify-between':'h-[36.9vh]  sm:w-[48.9%] md:w-[48%]  xl:w-[32.3%]'">
             <div class="flex justify-between w-full" x-bind:class="desplegable ? 'flex-row items-center' : 'flex-col-reverse h-full'">
                 <h2 class="h2 font-bold text-azul-oscuro">{{ $collection['name'] }}</h2>
                 <button class="self-end" @click="desplegable=!desplegable">@svg("ico-add", "w-10 h-auto text-azul-oscuro")</button>

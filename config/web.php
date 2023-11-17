@@ -6,12 +6,12 @@ return [
         'defaultDuration' => env('PV_CACHE_DEFAULT_DURATION', 60)
     ],
     'FILTRO_VIVE' => [
-        'Alojamiento',
-        'Servicios turísticos',
-        'Como llegar',
-        'Cultura y tradiciones',
-        'Sabores del lugar',
-        'Paisajes',
+        'alojamiento',
+        'servicios turísticos',
+        'como llegar',
+        'cultura y tradiciones',
+        'sabores del lugar',
+        'paisajes',
     ]
 
 ];

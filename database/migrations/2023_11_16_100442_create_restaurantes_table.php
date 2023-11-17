@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('restaurantes', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('imagens_id')->nullable();
+            $table->foreignId('imagen_id')->nullable();
             $table->integer('telefono')->nullable();
             $table->string('email')->nullable();
             $table->string('web')->nullable();

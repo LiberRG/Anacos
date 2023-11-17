@@ -1,33 +1,35 @@
 @extends('layouts.app')
 
-@section('page-class', 'descubreJuego1')
+@section('page-class', 'descubreEmpareja')
 
 @section('content')
 {{-- Página de resultados de búsqueda, con el mosaico de sesiones.--}}
 
-<div class="flex justify-between gap-x-8 container py-3 h-[81.6vh] xl:max-w-7xl relative">
-    <main id="tablero" class="flex items-center justify-evenly flex-wrap overflow-y-auto basis-3/4" role="main">
-        @foreach ($dataJuego1 as $data)
-        <x-card></x-card>
-        <x-card></x-card>
+<div class="flex justify-between items-center gap-x-8 container py-3 h-[86.6vh] xl:max-w-7xl relative">
+    <main id="tablero" class="flex items-center justify-evenly flex-wrap overflow-y-auto basis-3/4 h-full" role="main">
+        @foreach ($dataJuego as $data)
+        <x-card id="card1-{{$data->id}}" path="{{$data->rutaImg}}"></x-card>
+        <x-card id="card2-{{$data->id}}" path="{{$data->ImgDiseño->rutaImg}}" alt="alt"></x-card>
         @endforeach
     </main>
     <aside class="flex flex-col gap-y-5 basis-1/4 h-[76.3vh] sticky top-24">
         <div class="flex w-full h-full">
-            <div class="w-full h-[95%] bg-gris-oscuro flex items-end rounded-xl my-auto p-3">
+            <div class="w-full min-w-[200px] h-[95%] bg-gris-oscuro flex items-end rounded-xl my-auto p-5">
                 <div id="description">
                     <div id="title-description"></div>
                     <div id="text-description"></div>
                 </div>
-                <div id="name-collection">
-                    <div>
-                        <p>¿Jugamos a emparejar cartas?</p>
-                        <p>El juego es sencillo selecciona una carta y se te mostrará una imagen.</p>
-                        <p>Las imagenes están relacionadas de dos en dos según lo que representan.</p>
-                        <p>Intenta unir las parejas levantando las carta y haciendo memoria para recordar si ya la has visto antes</p>
+                <div id="name-collection" class="h-full flex flex-col justify-between">
+                    <div class="my-auto flex flex-col gap-8">
+                        <p class="p pl-0 font-bold">¿Jugamos a emparejar cartas?</p>
+                        <p class="p pl-0">El juego es sencillo selecciona una carta y se te mostrará una imagen.</p>
+                        <p class="p pl-0">Las imagenes están relacionadas de dos en dos según lo que representan.</p>
+                        <p class="p pl-0">Intenta unir las parejas levantando las carta y haciendo memoria para recordar si ya la has visto antes</p>
                     </div>
-                    <h3 class="h3 font-normal">Descubre</h3>
-                    <h1 id="titleDescubre" class="h1">Combarro</h1>
+                    <div>
+                        <h3 class="h3 font-normal">Descubre</h3>
+                        <h1 id="titleDescubre" class="h1">Combarro</h1>
+                    </div>
                 </div>
             </div>
         </div>
@@ -38,10 +40,10 @@
 </div>
 
 <script>
+    var data = []
     var selects = []
     var description = []
-    var DATA_JUEGO = <?= json_encode($dataJuego1); ?>;
-    var data = []
+    
     window.addEventListener("DOMContentLoaded", dashboard(), false);
 
     function dashboard() {
@@ -52,23 +54,6 @@
         document.getElementById("text-description").innerHTML = ""        
         document.getElementById("name-collection").setAttribute("style", "diplay:inline-block")
 
-        for (let i = 0; i < DATA_JUEGO.length; i++) {
-            for (let j = 0; j < DATA_JUEGO[i].length; j++) {
-                const element = DATA_JUEGO[i][j];
-                if (j == (DATA_JUEGO[i].length - 1)) {
-                    description.push(element)
-                } else {
-                    id = j + "-" + i
-                    data.push({
-                        id: id,
-                        img: element
-                    })
-                }
-            }
-        }
-        if (data.length > 0) {
-            data.sort((img) => Math.random() - 0.8, )
-        }
         let tablero = document.getElementById("tablero");
         cards = tablero.children
         for (let i = 0; i < data.length; i++) {
