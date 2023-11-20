@@ -22,22 +22,27 @@
         </div>
     </aside>
     <main class="flex flex-wrap gap-3 md:overflow-y-auto w-full h-full md:w-4/5 relative mx-3" role="main">
-        @foreach ($collections as $collection)
-        <div x-cloak x-data="{ desplegable: false }" class=" flex flex-col bg-blanco p-5 rounded-xl w-full" x-bind:class="desplegable ? 'h-full absolute justify-between':'h-[36.9vh]  sm:w-[48.9%] md:w-[48%]  xl:w-[32.3%]'">
+        @foreach ($data as $collection)
+        <div x-cloak x-data="{ desplegable: false }" class=" flex flex-col bg-blanco p-5 rounded-xl w-full" x-bind:class="desplegable ? 'h-full absolute justify-between z-10':'h-[36.9vh]  sm:w-[48.9%] md:w-[48%]  xl:w-[32.3%]'">
             <div class="flex justify-between w-full" x-bind:class="desplegable ? 'flex-row items-center' : 'flex-col-reverse h-full'">
-                <h2 class="h2 font-bold text-azul-oscuro">{{ $collection['name'] }}</h2>
+                <h2 class="h2 font-bold text-azul-oscuro">{{ $collection->nombre }}</h2>
+                <div class="relative" style="height:0;width:100%;padding-bottom:80%" x-bind:class="desplegable ?'hidden':'inline-block'">
+                    <div class="absolute w-full h-full flex justify-end">
+                        <img class="w-full object-cover" src="{{ $collection->imgPortada->rutaImg }}" alt="">
+                    </div>
+                </div>
                 <button class="self-end" @click="desplegable=!desplegable">@svg("ico-add", "w-10 h-auto text-azul-oscuro")</button>
             </div>
             <div class="grow grid grid-cols-1 sm:grid-cols-3 gap-5 my-3 mx-auto justify-between w-full sm:w-[82%] md:w-[90%] lg:w-full" x-bind:class="desplegable ?'inline-block' : 'hidden'">
                 <div class="lg:row-span-2 col-span-1 w-[40%] sm:w-full m-auto">
-                    <img class="rounded-xl h-full" src="{{ $collection['imgCollection'] }}" alt="">
+                    <img class="rounded-xl h-full" src="{{ $collection->imgPortada->rutaImg }}" alt="">
                 </div>
                 <div class="col-span-2 row-span-1 self-end  font-normal">
-                    <p>{{ $collection['description'] }}</p>
+                    <p>{{ $collection->descripcion }}</p>
                 </div>
                 <div class="grid lg:justify-start grid-cols-3 sm:grid-cols-5 gap-3 col-span-2 sm:col-span-3 lg:col-span-2 row-span-1">
-                    @foreach ($collection['products'] as $product)
-                    <img class="rounded-xl" src="{{ $product }}" alt="">
+                    @foreach ($collection->imgCollection as $product)
+                    <img class="rounded-xl" src="{{ $product->rutaImg }}" alt="">
                     @endforeach
                 </div>
             </div>

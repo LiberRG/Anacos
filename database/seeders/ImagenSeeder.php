@@ -27,6 +27,7 @@ class ImagenSeeder extends Seeder
             'rutaImg' => 'img/colecciones/meiga.jpg',
             'alt' => '',
             'categoria' => 'juego',
+            'coleccion_id' => 1,
         ]);
         DB::table('imagens')->insert([
             'rutaImg' => 'img/colecciones/castro.jpg',

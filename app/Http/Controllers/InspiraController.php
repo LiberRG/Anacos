@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Coleccion;
 
 class InspiraController extends Controller
 {
@@ -43,6 +44,8 @@ class InspiraController extends Controller
             "products" => ["/img/juego1/1.jpg", "/img/juego1/1.jpg", "/img/juego1/1.jpg","/img/juego1/1.jpg","/img/juego1/1.jpg"]
             ]
         ];
-        return view('inspira.index', compact('collections'));
+        $data = Coleccion::all();  
+
+        return view('inspira.index', compact('data'));
     }
 }
