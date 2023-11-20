@@ -1,4 +1,4 @@
-<div class="area-card cursor-pointer inline-block m-3 w-52">
+<div class="area-card cursor-pointer inline-block m-2 w-52">
     <div class="card cursor-pointer relative inline-block" id="{{$id}}" style="height:0;width:100%;padding-bottom:125%;transform: rotateY(0deg);">
         <div class="drowCard w-full h-full absolute flex justify-center">
             <img class="w-full rounded-xl border-8 border-azul-oscuro" src="{{$path}}" alt="">
