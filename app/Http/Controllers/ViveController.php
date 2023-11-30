@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Lugar;
+use App\Models\Restaurante;
+use App\Models\Alojamiento;
 
 class ViveController extends Controller
 {
@@ -23,7 +26,9 @@ class ViveController extends Controller
             "top" => "3",
             "left" => "78"]
         ];
-        $service=[
+        $lugares = Lugar::all();
+        
+        $ser=[
             "pathImg" => "/img/juego1/4.jpg",
             "title" => "titulo",
             "description" => "description",
@@ -40,6 +45,22 @@ class ViveController extends Controller
             "score" => 3,
             ],
         ];
-        return view('vive.index', compact('service', 'lugares'));
+
+        if(isset($filtro)){
+            switch ($filtro) {
+                case 'restaurante':
+                    $services = Restaurante::all();
+                    break;
+                
+                case 'alojamiento':
+                    $services = Alojamiento::all();
+                    break;
+                
+                default:
+                    $services = Alojamiento::all();
+                    break;
+            }
+        }
+        return view('vive.index', compact('services', 'lugares'));
     }
 }

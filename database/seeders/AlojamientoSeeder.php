@@ -6,14 +6,14 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class RestauranteSeeder extends Seeder
+class AlojamientoSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        DB::table('restaurantes')->insert([
+        DB::table('alojamientos')->insert([
             'imagen_id' => null,
             'nombre' => 'Hotel Combarro',
             'telefono' => '(+34)986772131',
@@ -32,7 +32,7 @@ class RestauranteSeeder extends Seeder
             'lugar_id' => '1'
         ]);
 
-        DB::table('restaurantes')->insert([
+        DB::table('alojamientos')->insert([
             'imagen_id' => null,
             'nombre' => 'Casa Noelmar',
             'telefono' => '(+34)986770588',
@@ -49,7 +49,7 @@ class RestauranteSeeder extends Seeder
             'lugar_id' => '1'
         ]);
 
-        DB::table('restaurantes')->insert([
+        DB::table('alojamientos')->insert([
             'imagen_id' => null,
             'nombre' => 'Apartamentos Dabarca Combarro',
             'telefono' => '(+34)986869723',
@@ -65,7 +65,5 @@ class RestauranteSeeder extends Seeder
             Ideal para familias',
             'lugar_id' => '1'
         ]);
-
-
     }
 }

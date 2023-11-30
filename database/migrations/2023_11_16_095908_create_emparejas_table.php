@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('emparejas', function (Blueprint $table) {
             $table->id();
             $table->foreignId('imagen_id');
-            $table->string('rutaImg');
-            $table->string('descripcion');
-            $table->string('titulo');
+            $table->string('rutaImg', 120);
+            $table->string('descripcion', 300);
+            $table->string('titulo', 60);
         });
     }
 
