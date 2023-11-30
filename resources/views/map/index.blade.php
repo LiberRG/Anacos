@@ -18,24 +18,24 @@
         <h1 class="h1 text-center text-magenta-oscuro my-5 uppercase">El Patrimonio Gallego</h1>
         <section class="bg-gris-oscuro">
             <div class="flex py-4 relative container max-w-6xl m-auto">
-                <div class="relative" id="" style="height:0;width:100%;padding-bottom:18%">
+                <div class="relative"   style="height:0;width:100%;padding-bottom:18%">
                     <div class="absolute w-full h-full flex justify-center">
-                        <img class="w-full object-cover" src="img/juego1/4.jpg" alt="">
+                        <img class="w-full object-cover" src="img/inicio/patrimonio/1.wepb" alt="piedra con el simbolo del camino de Santiago que marca el kilometro 0. Se ve el mar de fondo">
                     </div>
                 </div>
-                <div class="relative" id="" style="height:0;width:100%;padding-bottom:18%">
+                <div class="relative"   style="height:0;width:100%;padding-bottom:18%">
                     <div class="absolute w-full h-full flex justify-center">
-                        <img class="w-full object-cover" src="img/juego1/4.jpg" alt="">
+                        <img class="w-full object-cover" src="img/inicio/patrimonio/2.wepb" alt="Boceto de la torre de Hercules hecho a boli y pintado con acuarela">
                     </div>
                 </div>
-                <div class="relative hidden xs:inline-block" id="" style="height:0;width:100%;padding-bottom:18%">
+                <div class="relative hidden xs:inline-block"   style="height:0;width:100%;padding-bottom:18%">
                     <div class="absolute w-full h-full flex justify-center">
-                        <img class="w-full object-cover" src="img/juego1/4.jpg" alt="">
+                        <img class="w-full object-cover" src="img/inicio/patrimonio/3.wepb" alt="Muralla de Lugo en primer y al fondo se ven las torres de la catedral">
                     </div>
                 </div>
-                <div class="relative hidden md:inline-block" id="" style="height:0;width:100%;padding-bottom:18%">
+                <div class="relative hidden md:inline-block"   style="height:0;width:100%;padding-bottom:18%">
                     <div class="absolute w-full h-full flex justify-center">
-                        <img class="w-full object-cover" src="img/juego1/4.jpg" alt="">
+                        <img class="w-full object-cover" src="img/inicio/patrimonio/4.wepb" alt="Hombre vestido de druida, con una camisola hecha de hoja y una careta de madera. Porta una antorcha encendida en la mano izquierda">
                     </div>
                 </div>
             </div>
@@ -58,24 +58,24 @@
         <h1 class="h1 text-center text-magenta-oscuro my-5 uppercase">La Cultura Gallega</h1>
         <section class="bg-magenta-oscuro/[0.2]">
             <div class="flex py-4 relative container max-w-6xl m-auto">
-                <div class="relative" id="" style="height:0;width:100%;padding-bottom:18%">
+                <div class="relative" style="height:0;width:100%;padding-bottom:18%">
                     <div class="absolute w-full h-full flex justify-center">
-                        <img class="w-full object-cover" src="img/juego1/4.jpg" alt="">
+                        <img class="w-full object-cover" src="img/inicio/cultura/1.wepb" alt="mujeres vestidas con untraje tradicional gallega, de espaldas y con una pandereta en las manos">
                     </div>
                 </div>
-                <div class="relative" id="" style="height:0;width:100%;padding-bottom:18%">
+                <div class="relative" style="height:0;width:100%;padding-bottom:18%">
                     <div class="absolute w-full h-full flex justify-center">
-                        <img class="w-full object-cover" src="img/juego1/4.jpg" alt="">
+                        <img class="w-full object-cover" src="img/inicio/cultura/2.wepb" alt="Cuatro dibujos de rosalia de castro estanpados en diferentes colores (rojo, marrón, azul oscuro y amarillo)">
                     </div>
                 </div>
-                <div class="relative hidden xs:inline-block" id="" style="height:0;width:100%;padding-bottom:18%">
+                <div class="relative hidden xs:inline-block" style="height:0;width:100%;padding-bottom:18%">
                     <div class="absolute w-full h-full flex justify-center">
-                        <img class="w-full object-cover" src="img/juego1/4.jpg" alt="">
+                        <img class="w-full object-cover" src="img/inicio/cultura/3.wepb" alt="Rodaje de una serie por una calle Vigo, el actor canima entre el personal de camaras y sonido">
                     </div>
                 </div>
-                <div class="relative hidden md:inline-block" id="" style="height:0;width:100%;padding-bottom:18%">
+                <div class="relative hidden md:inline-block" style="height:0;width:100%;padding-bottom:18%">
                     <div class="absolute w-full h-full flex justify-center">
-                        <img class="w-full object-cover" src="img/juego1/4.jpg" alt="">
+                        <img class="w-full object-cover" src="img/inicio/cultura/4.wepb" alt="Dibujo a acuarela, en tonos azules, de la estatua de Julio Verne sobre un calamar que esta en Vigo">
                     </div>
                 </div>
             </div>
@@ -89,7 +89,7 @@
             <br>
             <p>Después, la influencia de la nobleza disminuyó y la creación literaria oral se mantuvo fuerte. La arquitectura y la música se lucieron en el Renacimiento y el Barroco, ¡una explosión de creatividad! También hubo ilustrados de nivel europeo y el surgimiento de la universidad compostelana.</p>
             <br>
-            <p>A pesar de las crisis y la emigración, el Romanticismo trajo una nueva ola literaria, con autores como <b>Rosalía de Castro</b>. La música también brilló con compositores como <b>Juan Montes</b>. La emigración también hizo que la cultura gallega se extendiera por el mundo mundo, prueba se ello son la <b>arquitectura modernista cubana</b> o la <b>biblioteca gallega de Buenos Aires</b>.</p>
+            <p>A pesar de las crisis y la emigración, el Romanticismo trajo una nueva ola literaria, con autores como <b>Rosalía de Castro</b>. La música también brilló con compositores como <b>Juan Montes</b>. La emigración hizo que se extendiera por el mundo mundo, prueba se ello son la <b>arquitectura modernista cubana</b> o la <b>biblioteca gallega de Buenos Aires</b>.</p>
             <br>
             <p>La cultura gallega sufrió durante la dictadura franquista, pero con la democracia, hubo un resurgimiento cultural impresionante. La profesionalización y proyección internacional de la cultura se convirtieron en la norma, especialmente en el ámbito audiovisual y editorial. No podemos olvidar la fascinación de autores como <b>Julio Verne</b> o el a arquitecto <b>Michel Pacewicz</b> por la ciudad de Vigo y la cultura gallega.</p>
             <br>
