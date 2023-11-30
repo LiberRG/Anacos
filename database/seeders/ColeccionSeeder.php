@@ -14,12 +14,12 @@ class ColeccionSeeder extends Seeder
     public function run(): void
     {
         DB::table('coleccions')->insert([
-            'nombre' => 'Galiza máxica',
+            'nombre' => 'Horreo',
             'descripcion' => 'Esta es una pequeña descripcion 2',
             'imagen_id' => 1,
         ]);
         DB::table('coleccions')->insert([
-            'nombre' => 'Sons',
+            'nombre' => 'Solpor',
             'descripcion' => 'Esta es una pequeña descripcion 2',
             'imagen_id' => 1,
         ]);
@@ -29,7 +29,22 @@ class ColeccionSeeder extends Seeder
             'imagen_id' => 1,
         ]);
         DB::table('coleccions')->insert([
-            'nombre' => 'A liberdade do toxo',
+            'nombre' => 'Froitos do mar',
+            'descripcion' => 'Esta es una pequeña descripcion 2',
+            'imagen_id' => 1,
+        ]);
+        DB::table('coleccions')->insert([
+            'nombre' => 'Salitre',
+            'descripcion' => 'Esta es una pequeña descripcion 2',
+            'imagen_id' => 1,
+        ]);
+        DB::table('coleccions')->insert([
+            'nombre' => 'Combarro',
+            'descripcion' => 'Esta es una pequeña descripcion 2',
+            'imagen_id' => 1,
+        ]);
+        DB::table('coleccions')->insert([
+            'nombre' => 'Caleidoscopio azul',
             'descripcion' => 'Esta es una pequeña descripcion 2',
             'imagen_id' => 1,
         ]);
