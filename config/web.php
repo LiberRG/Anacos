@@ -12,6 +12,13 @@ return [
         'cultura y tradiciones',
         'sabores del lugar',
         'paisajes',
-    ]
+    ],
+    'KEY_ALOJAMIENTO' => 0,
+    'KEY_SERVICIOS_TURISTICOS' => 1,
+    'KEY_COMO_LLEGAR' => 2,
+    'KEY_CULTURA_Y_TRADICIONES' => 3,
+    'KEY_SABORES_DEL_LUGAR' => 4,
+    'KEY_PAISAJES' => 5,
+
 
 ];

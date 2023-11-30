@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+use App\Models\Alojamiento;
 
 class AlojamientoSeeder extends Seeder
 {
@@ -13,9 +12,11 @@ class AlojamientoSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('alojamientos')->insert([
-            'imagen_id' => null,
+        Alojamiento::firstOrCreate([
             'nombre' => 'Hotel Combarro',
+        ],
+        [
+            'imagen_id' => null,
             'telefono' => '(+34)986772131',
             'email' => 'hotelcombarro@hotelcombarro.es',
             'web' => 'www.hotelcombarro.es',
@@ -32,9 +33,11 @@ class AlojamientoSeeder extends Seeder
             'lugar_id' => '1'
         ]);
 
-        DB::table('alojamientos')->insert([
-            'imagen_id' => null,
+        Alojamiento::firstOrCreate([
             'nombre' => 'Casa Noelmar',
+        ],
+        [
+            'imagen_id' => null,
             'telefono' => '(+34)986770588',
             'email' => 'noelmar@hotmail.es',
             'web' => 'www.casanoelmarcombarro.com',
@@ -49,9 +52,11 @@ class AlojamientoSeeder extends Seeder
             'lugar_id' => '1'
         ]);
 
-        DB::table('alojamientos')->insert([
-            'imagen_id' => null,
+        Alojamiento::firstOrCreate([
             'nombre' => 'Apartamentos Dabarca Combarro',
+        ],
+        [
+            'imagen_id' => null,
             'telefono' => '(+34)986869723',
             'email' => 'info@hoteldabarca.com',
             'web' => 'www.hoteldabarca.com',

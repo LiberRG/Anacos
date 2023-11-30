@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+use App\Models\Coleccion;
 
 class ColeccionSeeder extends Seeder
 {
@@ -13,39 +12,59 @@ class ColeccionSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('coleccions')->insert([
+        Coleccion::firstOrCreate([
             'nombre' => 'Horreo',
             'descripcion' => 'Esta es una pequeña descripcion 2',
+        ],
+        [
             'imagen_id' => 1,
         ]);
-        DB::table('coleccions')->insert([
+
+        Coleccion::firstOrCreate([
             'nombre' => 'Solpor',
             'descripcion' => 'Esta es una pequeña descripcion 2',
+        ],
+        [
             'imagen_id' => 1,
         ]);
-        DB::table('coleccions')->insert([
+
+        Coleccion::firstOrCreate([
             'nombre' => 'Ollar da natureza',
             'descripcion' => 'Esta es una pequeña descripcion 2',
+        ],
+        [
             'imagen_id' => 1,
         ]);
-        DB::table('coleccions')->insert([
+
+        Coleccion::firstOrCreate([
             'nombre' => 'Froitos do mar',
             'descripcion' => 'Esta es una pequeña descripcion 2',
+        ],
+        [
             'imagen_id' => 1,
         ]);
-        DB::table('coleccions')->insert([
+
+        Coleccion::firstOrCreate([
             'nombre' => 'Salitre',
             'descripcion' => 'Esta es una pequeña descripcion 2',
+        ],
+        [
             'imagen_id' => 1,
         ]);
-        DB::table('coleccions')->insert([
+
+        Coleccion::firstOrCreate([
             'nombre' => 'Combarro',
             'descripcion' => 'Esta es una pequeña descripcion 2',
+        ],
+        [
             'imagen_id' => 1,
         ]);
-        DB::table('coleccions')->insert([
+
+        Coleccion::firstOrCreate([
             'nombre' => 'Caleidoscopio azul',
             'descripcion' => 'Esta es una pequeña descripcion 2',
+        ],
+        [
             'imagen_id' => 1,
         ]);
     }

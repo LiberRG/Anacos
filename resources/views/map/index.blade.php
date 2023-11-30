@@ -17,25 +17,25 @@
     <article class="my-14">
         <h1 class="h1 text-center text-magenta-oscuro my-5 uppercase">El Patrimonio Gallego</h1>
         <section class="bg-gris-oscuro">
-            <div class="flex py-4 relative container max-w-6xl m-auto">
+            <div class="flex py-4 relative container max-w-6xl m-auto"> 
                 <div class="relative"   style="height:0;width:100%;padding-bottom:18%">
                     <div class="absolute w-full h-full flex justify-center">
-                        <img class="w-full object-cover" src="img/inicio/patrimonio/1.wepb" alt="piedra con el simbolo del camino de Santiago que marca el kilometro 0. Se ve el mar de fondo">
+                        <img class="w-full object-cover" src="img/inicio/patrimonio/1.png" alt="piedra con el simbolo del camino de Santiago que marca el kilometro 0. Se ve el mar de fondo">
                     </div>
                 </div>
                 <div class="relative"   style="height:0;width:100%;padding-bottom:18%">
                     <div class="absolute w-full h-full flex justify-center">
-                        <img class="w-full object-cover" src="img/inicio/patrimonio/2.wepb" alt="Boceto de la torre de Hercules hecho a boli y pintado con acuarela">
+                        <img class="w-full object-cover" src="img/inicio/patrimonio/2.png" alt="Boceto de la torre de Hercules hecho a boli y pintado con acuarela">
                     </div>
                 </div>
                 <div class="relative hidden xs:inline-block"   style="height:0;width:100%;padding-bottom:18%">
                     <div class="absolute w-full h-full flex justify-center">
-                        <img class="w-full object-cover" src="img/inicio/patrimonio/3.wepb" alt="Muralla de Lugo en primer y al fondo se ven las torres de la catedral">
+                        <img class="w-full object-cover" src="img/inicio/patrimonio/3.png" alt="Muralla de Lugo en primer y al fondo se ven las torres de la catedral">
                     </div>
                 </div>
                 <div class="relative hidden md:inline-block"   style="height:0;width:100%;padding-bottom:18%">
                     <div class="absolute w-full h-full flex justify-center">
-                        <img class="w-full object-cover" src="img/inicio/patrimonio/4.wepb" alt="Hombre vestido de druida, con una camisola hecha de hoja y una careta de madera. Porta una antorcha encendida en la mano izquierda">
+                        <img class="w-full object-cover" src="img/inicio/patrimonio/4.png" alt="Hombre vestido de druida, con una camisola hecha de hoja y una careta de madera. Porta una antorcha encendida en la mano izquierda">
                     </div>
                 </div>
             </div>
@@ -60,22 +60,22 @@
             <div class="flex py-4 relative container max-w-6xl m-auto">
                 <div class="relative" style="height:0;width:100%;padding-bottom:18%">
                     <div class="absolute w-full h-full flex justify-center">
-                        <img class="w-full object-cover" src="img/inicio/cultura/1.wepb" alt="mujeres vestidas con untraje tradicional gallega, de espaldas y con una pandereta en las manos">
+                        <img class="w-full object-cover" src="img/inicio/cultura/1.png" alt="mujeres vestidas con untraje tradicional gallega, de espaldas y con una pandereta en las manos">
                     </div>
                 </div>
                 <div class="relative" style="height:0;width:100%;padding-bottom:18%">
                     <div class="absolute w-full h-full flex justify-center">
-                        <img class="w-full object-cover" src="img/inicio/cultura/2.wepb" alt="Cuatro dibujos de rosalia de castro estanpados en diferentes colores (rojo, marrón, azul oscuro y amarillo)">
+                        <img class="w-full object-cover" src="img/inicio/cultura/2.png" alt="Cuatro dibujos de rosalia de castro estanpados en diferentes colores (rojo, marrón, azul oscuro y amarillo)">
                     </div>
                 </div>
                 <div class="relative hidden xs:inline-block" style="height:0;width:100%;padding-bottom:18%">
                     <div class="absolute w-full h-full flex justify-center">
-                        <img class="w-full object-cover" src="img/inicio/cultura/3.wepb" alt="Rodaje de una serie por una calle Vigo, el actor canima entre el personal de camaras y sonido">
+                        <img class="w-full object-cover" src="img/inicio/cultura/3.png" alt="Rodaje de una serie por una calle Vigo, el actor canima entre el personal de camaras y sonido">
                     </div>
                 </div>
                 <div class="relative hidden md:inline-block" style="height:0;width:100%;padding-bottom:18%">
                     <div class="absolute w-full h-full flex justify-center">
-                        <img class="w-full object-cover" src="img/inicio/cultura/4.wepb" alt="Dibujo a acuarela, en tonos azules, de la estatua de Julio Verne sobre un calamar que esta en Vigo">
+                        <img class="w-full object-cover" src="img/inicio/cultura/4.png" alt="Dibujo a acuarela, en tonos azules, de la estatua de Julio Verne sobre un calamar que esta en Vigo">
                     </div>
                 </div>
             </div>

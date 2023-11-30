@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Alojamiento extends Model
 {
     use HasFactory;
+    public $timestamps = false;
     public function getId() { return $this->id; }
     public function getImagenId() { return $this->imagen_id; }
     public function getNombre() { return $this->nombre; }
@@ -20,4 +21,7 @@ class Alojamiento extends Model
     public function getDetalles() { return $this->detalles; }
     public function getLugarId() { return $this->lugar_id; }
     
+    public function getImagen(){
+        return $this->HasOne(Imagen::class, 'id', 'imagen_id');
+    }
 }

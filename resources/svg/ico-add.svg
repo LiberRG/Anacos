@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="40" height="43" viewBox="0 0 40 43">
-  <g id="Grupo_796" data-name="Grupo 796" transform="translate(-12.346 2.669)">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="Grupo_796" data-name="Grupo 796">
     <!-- <rect class="Rectangle" width="40" height="40" transform="translate(12.346 -0.169)" fill="currentColor"/> -->
-    <circle cx="32.5" cy="21" r="12" fill="currentColor"/>
-    <text class="ENTRAR" transform="translate(23.346 -2.669)" fill="#fff" font-size="32" font-family="OpenSans-Bold, Open Sans" font-weight="700" letter-spacing="0.01em">
-      <tspan x="0" y="32">+</tspan>
+    <circle cx="10" cy="10" r="10" fill="currentColor"/>
+    <text class="ENTRAR" fill="#fff" font-size="30" font-family="OpenSans-Bold, Open Sans" font-weight="700" letter-spacing="0.01em">
+      <tspan x="1.5" y="19.5">+</tspan>
     </text>
   </g>
 </svg>

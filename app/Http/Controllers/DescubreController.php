@@ -13,9 +13,9 @@ class DescubreController extends Controller
         $data = Empareja::all();   
         //$dataJuego = $dataJuego->shuffle();     
         foreach ($data as $key => $element) {
-            $dataJuego[] = ["1-".$element->id, $element->rutaImg];
-            $dataJuego[] = ["2-".$element->id, $element->imgDibujo->rutaImg];
-            $description[] = [$element->id, $element->titulo, $element->descripcion];
+            $dataJuego[] = ["1-".$element->getId(), $element->getRutaImg()];
+            $dataJuego[] = ["2-".$element->getId(), $element->getImgDibujo->getRutaImg()];
+            $description[] = [$element->getId(), $element->getTitulo(), $element->getDescripcion()];
         }
         shuffle($dataJuego);
         

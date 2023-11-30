@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+use App\Models\Lugar;
 
 class LugarSeeder extends Seeder
 {
@@ -13,22 +12,30 @@ class LugarSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('lugars')->insert([
+        Lugar::firstOrCreate([
             'nombre' => 'combarro',
+        ],
+        [
             'provincia' => 'Pontevedra',
             'posicionTop' => 60.00,
             'posicionLeft' => 16.00,
             'rutaMapa' => 'img/mapas/map-combarro.png'
         ]);
-        DB::table('lugars')->insert([
+
+        Lugar::firstOrCreate([
             'nombre' => 'illas cies',
+        ],
+        [
             'provincia' => 'Pontevedra',
             'posicionTop' => 66.00,
             'posicionLeft' => 10.00,
             'rutaMapa' => 'img/mapas/map-combarro.png'
         ]);
-        DB::table('lugars')->insert([
+
+        Lugar::firstOrCreate([
             'nombre' => 'playa catedrales',
+        ],
+        [
             'provincia' => 'Lugo',
             'posicionTop' => 3.00,
             'posicionLeft' => 78.00,
