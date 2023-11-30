@@ -16,22 +16,22 @@ class LugarSeeder extends Seeder
         DB::table('lugars')->insert([
             'nombre' => 'combarro',
             'provincia' => 'Pontevedra',
-            'posicionTop' => 60,
-            'posicionLeft' => 16,
+            'posicionTop' => 60.00,
+            'posicionLeft' => 16.00,
             'rutaMapa' => 'img/mapas/map-combarro.png'
         ]);
         DB::table('lugars')->insert([
             'nombre' => 'illas cies',
             'provincia' => 'Pontevedra',
-            'posicionTop' => 66,
-            'posicionLeft' => 10,
+            'posicionTop' => 66.00,
+            'posicionLeft' => 10.00,
             'rutaMapa' => 'img/mapas/map-combarro.png'
         ]);
         DB::table('lugars')->insert([
             'nombre' => 'playa catedrales',
             'provincia' => 'Lugo',
-            'posicionTop' => 3,
-            'posicionLeft' => 78,
+            'posicionTop' => 3.00,
+            'posicionLeft' => 78.00,
             'rutaMapa' => 'img/mapas/map-combarro.png'
         ]);
     }

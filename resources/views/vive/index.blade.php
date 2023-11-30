@@ -15,7 +15,7 @@
                 @foreach (config('web.FILTRO_VIVE') as $filtro)
                     <a class="p capitalize hover:text-azul-oscuro md:py-3" @if (isset($lugar) && $lugar != null) href= "{{ route('vive.index', $lugar->nombre) }}"
                             @else
-                                href= "{{ route('vive.index') }}" @endif>
+                                    href= "{{ route('vive.index') }}" @endif>
                         {{ $filtro }}
                     </a>
                 @endforeach
@@ -32,16 +32,20 @@
                 @endforeach
             </div>
             <div class="overflow-y-auto">
-                @php($pathImg = $service['pathImg'])
-                    @php($title = $service['title'])
-                        @php($description = $service['description'])
-                            @php($date = $service['date'])
-                                @php($contact = $service['contact'])
-                                    @php($details = $service['details'])
-                                        <x-service :pathImg=$pathImg :title=$title :description=$description :date=$date :contact=$contact
-                                            :details=$details></x-service>
-                                    </div>
-                                </main>
+                @foreach ($services as $service)
+                <x-service :service=$service ></x-service>
+                @endforeach
+            </div>
+        </main>
 
-                            </div>
-                        @endsection
+    </div>
+
+    {{-- @php($pathImg = $service->'pathImg')
+        @php($title = $service->'nombre')
+        @php($description = $service->'description'])
+        @php($date = $service->'data'])
+        @php($contact = $service->'contact'])
+        @php($details = $service->'detailles']) --}}
+
+
+@endsection

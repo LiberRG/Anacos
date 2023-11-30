@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('lugars', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
+            $table->string('nombre', 60);
             $table->enum('provincia', ['Pontevedra','A Coruña', 'Ourense', 'Lugo']);
-            $table->decimal('posicionTop');
-            $table->decimal('posicionLeft');
-            $table->string('rutaMapa');
+            $table->float('posicionTop');
+            $table->float('posicionLeft');
+            $table->string('rutaMapa', 120);
         });
     }
 
