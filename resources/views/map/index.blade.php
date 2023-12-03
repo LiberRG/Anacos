@@ -18,24 +18,24 @@
         <h1 class="h1 text-center text-magenta-oscuro my-5 uppercase">El Patrimonio Gallego</h1>
         <section class="bg-gris-oscuro">
             <div class="flex py-4 relative container max-w-6xl m-auto"> 
-                <div class="relative"   style="height:0;width:100%;padding-bottom:18%">
+                <div class="relative" style="height:0;width:100%;padding-bottom:24%">
                     <div class="absolute w-full h-full flex justify-center">
-                        <img class="w-full object-cover" src="img/inicio/patrimonio/1.png" alt="piedra con el simbolo del camino de Santiago que marca el kilometro 0. Se ve el mar de fondo">
+                        <img class="w-full object-cover" src="/img/inicio/patrimonio/1.png" alt="piedra con el simbolo del camino de Santiago que marca el kilometro 0. Se ve el mar de fondo">
                     </div>
                 </div>
-                <div class="relative"   style="height:0;width:100%;padding-bottom:18%">
+                <div class="relative" style="height:0;width:100%;padding-bottom:24%">
                     <div class="absolute w-full h-full flex justify-center">
-                        <img class="w-full object-cover" src="img/inicio/patrimonio/2.png" alt="Boceto de la torre de Hercules hecho a boli y pintado con acuarela">
+                        <img class="w-full object-cover" src="/img/inicio/patrimonio/2.png" alt="Boceto de la torre de Hercules hecho a boli y pintado con acuarela">
                     </div>
                 </div>
-                <div class="relative hidden xs:inline-block"   style="height:0;width:100%;padding-bottom:18%">
+                <div class="relative" style="height:0;width:100%;padding-bottom:24%">
                     <div class="absolute w-full h-full flex justify-center">
-                        <img class="w-full object-cover" src="img/inicio/patrimonio/3.png" alt="Muralla de Lugo en primer y al fondo se ven las torres de la catedral">
+                        <img class="w-full object-cover" src="/img/inicio/patrimonio/3.png" alt="Muralla de Lugo en primer y al fondo se ven las torres de la catedral">
                     </div>
                 </div>
-                <div class="relative hidden md:inline-block"   style="height:0;width:100%;padding-bottom:18%">
+                <div class="relative hidden md:inline-block" style="height:0;width:100%;padding-bottom:24%">
                     <div class="absolute w-full h-full flex justify-center">
-                        <img class="w-full object-cover" src="img/inicio/patrimonio/4.png" alt="Hombre vestido de druida, con una camisola hecha de hoja y una careta de madera. Porta una antorcha encendida en la mano izquierda">
+                        <img class="w-full object-cover" src="/img/inicio/patrimonio/4.png" alt="Hombre vestido de druida, con una camisola hecha de hoja y una careta de madera. Porta una antorcha encendida en la mano izquierda">
                     </div>
                 </div>
             </div>
@@ -56,26 +56,26 @@
     </article>
     <article class="my-14">
         <h1 class="h1 text-center text-magenta-oscuro my-5 uppercase">La Cultura Gallega</h1>
-        <section class="bg-magenta-oscuro/[0.2]">
+        <section class="bg-gris-oscuro">
             <div class="flex py-4 relative container max-w-6xl m-auto">
-                <div class="relative" style="height:0;width:100%;padding-bottom:18%">
+                <div class="relative" style="height:0;width:100%;padding-bottom:24%">
                     <div class="absolute w-full h-full flex justify-center">
-                        <img class="w-full object-cover" src="img/inicio/cultura/1.png" alt="mujeres vestidas con untraje tradicional gallega, de espaldas y con una pandereta en las manos">
+                        <img class="w-full object-cover" src="/img/inicio/cultura/1.png" alt="mujeres vestidas con untraje tradicional gallega, de espaldas y con una pandereta en las manos">
                     </div>
                 </div>
-                <div class="relative" style="height:0;width:100%;padding-bottom:18%">
+                <div class="relative" style="height:0;width:100%;padding-bottom:24%">
                     <div class="absolute w-full h-full flex justify-center">
-                        <img class="w-full object-cover" src="img/inicio/cultura/2.png" alt="Cuatro dibujos de rosalia de castro estanpados en diferentes colores (rojo, marrón, azul oscuro y amarillo)">
+                        <img class="w-full object-cover" src="/img/inicio/cultura/2.png" alt="Cuatro dibujos de rosalia de castro estanpados en diferentes colores (rojo, marrón, azul oscuro y amarillo)">
                     </div>
                 </div>
-                <div class="relative hidden xs:inline-block" style="height:0;width:100%;padding-bottom:18%">
+                <div class="relative" style="height:0;width:100%;padding-bottom:24%">
                     <div class="absolute w-full h-full flex justify-center">
-                        <img class="w-full object-cover" src="img/inicio/cultura/3.png" alt="Rodaje de una serie por una calle Vigo, el actor canima entre el personal de camaras y sonido">
+                        <img class="w-full object-cover" src="/img/inicio/cultura/3.png" alt="Rodaje de una serie por una calle Vigo, el actor canima entre el personal de camaras y sonido">
                     </div>
                 </div>
-                <div class="relative hidden md:inline-block" style="height:0;width:100%;padding-bottom:18%">
+                <div class="relative hidden md:inline-block" style="height:0;width:100%;padding-bottom:24%">
                     <div class="absolute w-full h-full flex justify-center">
-                        <img class="w-full object-cover" src="img/inicio/cultura/4.png" alt="Dibujo a acuarela, en tonos azules, de la estatua de Julio Verne sobre un calamar que esta en Vigo">
+                        <img class="w-full object-cover" src="/img/inicio/cultura/4.png" alt="Dibujo a acuarela, en tonos azules, de la estatua de Julio Verne sobre un calamar que esta en Vigo">
                     </div>
                 </div>
             </div>
@@ -95,7 +95,7 @@
             <br>
             <p>Hoy en día, nuestra cultura es una mezcla de tradición y modernidad. Galicia es un crisol de influencias europeas y americanas, y nuestra cultura es un activo estratégico para el desarrollo social y económico de la región. Grupos de música que mezclan la tradición con lo moderno, como <i><b>Tanxugeiras</b></i> o <i><b>Fillas de Cassandra</b></i>, se estan haciendo cada vez más fuertes en el panorama nacional. Tampoco podemos olvidar la explosión cinematográfica que sufre Galicia en este momento donde tanto produciones de <b>Netflix</b> como reconocidos cineastas, <b>J.A. Bayona</b> o <b>Alejandro Amenábar</b>, escogen nuestros paisajes para ambientar sus creaciones. </p>
             <br><br>
-            <p class="text-xl text-center"><b>¡Ven y descubre la magia de Galicia!</b></p>
+            <p class="text-xl text-center text-magenta-oscuro"><b>¡Ven y descubre la magia de Galicia!</b></p>
         </section>
     </article>
 </main>

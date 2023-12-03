@@ -2,7 +2,7 @@
     <div class="container h-[7.5vh] flex flex-row justify-between items-center">
         <div class="grow text-blanco">
             @svg("logo-anacos-galicia", "h-12 w-auto hidden lg:inline")
-            @svg("logo-anacos", "h-6 w-auto lg:hidden")
+            @svg("logo-anacos", "h-6 w-auto lg:hidden hidden xs:inline")
         </div>
         <div class="flex justify-between gap-3">
             <button @click="desplega('cookie')" class="text-sm hover:scale-105">
@@ -56,6 +56,7 @@
             contacto: false,
             instagram: false,
 
+            // Método que cierra todos los desplagables excepto el que se acaba de pulsar
             desplega(event) {
                 switch (event) {
                     case 'cookie':

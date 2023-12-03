@@ -22,6 +22,6 @@ class Coleccion extends Model
         return $this->hasOne(Imagen::class, 'id', 'imagen_id');
     }
     public function getImagenesColeccion(){
-        return $this->hasMany(Imagen::class, );
+        return $this->hasMany(Imagen::class);
     }
 }

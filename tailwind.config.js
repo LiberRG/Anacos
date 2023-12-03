@@ -26,14 +26,7 @@ module.exports = {
       animation: {
         marquee: 'marquee 60s linear infinite',
       },
-      colors: {
-        "azul": "rgb(var(--color-azul) / <alpha-value>)",
-        "gris-calido": "rgb(var(--color-gris-calido) / <alpha-value>)",
-        "gris-patrocinio": "rgb(var(--color-gris-patrocinio) / <alpha-value>)",        
-        "rojo": "rgb(var(--color-rojo) / <alpha-value>)",
-        "ocre": "rgb(var(--color-ocre) / <alpha-value>)",
-
-        
+      colors: {        
         "blanco": "rgb(var(--color-blanco) / <alpha-value>)",
         "ocre-claro": "rgb(var(--color-ocre-claro) / <alpha-value>)",
         "gris-claro": "rgb(var(--color-gris-claro) / <alpha-value>)",
@@ -71,7 +64,7 @@ module.exports = {
         }
       },
       backgroundImage: {
-        'imagen-map': "url('/img/mapas/bg-imagen-map.jpg')",
+        'imagen-map': "url('/img/mapas/bg-imagen-map.png')",
       },
     },
     screens: {

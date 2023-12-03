@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use App\Models\Imagen;
 
 class Empareja extends Model
 {
@@ -16,7 +17,7 @@ class Empareja extends Model
     public function getDescripcion() { return $this->descripcion; }
     public function getTitulo() { return $this->titulo; }
 
-    public function imgDibujo(){
+    public function getImgDibujo(){
         return $this->HasOne(Imagen::class, 'id', 'imagen_id');
     }
 }

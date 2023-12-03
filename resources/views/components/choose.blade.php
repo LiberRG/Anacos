@@ -8,7 +8,7 @@
             </div>
             <div class="grow flex flex-col-reverse md:flex-row justify-center items-center gap-5 lg:gap-x-10 mt-0">
                 <div class="flex flex-col gap-5 md:max-w-xs text-left">
-                    <p class="p w-full">Elige el lugar que deseas explorar y atreveté a descubrir su historía.</p>
+                    <p class="p w-full hidden sm:inline">Elige el lugar que deseas explorar y atreveté a descubrir su historía.</p>
                     <p class="p w-full hidden md:inline">En este mapa podrás navegar por cada uno de ellos.</p>
                     <p class="p w-full hidden md:inline">Los paisajes, que representan a la perfección la magia de
                         Galicia, se yerguen como observadores incansables del paso del tiempo y cuentan historias a

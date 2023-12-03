@@ -3,14 +3,10 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import "wordfind";
 
 @layer base {
     :root {
-        --color-azul: 0 127 255;
-        --color-gris-calido: 248 246 240;
-        --color-gris-patrocinio: 22 22 21;
-        --color-rojo: 175 11 11;
-        --color-ocre: 195 148 0;
 
         --color-blanco: 255 255 255;
         --color-ocre-claro: 246 235 219;
@@ -148,15 +144,15 @@ Estilos de texto
     }
 
     /* Apariencia scrollbar */
-    body::-webkit-scrollbar, div::-webkit-scrollbar {
+    body::-webkit-scrollbar, main::-webkit-scrollbar, div::-webkit-scrollbar {
         width: 5px;
     }
 
-    body::-webkit-scrollbar-track, div::-webkit-scrollbar-track {
+    body::-webkit-scrollbar-track, main::-webkit-scrollbar-track, div::-webkit-scrollbar-track {
         background: #E1E4E7;
     }
 
-    body::-webkit-scrollbar-thumb, div::-webkit-scrollbar-thumb {
+    body::-webkit-scrollbar-thumb, main::-webkit-scrollbar-thumb, div::-webkit-scrollbar-thumb {
         background-color: #91B6D7;
         border-radius: 20px;
     }

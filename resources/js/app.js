@@ -1,5 +1,3 @@
 import './bootstrap';
-
-// import './utils';
-// import './adjustStickyTop';
-// import './effects';
+import './wordfindgame';
+import './wordfind';

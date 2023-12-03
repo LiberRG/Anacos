@@ -1,6 +1,6 @@
 <div>
     <div class="h-[89.3vh] relative">
-        <img class="w-full h-full object-cover" src="{{ $lugar->rutaMapa }}" alt="">
+        <img class="w-full h-full object-cover" src="/{{ $lugar->rutaMapa }}">
         <div>
             <ul>
                 @foreach ($lugar->sitios as $sitio)
@@ -17,10 +17,6 @@
                 @endforeach
             </ul>
         </div>
-    </div>
-
-    
-
-    
+    </div> 
 </div>
 

@@ -36,6 +36,7 @@
 
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" crossorigin="anonymous"></script>
 
 </head>
 

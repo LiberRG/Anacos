@@ -10,7 +10,7 @@
                         text-lg font-bold md:font-normal
                         p-5 xl:px-8 2xl:px-10">
                         <button name="planea" @click="desplegable($event)" 
-                        class="text-start 2xs:text-center uppercase min-w-[33%] md:min-w-max hover:md:text-magenta-oscuro hover:scale-105 font-semibold
+                        class="text-start 2xs:text-center uppercase min-w-[33%] md:min-w-max hover:md:text-magenta-oscuro hover:md:scale-105 font-semibold
                         @if (Route::currentRouteName() == "vive.index" )
                         text-magenta-oscuro
                         @else
@@ -45,13 +45,13 @@
                         text-blanco
                         @endif
                         ">
-                            Inspirate
+                            Inspírate
                         </a>
                     </span>
                     <span class=" flex gap-x-6 items-start flex-wrap md:inline
                         text-lg font-bold md:font-normal
                         p-5 xl:px-8 2xl:px-10">
-                        <button name="juega" @click="desplegable($event)" class="text-start 2xs:text-center uppercase min-w-[33%] md:min-w-max hover:md:text-magenta-oscuro hover:scale-105 font-semibold
+                        <button name="juega" @click="desplegable($event)" class="text-start 2xs:text-center uppercase min-w-[33%] md:min-w-max hover:md:text-magenta-oscuro hover:md:scale-105 font-semibold
                         @if (Route::currentRouteName() == "descubre.juego1")
                         text-magenta-oscuro
                         @else
@@ -101,12 +101,14 @@
         window.onscroll = () => {positionNav()}
     }
 
+    // Función para alpine
     function header() {
         return {
             planea: false,
             inspira: false,
             juega: false,
-
+            
+            // Método que cierra todos los desplagables excepto el que se acaba de pulsar
             desplegable(event) {
                 variable = event.target.name
                 switch (variable) {
@@ -135,6 +137,8 @@
             }
         }
     }
+
+    // Método que encuentra la cosición de la cabecera dentro de la hoja y hace que la posicion relativa de los desplegables sea top o bottom dependiendo de ella
     function positionNav() {
         navElements = document.querySelectorAll("button+div.font-normal");
         navDown = document.getElementById("navDown")

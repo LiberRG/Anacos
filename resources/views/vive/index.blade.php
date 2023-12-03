@@ -30,7 +30,7 @@
                 <h1 id="titleVive" class="h1">Galicia</h1>
             </div>
         </aside>
-        <main class="md:w-3/4" role="main">
+        <main class="md:w-3/4 h-full" role="main">
             <div class="flex flex-wrap justify-evenly font-bold text-azul-oscuro w-full my-2 gap-3">
                 @foreach ($lugares as $lg)
                     <a class="capitalize hover:scale-105 
@@ -38,15 +38,15 @@
                     " href="{{ route('vive.index', [$filtrar,$lg->getNombre()]) }}">{{ $lg->getNombre() }}</a>
                 @endforeach
             </div>
-            <div class="overflow-y-auto h-[93%] pr-3">
+            <div class="overflow-y-auto h-[70vh] pr-3">
                 @if(count($services)>0)
                 @foreach ($services as $service)
                 <x-service :service=$service ></x-service>
                 @endforeach
+                @else
+                <p class="p">No se han encontrado resultados para su busqueda.</p>
                 @endif
             </div>
         </main>
-
     </div>
-
 @endsection

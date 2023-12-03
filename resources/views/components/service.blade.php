@@ -1,11 +1,11 @@
-<div x-data="{ dropdown: false }">
+<div x-cloak x-data="{ dropdown: false }">
     <div class="bg-blanco rounded-xl p-3 pb-1 my-3">
         <div id="content" class="flex gap-x-3">
             @if($service->getImagenId() != null)
             <span class="w-[15%] ">
                 <div class="relative" id="" style="height:0;width:100%;padding-bottom:120%">
                     <div class="absolute w-full h-full flex justify-center">
-                        <img class="w-full object-cover" src="{{$service->getImagen()->getRutaImg()}}" alt="">
+                        <img class="w-full object-cover" src="/{{$service->getImagen->getRutaImg()}}" alt="{{$service->getImagen->getAlt()}}">
                     </div>
                 </div>
             </span>
@@ -49,7 +49,7 @@
     @if($service->getDetalles() != null)
     <div class="flex justify-end items-center">
         <div class="grow flex justify-center text-gris-oscuro">
-            <span @click="dropdown=!dropdown" x-bind:class="dropdown ? 'rotate-180':'rotate-0'">@svg("ico-down", "h-3 w-auto")</span>
+            <span class="cursor-pointer" @click="dropdown=!dropdown" x-bind:class="dropdown ? 'rotate-180':'rotate-0'">@svg("ico-down", "h-3 w-auto")</span>
         </div>
         @endif
         @if($service->getPuntuacion() != null)
