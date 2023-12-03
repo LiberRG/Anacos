@@ -38,6 +38,7 @@
     <script src="{{ mix('js/app.js') }}" defer></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" crossorigin="anonymous"></script>
 
+    @livewireStyles
 </head>
 
 <body class="antialiased flex flex-col justify-between h-full @yield('page-class')">
@@ -47,5 +48,7 @@
             @yield('content')
     </div>
     @include('partials.footer')
+
+    @livewireScripts
 </body>
 </html>

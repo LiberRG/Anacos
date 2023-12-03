@@ -37,6 +37,7 @@
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
 
+    @livewireStyles
 </head>
 
 <body class="antialiased relative @yield('page-class')">
@@ -50,6 +51,8 @@
         @include('partials.footer')
 
     </div> 
+
+    @livewireScripts
 </body>
 
 </html>

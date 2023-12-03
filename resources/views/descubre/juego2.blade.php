@@ -43,26 +43,7 @@
 </div>
 
 <script>
-    // Array con las palabras que el usuario debe buscar
-    var palabras = ['pie', 'localizar', 'coche',
-        'culo', 'pelo', 'formula',
-        'resfriado', 'perro', 'pescador',
-        'repartidor', 'programador', 'velocimetro',
-        'contador', 'salinidad', 'tabaco',
-        'oso', 'ceniza', 'electricidad',
-        'buho', 'frecuencia', 'entreunosyceros',
-        'onanismo', 'osmosis', 'zapato'
-    ];
-    // Comienza un juego de palabras
-    var sopaLetras = wordfindgame.create(palabras, '#contenedor', '#palabras-sopadeletras');
-    // Función para resolver la sopa de petras             
-    function solve() {
-        var resultado = wordfindgame.solve(sopaLetras, palabras);
-        console.log(resultado);
-    }
-    // Función para reiniciar la sopa de letras
-    function reload() {
-        window.location.href = window.location.href;
-    }
+
+
 </script>
 @endsection
