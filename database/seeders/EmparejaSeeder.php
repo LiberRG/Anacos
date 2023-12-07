@@ -35,7 +35,7 @@ class EmparejaSeeder extends Seeder
         ]);
 
         Empareja::firstOrCreate([
-            'imagen_id' => 2,
+            'imagen_id' => 9,
             'rutaImg' => 'img/juego1/2.png',
         ],
         [
@@ -47,7 +47,7 @@ class EmparejaSeeder extends Seeder
         ]);
 
         Empareja::firstOrCreate([
-            'imagen_id' => 3,
+            'imagen_id' => 18,
             'rutaImg' => 'img/juego1/3.png',
         ],
         [
@@ -58,7 +58,7 @@ class EmparejaSeeder extends Seeder
         ]);
 
         Empareja::firstOrCreate([
-            'imagen_id' => 4,
+            'imagen_id' => 13,
             'rutaImg' => 'img/juego1/4.png',
         ],
         [

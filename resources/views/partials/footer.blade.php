@@ -1,4 +1,4 @@
-<footer class="bg-azul-claro" x-data="footer()" role="contentinfo">
+<footer class="bg-azul-claro relative" x-data="footer()" role="contentinfo">
     <div class="container h-[7.5vh] flex flex-row justify-between items-center">
         <div class="grow text-blanco">
             @svg("logo-anacos-galicia", "h-12 w-auto hidden lg:inline")

@@ -25,7 +25,7 @@ class ColeccionSeeder extends Seeder
             'descripcion' => 'Esta es una pequeña descripcion 2',
         ],
         [
-            'imagen_id' => 1,
+            'imagen_id' => 6,
         ]);
 
         Coleccion::firstOrCreate([
@@ -33,7 +33,7 @@ class ColeccionSeeder extends Seeder
             'descripcion' => 'Esta es una pequeña descripcion 2',
         ],
         [
-            'imagen_id' => 1,
+            'imagen_id' => 9,
         ]);
 
         Coleccion::firstOrCreate([
@@ -41,7 +41,7 @@ class ColeccionSeeder extends Seeder
             'descripcion' => 'Esta es una pequeña descripcion 2',
         ],
         [
-            'imagen_id' => 1,
+            'imagen_id' => 13,
         ]);
 
         Coleccion::firstOrCreate([
@@ -49,7 +49,7 @@ class ColeccionSeeder extends Seeder
             'descripcion' => 'Esta es una pequeña descripcion 2',
         ],
         [
-            'imagen_id' => 1,
+            'imagen_id' => 18,
         ]);
 
         Coleccion::firstOrCreate([
@@ -57,7 +57,7 @@ class ColeccionSeeder extends Seeder
             'descripcion' => 'Esta es una pequeña descripcion 2',
         ],
         [
-            'imagen_id' => 1,
+            'imagen_id' => 21,
         ]);
 
         Coleccion::firstOrCreate([
@@ -65,7 +65,7 @@ class ColeccionSeeder extends Seeder
             'descripcion' => 'Esta es una pequeña descripcion 2',
         ],
         [
-            'imagen_id' => 1,
+            'imagen_id' => 26,
         ]);
     }
 }

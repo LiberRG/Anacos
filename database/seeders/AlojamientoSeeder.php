@@ -16,7 +16,7 @@ class AlojamientoSeeder extends Seeder
             'nombre' => 'Hotel Combarro',
         ],
         [
-            'imagen_id' => null,
+            'imagen_id' => 33,
             'telefono' => '(+34)986772131',
             'email' => 'hotelcombarro@hotelcombarro.es',
             'web' => 'www.hotelcombarro.es',
@@ -37,7 +37,7 @@ class AlojamientoSeeder extends Seeder
             'nombre' => 'Casa Noelmar',
         ],
         [
-            'imagen_id' => null,
+            'imagen_id' => 34,
             'telefono' => '(+34)986770588',
             'email' => 'noelmar@hotmail.es',
             'web' => 'www.casanoelmarcombarro.com',
@@ -56,7 +56,7 @@ class AlojamientoSeeder extends Seeder
             'nombre' => 'Apartamentos Dabarca Combarro',
         ],
         [
-            'imagen_id' => null,
+            'imagen_id' => 35,
             'telefono' => '(+34)986869723',
             'email' => 'info@hoteldabarca.com',
             'web' => 'www.hoteldabarca.com',

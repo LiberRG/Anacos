@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('detalles', 600)->nullable();
             $table->foreignId('lugar_id');
         });
+        
     }
 
     /**

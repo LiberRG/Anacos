@@ -4,77 +4,70 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Lugar;
+use App\Models\Servicio;
 use App\Models\Restaurante;
 use App\Models\Alojamiento;
+use App\Models\TurismoOficina;
+use App\Models\Tradicion;
+use App\Models\Transporte;
+use App\Models\Paisaje;
 
 class ViveController extends Controller
 {
-    public function index($filtrar = 0, $lugar = null)
+    public function index($filtrar = 0, $lg = null)
     {
-        $lugares = [
-            [
-                "id" => "01",
-                "name" => "Combarro",
-                "top" => "60",
-                "left" => "16"
-            ],
-
-            [
-                "id" => "02",
-                "name" => "Illas Cies",
-                "top" => "66",
-                "left" => "10"
-            ],
-
-            [
-                "id" => "03",
-                "name" => "Playa catedrales",
-                "top" => "3",
-                "left" => "78"
-            ]
-        ];
-        $lugares = Lugar::all();
-
-        $ser = [
-            "pathImg" => "/img/juego1/4.jpg",
-            "title" => "titulo",
-            "description" => "description",
-            "date" => " f ",
-            "contact" => [
-                "telefono" => "+34 111 222 444 555",
-                "email" => "email@email.com",
-            ],
-            "details" => [
-                "text" => "",
-                "email" => "email@email.com",
-                "web" => "www.web.com",
-                "direction" => "calle cp y provincia",
-                "score" => 3,
-            ],
-        ];
+        $lugares = Lugar::all(); 
+        $lugar= null;       
 
         if (isset($filtrar)) {
             switch ($filtrar) {
                 case config('web.KEY_ALOJAMIENTO'):
-                    $services = Alojamiento::all();
+                    $class = Alojamiento::class;
                     break;
                 case config('web.KEY_SERVICIOS_TURISTICOS'):
-                    $services = [];
+                    $class =  TurismoOficina::class;
                     break;
                 case config('web.KEY_COMO_LLEGAR'):
-                    $services = [];
+                    $class = Transporte::class;
                     break;
                 case config('web.KEY_CULTURA_Y_TRADICIONES'):
-                    $services = [];
+                    $class = Tradicion::class;
                     break;
                 case config('web.KEY_SABORES_DEL_LUGAR'):
-                    $services = Restaurante::all();
+                    $class = Restaurante::class;
                     break;
                 case config('web.KEY_PAISAJES'):
-                    $services = [];
+                    $class = Paisaje::class;
                     break;
-            }
+            }            
+        }
+        $services = $class::all();
+        if(isset($lg)){
+            $lugar= Lugar::find($lg);
+            $services = $class::where('lugar_id', $lg)->get();
+            // $services->
         }
         return view('vive.index', compact('filtrar', 'lugar', 'lugares', 'services'));
     }
 }
+
+// switch ($filtrar) {
+//     case config('web.KEY_ALOJAMIENTO'):
+//         $services = Alojamiento::all();
+//         break;
+//     case config('web.KEY_SERVICIOS_TURISTICOS'):
+//         $services =  TurismoOficina::all();
+//         break;
+//     case config('web.KEY_COMO_LLEGAR'):
+//         $services = Transporte::all();
+//         break;
+//     case config('web.KEY_CULTURA_Y_TRADICIONES'):
+//         $services = Tradicion::all();
+//         break;
+//     case config('web.KEY_SABORES_DEL_LUGAR'):
+//         $services = Restaurante::all();
+//         break;
+//     case config('web.KEY_PAISAJES'):
+//         $services = Paisaje::all();
+//         break;
+// }   

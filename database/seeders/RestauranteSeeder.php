@@ -13,54 +13,48 @@ class RestauranteSeeder extends Seeder
     public function run(): void
     {
         Restaurante::firstOrCreate([
-            'nombre' => 'Hotel Combarro',
+            'nombre' => 'Bar Pedramar',
         ],
         [
-            'imagen_id' => null,
-            'telefono' => '(+34)986772131',
-            'email' => 'hotelcombarro@hotelcombarro.es',
-            'web' => 'www.hotelcombarro.es',
-            'direccion' => 'Avenida de la Pinela S/N, 36995 Combarro, España',
-            'descripcion' => 'Este establecimiento moderno y luminoso se encuentra en el corazón de la preciosa región costera de las Rías Baixas y resulta ideal para disfrutar del sol en familia.',
-            'puntuacion' => 8.7,
-            'detalles' => 'El hotel dispone de jardín con piscina y un bar cafetería. Además, la zona de los alrededores ofrece muchas actividades de ocio para toda la familia.
-            El hotel está a solo 10 minutos a pie de la histórica ciudad de Combarro, un destino muy popular entre los artistas. También se encuentra a solo 800 metros de la playa y cerca de Sanxenxo, Vigo y la maravillosa península de O Grove.            
-            El hotel también dispone de conexión a internet WiFi.            
-            A las parejas les encanta la ubicación',
+            'imagen_id' => 36,
+            'telefono' => '(+34)986778143',
+            'email' => 'pedramarbar@hotmail.com',
+            'web' => 'www.facebook.com/barpedramar',
+            'direccion' => 'Calle de la Rua, 49 Calle A Rua n°49, 36993 Combarro, España',
+            'descripcion' => 'Bar restaurante de tapas para compartir con terraza vistas al mar en el centro historisco artistico de Combarro.',
+            'puntuacion' => 9,
+            'detalles' => 'RANGO DE PRECIOS
+            3 € - 90 €
+            TIPOS DE COCINA
+            Marisco, Mediterránea, Española, Saludable
+            DIETAS ESPECIALES
+            Opciones sin gluten
+            COMIDAS
+            Comidas, Cenas, Bebidas
+            VENTAJAS
+            Terraza exterior, Televisión, Tronas disponibles, Sirve alcohol, Bar completo, Vino y cerveza, Acepta American Express, Acepta Mastercard, Acepta Visa, Pagos digitales, Acepta Discover, Acepta tarjetas de crédito, Servicio de mesa, Frente a una costa o ribera, Estilo familiar',
             'lugar_id' => '1'
         ]);
 
         Restaurante::firstOrCreate([
-            'nombre' => 'Casa Noelmar',
+            'nombre' => 'Restaurante Tinta Negra',
         ],
         [
-            'imagen_id' => null,
-            'telefono' => '(+34)986770588',
-            'email' => 'noelmar@hotmail.es',
-            'web' => 'www.casanoelmarcombarro.com',
-            'direccion' => 'Rua da Laxe, 8 , 36994 Combarro, España',
-            'descripcion' => 'La Casa Noelmar se encuentra en la localidad pesquera gallega de Combarro, a 5 minutos a pie del puerto deportivo.',
-            'puntuacion' => 9.6,
-            'detalles' => ' Esta casa de piedra de estilo rústico ofrece apartamentos con chimenea, ducha de hidromasaje y WiFi gratuita.
-            Todos los apartamentos tienen vistas al mar y disponen de calefacción, patio amueblado, zona de barbacoa, sala de estar con TV de pantalla plana y sofá cama, baño privado con artículos de aseo, lavadora y cocina bien equipada.            
-            Cuenta con traslado al aeropuerto',
-            'lugar_id' => '1'
-        ]);
-
-        Restaurante::firstOrCreate([
-            'nombre' => 'Apartamentos Dabarca Combarro',
-        ],
-        [
-            'imagen_id' => null,
-            'telefono' => '(+34)986869723',
-            'email' => 'info@hoteldabarca.com',
-            'web' => 'www.hoteldabarca.com',
-            'direccion' => 'Rúa Baixada a Chousa, 36, 36993 Combarro, España',
-            'descripcion' => 'Apartamentos Dabarca Combarro se encuentra en Combarro, a 6 min a pie de Praia do Padrón y a 1,4 km de Praia de Chancelas, y ofrece vistas al mar y wifi gratis.',
-            'puntuacion' => 7.6,
-            'detalles' => ' El alojamiento dispone de cocina totalmente equipada con nevera y cafetera, TV de pantalla plana y baño privado con ducha. Hay una zona de estar y de comedor en todas las unidades.
-            Praia Ouriceira está a 2 km del alojamiento, y Praia Area da Barca está a 2,6 km. El aeropuerto más cercano (Aeropuerto de Vigo) está a 38 km del alojamiento.            
-            Ideal para familias',
+            'imagen_id' => 37,
+            'telefono' => '(+34)683308048',
+            'email' => 'tintanegra.tapas@gmail.com',
+            'web' => 'www.tintanegracombarro.com',
+            'direccion' => 'Avenida de Francisco Regalado 44 Frente al puerto deportivo, 36993 Combarro España',
+            'descripcion' => 'Bar restaurante de tapas para compartir con terraza vistas al mar',
+            'puntuacion' => 8,
+            'detalles' => ' TIPOS DE COCINA
+            Europea, Española
+            DIETAS ESPECIALES
+            Opciones vegetarianas, Opciones veganas, Opciones sin gluten
+            COMIDAS
+            Desayuno, Comidas, Cenas, Abierto hasta tarde, Bebidas
+            VENTAJAS
+            Reservas, Terraza exterior, Capacidad, Televisión, Tronas disponibles, Acceso para discapacitados, Sirve alcohol, Bar completo, Wifi gratuito, Acepta tarjetas de crédito, Servicio de mesa',
             'lugar_id' => '1'
         ]);
 

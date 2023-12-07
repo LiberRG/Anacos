@@ -110,7 +110,7 @@ Estilos de texto
     }
 
     .p {
-        @apply text-base font-medium pl-3 py-1;
+        @apply text-base font-normal pl-3 py-1;
     }
 
     /*Clases Juego 1*/

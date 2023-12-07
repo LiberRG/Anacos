@@ -5,7 +5,7 @@
             <span class="w-[15%] ">
                 <div class="relative" id="" style="height:0;width:100%;padding-bottom:120%">
                     <div class="absolute w-full h-full flex justify-center">
-                        <img class="w-full object-cover" src="/{{$service->getImagen->getRutaImg()}}" alt="{{$service->getImagen->getAlt()}}">
+                        <img class="h-full w-auto object-cover" src="/{{$service->getImagen->getRutaImg()}}" alt="{{$service->getImagen->getAlt()}}">
                     </div>
                 </div>
             </span>
@@ -19,11 +19,11 @@
                 @endif
 
 
-                {{-- @if($service->getFecha() != null)
+                @if($service->getFecha() != null)
                 <div>
                     <p class="text-start"><span>@svg("ico-calendar","text-negro/[0.6] h-3 w-auto mr-2 inline")</span>{{$service->getFecha()}}</p>
             </div>
-            @endif --}}
+            @endif
 
         </div>
     </div>

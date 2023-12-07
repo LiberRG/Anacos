@@ -3,8 +3,8 @@
 @section('page-class', 'mapIndex')
 
 @section('contentMap')
-<div class="h-[89.3vh]">
-    @if(isset($lugar) && $lugar != null)    
+<div class="">
+    @if(isset($lugar) && $lugar != null)      
     <x-map :lugar=$lugar ></x-map>
     @else
     <x-choose :lugares=$lugares></x-choose> 

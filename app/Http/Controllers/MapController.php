@@ -12,11 +12,10 @@ class MapController extends Controller
         $mapa = null;
         $sitios= null;
         if ($lugar != null) {
-            $lugar = Lugar::where('nombre', $lugar)->first();
-            $sitios = $lugar->sitios;
+            $lugar = Lugar::find($lugar);            
         }
         
-        return view('map.index', compact('lugares','lugar', 'sitios'));
+        return view('map.index', compact('lugares','lugar'));
     }
     
 }

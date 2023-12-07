@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('imagens', function (Blueprint $table) {
             $table->id();
             $table->string('rutaImg', 120);
-            $table->string('alt', 120)->nullable();
+            $table->string('alt', 180)->nullable();
             $table->string('categoria', 60)->nullable();
             $table->foreignId('coleccion_id')->nullable();
         });

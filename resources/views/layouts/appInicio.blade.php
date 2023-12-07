@@ -41,16 +41,12 @@
 </head>
 
 <body class="antialiased relative @yield('page-class')">
-    
-    <div x-data="{ explora: false }">
         <div>@yield('contentMap')</div>
         @include('partials.header')
         <div class="flex-grow">
             <div>@yield('content')</div>
         </div>
         @include('partials.footer')
-
-    </div> 
 
     @livewireScripts
 </body>

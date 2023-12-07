@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('imagen_id');
             $table->string('rutaImg', 120);
-            $table->string('descripcion',540);
+            $table->string('descripcion',800);
             $table->string('titulo', 60);
         });
     }
