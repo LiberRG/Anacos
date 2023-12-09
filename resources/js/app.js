@@ -1,3 +1,3 @@
 import './bootstrap';
-// import './wordfindgame';
 // import './wordfind';
+// import './wordfindgame';

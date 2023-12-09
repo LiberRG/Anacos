@@ -14,7 +14,7 @@ class EmparejaSeeder extends Seeder
     {
         Empareja::firstOrCreate([
             'imagen_id' => 1,
-            'rutaImg' => 'img/juego1/1.png',
+            'rutaImg' => '/img/juego1/1.png',
         ],
         [
             'descripcion' => 'En el norte de España se criaron desde el
@@ -36,7 +36,7 @@ class EmparejaSeeder extends Seeder
 
         Empareja::firstOrCreate([
             'imagen_id' => 9,
-            'rutaImg' => 'img/juego1/2.png',
+            'rutaImg' => '/img/juego1/2.png',
         ],
         [
             'descripcion' => "Tiene una longitud promedio de 14 centímetros y pesa aproximadamente 12 gramos. La cabeza y el cuello de los machos son de un negro brillante, mientras que la nuca está adornada con un blanco contrastante. Sus alas y espalda presentan tonos de amarillo limón, que
@@ -48,7 +48,7 @@ class EmparejaSeeder extends Seeder
 
         Empareja::firstOrCreate([
             'imagen_id' => 18,
-            'rutaImg' => 'img/juego1/3.png',
+            'rutaImg' => '/img/juego1/3.png',
         ],
         [
             'descripcion' => "Embarcación tradicional de fondo plano, que le permite navegar en aguas poco profundas. Utilizado como embarcación auxiliar o también para el marisqueo artesanal de pesca de bajura. Son embarcaciones pequeñas, de hasta 5 metros de largo y hasta dos metros de
@@ -59,7 +59,7 @@ class EmparejaSeeder extends Seeder
 
         Empareja::firstOrCreate([
             'imagen_id' => 13,
-            'rutaImg' => 'img/juego1/4.png',
+            'rutaImg' => '/img/juego1/4.png',
         ],
         [
             'descripcion' => "Pollicipes pollicipes, habita en rocas batidas por las olas del Atlántico lo que implica siempre riego en su recolección. Los perceberos siempre acuden en parejas, uno asiste desde la altura y el otro desciende hasta la zona donde anida.

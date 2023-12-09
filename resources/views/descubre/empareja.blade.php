@@ -4,35 +4,36 @@
 
 @section('content')
 
-<div class="flex flex-col-reverse md:flex-row justify-between gap-x-8 container py-3 md:h-[81.6vh] xl:max-w-7xl relative">
-    <main id="tablero" class="flex justify-center flex-wrap md:overflow-y-auto md:basis-3/4 h-full" role="main">
-
+<div class="flex flex-col-reverse md:flex-row justify-between gap-x-8 container py-3 md:h-[81.6vh] min-h-[81.6vh] xl:max-w-7xl relative">
+    <main id="tablero" class="grow flex justify-center flex-wrap md:overflow-y-auto md:basis-3/4 h-full" role="main">
         @foreach ($dataJuego as $data)
         <x-card id="{{ $data[0] }}" path="{{ $data[1] }}"></x-card>
         @endforeach
     </main>
-    <aside class="flex md:flex-col justify-between gap-y-5 gap-x-3 md:basis-1/4 mb-3 md:mb-0" x-cloak x-data="{ dropdown: false }">
-        <div @click="dropdown=!dropdown" class="flex md:hidden items-center justify-between gap-x-3 boton mt-3 px-3 grow cursor-pointer"> 
-            Descubre Galicia
-            <span x-bind:class="dropdown ? 'rotate-180':'rotate-0'">@svg("ico-down", "h-3 w-auto")</span>
-        </div>
-        <div class="w-full min-w-[200px] bg-gris-oscuro md:flex items-center rounded-xl p-5 md:h-[85%]" x-bind:class="dropdown ? 'flex absolute top-[4.5rem]': 'hidden'">
-            <div id="description" class="overflow-y-auto h-full">
-                <div id="title-description" class="h2 pb-5"></div>
-                <div id="text-description"></div>
+    <aside class="flex md:flex-col justify-between gap-y-5 gap-x-3 md:basis-1/4" x-cloak x-data="{ dropdown: false }">
+        <div @click="dropdown=!dropdown" class="grow cursor-pointer md:h-[85%]">
+            <div class="flex md:hidden items-center justify-between gap-x-3 boton px-3 mb-3 md:mb-0">
+                <p id="descubreGalicia">Descubre Galicia</p>
+                <span x-bind:class="dropdown ? 'rotate-180':'rotate-0'">@svg("ico-down", "h-3 w-auto")</span>
             </div>
-            <div id="name-collection" class="h-full flex flex-col justify-between">
-                <div class="my-auto flex flex-col gap-3">
-                    <p class="p pl-0 font-bold">¿Jugamos a emparejar cartas?</p>
-                    <p class="p pl-0">El juego es sencillo selecciona una carta y se te mostrará una imagen. Las imagenes están relacionadas de dos en dos según lo que representan. Intenta unir las parejas levantando las carta y haciendo memoria para recordar si ya la has visto antes</p>
+            <div class="min-w-[200px] bg-gris-oscuro md:flex items-center rounded-xl p-4 mr-3 md:m-auto md:h-full" x-bind:class="dropdown ? 'absolute md:static': 'hidden'">
+                <div id="description" class="flex flex-col gap-3 overflow-y-auto h-full">
+                    <div id="title-description" class="h2"></div>
+                    <div id="text-description"></div>
                 </div>
-                <div>
-                    <h3 class="h3 font-normal">Descubre</h3>
-                    <h1 id="titleDescubre" class="h1">Galicia</h1>
+                <div id="name-collection" class="h-full flex flex-col justify-between gap-3">
+                    <div class="my-auto flex flex-col gap-3 overflow-y-auto h-full">
+                        <p class="p pl-0 font-bold">¿Jugamos a emparejar cartas?</p>
+                        <p class="p pl-0">El juego es sencillo selecciona una carta y se te mostrará una imagen. Las imagenes están relacionadas de dos en dos según lo que representan. Intenta unir las parejas levantando las carta y haciendo memoria para recordar si ya la has visto antes</p>
+                    </div>
+                    <div class="hidden md:inline">
+                        <h3 class="h3 font-normal">Descubre</h3>
+                        <h1 id="titleDescubre" class="h1">Galicia</h1>
+                    </div>
                 </div>
             </div>
         </div>
-        <button type="button" class="boton mt-3 px-3" onclick="reload()">
+        <button type="button" class="boton px-3 mb-3 md:mb-0" onclick="reload()">
             Nuevo juego
         </button>
     </aside>
@@ -48,6 +49,7 @@
     function dashboard() {
         selects = []
 
+        document.getElementById("descubreGalicia").innerHTML = "Descubre Galicia"
         document.getElementById("title-description").innerHTML = ""
         document.getElementById("text-description").innerHTML = ""
         document.getElementById("name-collection").setAttribute("style", "diplay: flex")
@@ -102,6 +104,7 @@
                 document.getElementById("name-collection").setAttribute("style", "display:none")
                 description.forEach(element => {
                     if (element[0] == selects[0].slice(-1)) {
+                        document.getElementById("descubreGalicia").innerHTML = element[1];
                         document.getElementById("title-description").innerHTML = element[1];
                         document.getElementById("text-description").innerHTML = element[2];
                     }
@@ -121,6 +124,7 @@
             cards = tablero.children;
             for (let i = 0; i < data.length; i++) {
                 card = cards[i]
+                card.querySelector('.cara').setAttribute("style", "display:flex");
                 card.querySelector('.card').id = "card" + data[i][0];
                 card.querySelector('img').src = data[i][1];
             }

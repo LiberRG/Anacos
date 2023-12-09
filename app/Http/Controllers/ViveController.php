@@ -50,24 +50,3 @@ class ViveController extends Controller
         return view('vive.index', compact('filtrar', 'lugar', 'lugares', 'services'));
     }
 }
-
-// switch ($filtrar) {
-//     case config('web.KEY_ALOJAMIENTO'):
-//         $services = Alojamiento::all();
-//         break;
-//     case config('web.KEY_SERVICIOS_TURISTICOS'):
-//         $services =  TurismoOficina::all();
-//         break;
-//     case config('web.KEY_COMO_LLEGAR'):
-//         $services = Transporte::all();
-//         break;
-//     case config('web.KEY_CULTURA_Y_TRADICIONES'):
-//         $services = Tradicion::all();
-//         break;
-//     case config('web.KEY_SABORES_DEL_LUGAR'):
-//         $services = Restaurante::all();
-//         break;
-//     case config('web.KEY_PAISAJES'):
-//         $services = Paisaje::all();
-//         break;
-// }   

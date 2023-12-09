@@ -27,8 +27,8 @@ class SitioSeeder extends Seeder
             'lugar_id' => 1,
         ],
         [
-            'posicionTop' => 57,
-            'posicionLeft' => 55,
+            'posicionTop' => 61,
+            'posicionLeft' => 60,
             'descripcion' => 'Pintoresco puerto, con sus pequeñas embarcaciones  y las vistas panorámicas de la ría que te robará el corazón.',
             'imagen_id' => 19,
         ]);
@@ -43,5 +43,37 @@ class SitioSeeder extends Seeder
             'imagen_id' => 23,
         ]);
         
+
+
+        Sitio::firstOrCreate([
+            'nombre' => 'Faro Monte do faro',
+            'lugar_id' => 2,
+        ],
+        [
+            'posicionTop' => 14,
+            'posicionLeft' => 40.5,
+            'descripcion' => 'Situado a 178 metros de altura sobre el nivel del mar y brindando a todo el que lo visita unas impresionantes vistas del parque natural, a día de hoy sigue realizando su función marítima como desde hace más de 150 años.',
+            'imagen_id' => 45,
+        ]);
+        Sitio::firstOrCreate([
+            'nombre' => 'Faro de Peito',
+            'lugar_id' => 2,
+        ],
+        [
+            'posicionTop' => 47.5,
+            'posicionLeft' => 82,
+            'descripcion' => 'Construido en 1904 marca la entrada norte a la Ría de Vigo. Es el punto del archipiélago más cercano al continente, el visitante tiene una vista privilegiada a la Costa da Vela, con la mirada apuntando al norte, también es posible ver el archipiélago de Ons.',
+            'imagen_id' => 46,
+        ]);
+        Sitio::firstOrCreate([
+            'nombre' => 'Playa de Rodas',
+            'lugar_id' => 2,
+        ],
+        [
+            'posicionTop' => 49,
+            'posicionLeft' => 50,
+            'descripcion' => 'La mejor playa del mundo, o al menos eso dicen. Sin duda es una paraje espectacular que debe ser visitado. Sus aguas cristalinas color turquesa, arena blanca y fina; y los bosques y dunas que la rodean hacen de este lugar un paraíso.',
+            'imagen_id' => 47,
+        ]);
     }
 }

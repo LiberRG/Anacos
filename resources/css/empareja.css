@@ -1,0 +1,29 @@
+/*Clases Juego 1 - EMPAREJA*/
+* {
+    transition: all 0.5s;
+}
+
+.card {
+    transform-style: preserve-3d;
+}
+
+.cara {
+    backface-visibility: hidden;
+}
+
+.drowCard {
+    transform: rotateY(180deg);
+}
+
+@keyframes iniciar {
+
+    20%,
+    90% {
+        transform: rotateY(180deg);
+    }
+
+    0%,
+    100% {
+        transform: rotateY(0deg);
+    }
+}

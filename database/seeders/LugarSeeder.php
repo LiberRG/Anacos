@@ -19,7 +19,7 @@ class LugarSeeder extends Seeder
             'provincia' => 'Pontevedra',
             'posicionTop' => 60.00,
             'posicionLeft' => 16.00,
-            'rutaMapa' => 'img/mapas/map-combarro.png'
+            'rutaMapa' => '/img/mapas/map-combarro.png'
         ]);
 
         Lugar::firstOrCreate([
@@ -29,7 +29,7 @@ class LugarSeeder extends Seeder
             'provincia' => 'Pontevedra',
             'posicionTop' => 66.00,
             'posicionLeft' => 10.00,
-            'rutaMapa' => 'img/mapas/map-combarro.png'
+            'rutaMapa' => '/img/mapas/map-illas-cies.png'
         ]);
 
         Lugar::firstOrCreate([
@@ -39,7 +39,7 @@ class LugarSeeder extends Seeder
             'provincia' => 'Lugo',
             'posicionTop' => 3.00,
             'posicionLeft' => 78.00,
-            'rutaMapa' => 'img/mapas/map-combarro.png'
+            'rutaMapa' => '/img/mapas/map-combarro.png'
         ]);
     }
 }

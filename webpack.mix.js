@@ -16,7 +16,9 @@ mix.js('resources/js/app.js', 'public/js')
         require("tailwindcss"),
     ])
     .copyDirectory('resources/img', 'public/img')
-    .copyDirectory('resources/fonts', 'public/fonts');
+    .copyDirectory('resources/fonts', 'public/fonts')
+    .copy('resources/js/wordfind.js', 'public/js/wordfind.js')
+    .copy('resources/js/wordfindgame.js', 'public/js/wordfindgame.js')
 
 if (mix.inProduction()) {
     mix.version();

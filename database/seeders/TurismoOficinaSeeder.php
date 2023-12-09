@@ -17,7 +17,7 @@ class TurismoOficinaSeeder extends Seeder
             'nombre' => 'Oficina de turismo de Combarro',
         ],
         [
-            'imagen_id' => 38,
+            'imagen_id' => 37,
             'telefono' => '(+34)986770001',            
             'direccion' => 'Carreiro do Campo, 17, 36993 Combarro, Pontevedra',
             'descripcion' => 'Combarro es uno de los pueblos marineros de Galicia que mejor ha conservado su arquitectura tradicional. Construido íntegramente en granito, mantiene casi intactas su estructura urbanística y edificaciones',

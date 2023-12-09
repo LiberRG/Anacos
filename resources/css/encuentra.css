@@ -1,0 +1,43 @@
+  #puzzle div {
+    display: flex;
+    justify-content: center;
+  }
+  #puzzle .puzzleSquare {
+    height: 30px;
+    width: 30px;
+    text-transform: uppercase;
+    border: 0;
+  }
+  
+  button::-moz-focus-inner {
+    border: 0;
+  }
+
+  #puzzle .selected {
+    @apply bg-azul-claro;
+  }
+
+  #puzzle .found {
+    @apply bg-azul-oscuro text-blanco font-bold;
+  }
+
+  #puzzle .solved {    
+    @apply bg-magenta-oscuro/[80%];
+  } 
+  #puzzle .found.complete {
+    @apply bg-verde-oscuro/[80%] text-negro;
+  }   
+  #puzzle .complete {
+    @apply text-gris-oscuro;
+  }    
+  #words ul {
+    list-style-type: none;
+    @apply flex flex-wrap justify-center md:gap-3 text-center;
+  }  
+  #words li {
+    @apply text-base font-normal capitalize px-3 py-1;
+  }
+  #words .wordFound {
+    text-decoration: line-through;
+  }
+  

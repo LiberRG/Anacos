@@ -38,7 +38,7 @@
                     <span class=" flex gap-x-6 items-start flex-wrap md:inline
                         text-lg font-bold md:font-normal
                         p-5 xl:px-8 2xl:px-10">
-                        <a href="{{ route('inspira.index') }}" class="2xs:text-center uppercase min-w-[33%] md:min-w-max hover:md:text-magenta-oscuro hover:scale-105 font-semibold
+                        <a href="{{ route('inspira.index') }}" class="inline-block 2xs:text-center uppercase min-w-[33%] md:min-w-max hover:md:text-magenta-oscuro hover:scale-105 font-semibold
                         @if (Route::currentRouteName() == 'inspira.index')
                         text-magenta-oscuro
                         @else
@@ -52,7 +52,7 @@
                         text-lg font-bold md:font-normal
                         p-5 xl:px-8 2xl:px-10">
                         <button @click="desplegable('juega')" class="text-start 2xs:text-center uppercase min-w-[33%] md:min-w-max hover:md:text-magenta-oscuro hover:md:scale-105 font-semibold
-                        @if (Route::currentRouteName() == 'descubre.juego1')
+                        @if (Route::currentRouteName() == 'descubre.empareja' || Route::currentRouteName() == 'descubre.encuentra')
                         text-magenta-oscuro
                         @else
                         text-blanco 
@@ -63,12 +63,12 @@
                         </button>
                         <div class="font-normal min-w-max flex flex-col
                         text-start text-negro" x-bind:class="juega ? 'md:absolute md:right-0 md:bg-azul-claro/[0.9] md:z-50 md:w-2/5 lg:w-1/3' :'md:hidden'">
-                            <a class="p hover:text-azul-oscuro hover:scale-105 md:p-5 md:border-b md:border-blanco" href="{{ route('descubre.juego1') }}">
+                            <a class="p hover:text-azul-oscuro hover:scale-105 md:p-5 md:border-b md:border-blanco" href="{{ route('descubre.empareja') }}">
                                 Empareja y descubre
                             </a>
 
-                            <a class="p hover:text-azul-oscuro hover:scale-105 md:p-5" href="{{ route('descubre.juego2') }}">
-                                Otro
+                            <a class="p hover:text-azul-oscuro hover:scale-105 md:p-5" href="{{ route('descubre.encuentra') }}">
+                                Encuentra y descubre
                             </a>
                         </div>
                     </span>
