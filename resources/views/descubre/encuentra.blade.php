@@ -23,7 +23,7 @@
                         <div class="overflow-y-auto h-[200px] w-full md:h-[94%]">
                             @foreach ($dataJuego as $key => $slide)
                             <div class="my-auto flex flex-col gap-2 w-full" x-show="activeSlide ==={{$key}}">
-                                <p class="p pl-0 font-bold">{{$slide->getNombre()}}</p>
+                                <h3 class="h3">{{$slide->getNombre()}}</h3>
                                 <div class="flex md:flex-col gap-3">
                                     @if($slide->getImagen != null)
                                     <div class="w-1/2 md:w-full">
@@ -46,7 +46,7 @@
                             </button>
                             <div class="flex justify-between px-3 gap-2">
                                 @foreach ($dataJuego as $key => $slide)
-                                <button class="h-2 w-3 rounded-full" :class="{ 'bg-magenta-oscuro': activeSlide === {{$key}}, 'bg-azul-oscuro': activeSlide !== {{$key}} }" @click="activeSlide = {{$key}}">
+                                <button class="h-2.5 w-2.5 rounded-full hover:scale-125" :class="{ 'bg-magenta-oscuro': activeSlide === {{$key}}, 'bg-azul-oscuro': activeSlide !== {{$key}} }" @click="activeSlide = {{$key}}">
                                 </button>
                                 @endforeach
                             </div>
