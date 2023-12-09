@@ -22,9 +22,20 @@
                     <div class="flex flex-col justify-between w-full h-[80%]">
                         <div class="overflow-y-auto h-[200px] w-full md:h-[94%]">
                             @foreach ($dataJuego as $key => $slide)
-                            <div class="my-auto flex flex-col gap-3 w-full" x-show="activeSlide ==={{$key}}">
-                                <p class="p pl-0 font-bold">{{$slide['title']}}</p>
-                                <p class="p pl-0 w-full">{{$slide['description']}}</p>
+                            <div class="my-auto flex flex-col gap-2 w-full" x-show="activeSlide ==={{$key}}">
+                                <p class="p pl-0 font-bold">{{$slide->getNombre()}}</p>
+                                <div class="flex md:flex-col gap-3">
+                                    @if($slide->getImagen != null)
+                                    <div class="w-1/2 md:w-full">
+                                        <div class="relative grow" style="height:0;width:100%;padding-bottom:80%" x-bind:class="desplegable ?'hidden':'inline-block'">
+                                            <div class="absolute w-full h-full flex justify-end">
+                                                <img class="w-full object-cover" src="{{ $slide->getImagen->getRutaImg() }}" alt="{{ $slide->getImagen->getAlt() }}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endif
+                                    <p class="p pl-0 pt-0 w-full">{{$slide->getDescripcion()}}</p>
+                                </div>
                             </div>
                             @endforeach
                         </div>
@@ -35,8 +46,7 @@
                             </button>
                             <div class="flex justify-between px-3 gap-2">
                                 @foreach ($dataJuego as $key => $slide)
-                                <button class="h-2 w-3 rounded-full" :class="{ 'bg-magenta-oscuro': activeSlide === {{$key}}, 'bg-azul-oscuro': activeSlide !== {{$key}} }" 
-                                @click="activeSlide = {{$key}}">
+                                <button class="h-2 w-3 rounded-full" :class="{ 'bg-magenta-oscuro': activeSlide === {{$key}}, 'bg-azul-oscuro': activeSlide !== {{$key}} }" @click="activeSlide = {{$key}}">
                                 </button>
                                 @endforeach
                             </div>
@@ -69,14 +79,14 @@
     const LETRAS_ANCHO = 15;
     const LETRAS_ALTO = 14;
     // var words = ['Develoteca', 'cursos', 'ayuda', 'Videos', 'Tutoriales', 'Plugins'];
-    var gamePuzzle, words=[];
+    var gamePuzzle, words = [];
     var data = <?= json_encode($dataJuego) ?>;
-    data.forEach((element,key) => {
-        if(key != 0){
-            words.push(element.title);
+    data.forEach((element, key) => {
+        if (key != 0) {
+            words.push(element.nombre);
         }
     });
-    
+
     window.addEventListener("DOMContentLoaded", create(), false);
 
     function create() {

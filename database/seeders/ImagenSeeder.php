@@ -34,7 +34,7 @@ class ImagenSeeder extends Seeder
         ],
         [
             'alt' => 'Estampado de horreos en pinta azul sobre cartón marrón',
-            'categoria' => 'juego',
+            'categoria' => 'empareja',
         ]);
         Imagen::firstOrCreate([
             'rutaImg' => '/img/colecciones/horreo/4.png',
@@ -80,7 +80,7 @@ class ImagenSeeder extends Seeder
         ],
         [
             'alt' => 'Estampado sobre tela en tonos azulez. Ferreiriño real sobre rama de carballo',
-            'categoria' => 'portada',
+            'categoria' => 'portada, empareja',
         ]);
         Imagen::firstOrCreate([
             'rutaImg' => '/img/colecciones/natureza/2.png',
@@ -110,7 +110,7 @@ class ImagenSeeder extends Seeder
         ],
         [
             'alt' => 'Estampado sobre tela en tonos azulez. Conjunto de percebes sobre roca dispuestos en diferentes direciones.',
-            'categoria' => 'portada',
+            'categoria' => 'portada, empareja',
         ]);
         Imagen::firstOrCreate([
             'rutaImg' => '/img/colecciones/mar/2.png',
@@ -147,7 +147,7 @@ class ImagenSeeder extends Seeder
         ],
         [
             'alt' => 'Lamina de una gamela en el agua, tonos azules y marrones',
-            'categoria' => 'portada',
+            'categoria' => 'portada, empareja',
         ]);
         Imagen::firstOrCreate([
             'rutaImg' => '/img/colecciones/salitre/2.png',
@@ -370,6 +370,56 @@ class ImagenSeeder extends Seeder
             'categoria' => 'sitios',
         ]);
 
+        Imagen::firstOrCreate([
+            'rutaImg' => '/img/juego2/chincheta.png',
+        ],
+        [
+            'alt' => 'Dibujo esquematico, en tonos azules, de un barco perquero señalizando 3 nasas bajo el mar.',
+            'categoria' => 'encuentra',
+        ]);
+        Imagen::firstOrCreate([
+            'rutaImg' => '/img/juego2/gorse.png',
+        ],
+        [
+            'alt' => 'Fotografía de una mujer con un instrumento para sacar percebes de las rocas.',
+            'categoria' => 'encuentra',
+        ]);
+        Imagen::firstOrCreate([
+            'rutaImg' => '/img/juego2/longa.png',
+        ],
+        [
+            'alt' => 'Ilustración digital de mariscadora con cubo y rastrillo, en tonos azules',
+            'categoria' => 'encuentra',
+        ]);
+
+        Imagen::firstOrCreate([
+            'rutaImg' => '/img/juego2/rañola.png',
+        ],
+        [
+            'alt' => 'Fotografia de 6 marisqueiros cuatro de ellos con una espacie de rastrillo con red, utensilio que usan para desenpeñar su labor',
+            'categoria' => 'encuentra',
+        ]);
+        Imagen::firstOrCreate([
+            'rutaImg' => '/img/juego2/tarrafa.png',
+        ],
+        [
+            'alt' => 'Foto en blanco y negro de un hombre tirando una red redonda al agua',
+            'categoria' => 'encuentra',
+        ]);
+        Imagen::firstOrCreate([
+            'rutaImg' => '/img/juego2/xabeca.png',
+        ],
+        [
+            'alt' => 'fotografia de cubo de madera con peces en agua dentro.',
+            'categoria' => 'encuentra',
+        ]);
+        Imagen::firstOrCreate([
+            'rutaImg' => '/img/juego2/xacio.png',
+        ],
+        [
+            'alt' => 'Dibujo en aerosol sobre muro de bloques. Muestra a un ser tumbado, mitad mujer mitad pez, rodeada de peces vindo casa dos niñas que van nadando hacia ella.',
+            'categoria' => 'encuentra',
+        ]);
         
     }
 }
