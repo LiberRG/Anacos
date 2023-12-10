@@ -14,6 +14,7 @@ class AlojamientoSeeder extends Seeder
     {
         Alojamiento::firstOrCreate([
             'nombre' => 'Hotel Combarro',
+            'lugar_id' => 1,
         ],
         [
             'imagen_id' => 33,
@@ -30,11 +31,11 @@ class AlojamientoSeeder extends Seeder
             El hotel también dispone de conexión a internet WiFi.
             
             A las parejas les encanta la ubicación',
-            'lugar_id' => '1'
         ]);
 
         Alojamiento::firstOrCreate([
             'nombre' => 'Casa Noelmar',
+            'lugar_id' => 1,
         ],
         [
             'imagen_id' => 34,
@@ -49,11 +50,11 @@ class AlojamientoSeeder extends Seeder
             Todos los apartamentos tienen vistas al mar y disponen de calefacción, patio amueblado, zona de barbacoa, sala de estar con TV de pantalla plana y sofá cama, baño privado con artículos de aseo, lavadora y cocina bien equipada.
             
             Cuenta con traslado al aeropuerto',
-            'lugar_id' => '1'
         ]);
 
         Alojamiento::firstOrCreate([
             'nombre' => 'Apartamentos Dabarca Combarro',
+            'lugar_id' => 1,
         ],
         [
             'imagen_id' => 35,
@@ -67,8 +68,23 @@ class AlojamientoSeeder extends Seeder
 
             Praia Ouriceira está a 2 km del alojamiento, y Praia Area da Barca está a 2,6 km. El aeropuerto más cercano (Aeropuerto de Vigo) está a 38 km del alojamiento.
             
-            Ideal para familias',
-            'lugar_id' => '1'
+            Ideal para familias',            
+        ]);
+
+
+
+        Alojamiento::firstOrCreate([
+            'nombre' => 'Camping Islas Cíes',
+            'lugar_id' => 2,
+        ],
+        [
+            'imagen_id' => 55,
+            'telefono' => '(+34)986438358',
+            'email' => 'info@campingislascies.com',
+            'web' => 'www.campingislascies.com',
+            'descripcion' => 'Para dormir, la única opción disponible es su camping en el que podrás llevar tu propia tienda o alquilar alguna de las que tienen disponibles (que incluyen una o dos camas).',
+            'puntuacion' => 8.4,
+            'detalles' => 'Si hay algo mejor que las Cíes de día, son las Cíes de noche. En verano, con el cielo despejado y un inmenso campo de estrellas en el firmamento, cada noche allí se convierte en una experiencia única. Además, el camping cuenta con cafetería, supermercado y salón social, haciéndote sentir como en casa.',
         ]);
     }
 }

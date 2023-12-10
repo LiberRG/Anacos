@@ -23,7 +23,7 @@
                         <div class="overflow-y-auto h-[200px] w-full md:h-[94%]">
                             @foreach ($dataJuego as $key => $slide)
                             <div class="my-auto flex flex-col gap-2 w-full" x-show="activeSlide ==={{$key}}">
-                                <h3 class="h3">{{$slide->getNombre()}}</h3>
+                                <h3 class="h3 font-bold">{{$slide->getNombre()}}</h3>
                                 <div class="flex md:flex-col gap-3">
                                     @if($slide->getImagen != null)
                                     <div class="w-1/2 md:w-full">

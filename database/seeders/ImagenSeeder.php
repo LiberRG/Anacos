@@ -254,7 +254,7 @@ class ImagenSeeder extends Seeder
             'coleccion_id' => 7,
         ]);
 
-        //Servicios
+        //Servicios Combarro
         Imagen::firstOrCreate([
             'rutaImg' => '/img/servicios/hotel_combarro.png',
         ],
@@ -348,6 +348,8 @@ class ImagenSeeder extends Seeder
             'categoria' => 'servicios',
         ]);
 
+
+        // Sitios Cies
         Imagen::firstOrCreate([
             'rutaImg' => '/img/sitios/faro-monte-cies.png',
         ],
@@ -370,6 +372,8 @@ class ImagenSeeder extends Seeder
             'categoria' => 'sitios',
         ]);
 
+
+        //Juego encuentra
         Imagen::firstOrCreate([
             'rutaImg' => '/img/juego2/chincheta.png',
         ],
@@ -420,6 +424,90 @@ class ImagenSeeder extends Seeder
             'alt' => 'Dibujo en aerosol sobre muro de bloques. Muestra a un ser tumbado, mitad mujer mitad pez, rodeada de peces vindo casa dos niñas que van nadando hacia ella.',
             'categoria' => 'encuentra',
         ]);
+
+
+
+        //Servicios Cies
+        Imagen::firstOrCreate([
+            'rutaImg' => '/img/servicios/camping-cies.png',
+        ],
+        [
+            'alt' => 'Llano verde con árboles al fondo y la playa detrás de ellos. En el llano se encuentran varias tiendas de campaña y estructuras de madera, como cercas y escaleras.',
+            'categoria' => 'servicios',
+        ]);
+        
+        
+        Imagen::firstOrCreate([
+            'rutaImg' => '/img/servicios/restaurante-rodas-cies.png',
+        ],
+        [
+            'alt' => 'Foto antigua en blanco y negro de un edificio de dos pisos con una gran carpa a la derecha. El edificio tiene banderas en su azotea.',
+            'categoria' => 'servicios',
+        ]);
+        
+        Imagen::firstOrCreate([
+            'rutaImg' => '/img/servicios/centro-visitas-cies.png',
+        ],
+        [
+            'alt' => 'Exterior diurna de un baja de piedra con grandes vantanas y puertas',
+            'categoria' => 'servicios',
+        ]);
+        
+        Imagen::firstOrCreate([
+            'rutaImg' => '/img/servicios/playas-cies.png',
+        ],
+        [
+            'alt' => 'Playa rodeade de acantilados desde un mirador',
+            'categoria' => 'servicios',
+        ]);
+
+        Imagen::firstOrCreate([
+            'rutaImg' => '/img/servicios/ruta-cies.png',
+        ],
+        [
+            'alt' => 'Sendero de tierra junto al mar, con hierba a los lados.',
+            'categoria' => 'servicios',
+        ]);
+
+        Imagen::firstOrCreate([
+            'rutaImg' => '/img/servicios/buceo-cies.png',
+        ],
+        [
+            'alt' => 'Hombre buceando al lado de un coral de colores rosas, amarillos y verdes.',
+            'categoria' => 'servicios',
+        ]);
+
+        Imagen::firstOrCreate([
+            'rutaImg' => '/img/servicios/aves-cies.png',
+        ],
+        [
+            'alt' => 'Una bandada de pequeñas gaviotas sobre una roca.',
+            'categoria' => 'servicios',
+        ]);
+
+        Imagen::firstOrCreate([
+            'rutaImg' => '/img/servicios/mardeons.png',
+        ],
+        [
+            'alt' => 'Barco atracado en el embarcadero de Cíes con la arena de la playa en primer lugar.',
+            'categoria' => 'servicios',
+        ]);
+
+        Imagen::firstOrCreate([
+            'rutaImg' => '/img/servicios/piratasdenabia.png',
+        ],
+        [
+            'alt' => 'Un barco está atracado en el embarcadero del puerto de Vigo, tras la pasarela de embarque. Se observa a personas celebrando en la cubierta.',
+            'categoria' => 'servicios',
+        ]);
+
+        Imagen::firstOrCreate([
+            'rutaImg' => '/img/servicios/crucerosriasbaixas.png',
+        ],
+        [
+            'alt' => 'Playa de rodas desde el embarcadero de Cíes, con un barco atracado a la izquierda.',
+            'categoria' => 'servicios',
+        ]);     
         
     }
 }

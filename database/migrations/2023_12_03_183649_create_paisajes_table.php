@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('nombre', 60)->nullable();
             $table->string('direccion', 120)->nullable();
             $table->string('descripcion', 300)->nullable();
-            $table->string('detalles', 600)->nullable();
+            $table->string('detalles', 800)->nullable();
             $table->foreignId('lugar_id');
         });
     }

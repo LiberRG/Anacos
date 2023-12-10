@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-// use App\Models\Lugar;
+use App\Models\Lugar;
+use App\Models\Restaurante;
+use App\Models\Alojamiento;
+use App\Models\TurismoOficina;
+use App\Models\Tradicion;
+use App\Models\Transporte;
+use App\Models\Paisaje;
 use App\Models\Servicio;
-// use App\Models\Restaurante;
-// use App\Models\Alojamiento;
-// use App\Models\TurismoOficina;
-// use App\Models\Tradicion;
-// use App\Models\Transporte;
-// use App\Models\Paisaje;
 
 class ViveController extends Controller
 {

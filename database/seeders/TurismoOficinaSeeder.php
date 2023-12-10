@@ -15,6 +15,7 @@ class TurismoOficinaSeeder extends Seeder
     {
         TurismoOficina::firstOrCreate([
             'nombre' => 'Oficina de turismo de Combarro',
+            'lugar_id' => 1,
         ],
         [
             'imagen_id' => 37,
@@ -25,7 +26,19 @@ class TurismoOficinaSeeder extends Seeder
             L: Cerrado 
             M-S: 09:30h-20:30h 
             D: 11:00h-13:30h',
-            'lugar_id' => '1'
         ]);  
+
+        TurismoOficina::firstOrCreate([
+            'nombre' => 'Centro de Visitantes de las Islas Atlánticas',
+            'lugar_id' => 2,
+        ],
+        [
+            'imagen_id' => 57,
+            'telefono' => '(+34)886218082',            
+            'direccion' => ' Rúa Palma, 4, 36202 Vigo, Pontevedra',
+            'descripcion' => 'El Centro, intenta mostrar los valores naturales y culturales de las islas atlánticas de una manera muy artístico con la intención de trasladarnos a este singular espacio protegido.',
+            'detalles' => 'El Centro trata de ser un referente para la visita a las islas, de suerte que los visitantes puedan disfrutar insitu de la riqueza natural y cultural de las islas teniendo una muestra previa de su valía. El fin último será posibilitar la conservación de este emblemático lugar con el uso y disfrute por parte de todos.
+            Se recomienda comprobar horarios según la época del año.',
+        ]); 
     }
 }
