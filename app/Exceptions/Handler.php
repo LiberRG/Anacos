@@ -40,8 +40,7 @@ class Handler extends ExceptionHandler
         //
     ];
 
-    // codigo - Previo:esto no esta en el original
-    
+        
     /**
      * A list of the exception types that are not reported.
      *

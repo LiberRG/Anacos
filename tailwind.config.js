@@ -16,10 +16,6 @@ module.exports = {
       center: true,
       padding: {
         DEFAULT: '1rem',
-        // sm: '2rem',
-        // lg: '4rem',
-        // xl: '5rem',
-        // '2xl': '6rem',
       },
     },
     extend: {
@@ -52,7 +48,7 @@ module.exports = {
         sans: ["Quicksand", "sans-serif"],
       },
       typography: {
-        DEFAULT: { // this is for prose class
+        DEFAULT: { 
           css: [{
             'ol > li::marker': {
               color: 'black',

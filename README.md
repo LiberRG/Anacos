@@ -25,10 +25,9 @@ En este proyecto usamos Laravel Mix.
 - producción: `npm run production`
 
 ## BD
-- nombre: 
-- usuario: 
-- contraseña: 
-- servidor: 
+- nombre: anacosbd  
+- usuario: root
+- contraseña: (vacia)
 
 # Recursos utilizados
 - Laravel 10 (https://laravel.com/docs/10.x)
