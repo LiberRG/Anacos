@@ -21,8 +21,3 @@ Elemento descripcion en movil
 
 ## Codigo
 Busca codigo para saber la estructura de codigo
-
-## Previo
-Busca previo para ver las diferencias con la estructura previa
-routes auth.php no existe
-resources/views vacia
