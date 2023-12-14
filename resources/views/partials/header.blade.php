@@ -58,7 +58,7 @@
                         text-blanco 
                         @endif
                         " 
-                        x-bind:class="juega ? 'md:text-magenta-oscuro' : 'md:text-blanco'">
+                        x-bind:class="juega ? 'md:text-magenta-oscuro' : ''">
                             Descubre
                         </button>
                         <div class="font-normal min-w-max flex flex-col

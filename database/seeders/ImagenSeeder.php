@@ -397,7 +397,7 @@ class ImagenSeeder extends Seeder
         ]);
 
         Imagen::firstOrCreate([
-            'rutaImg' => '/img/juego2/rañola.png',
+            'rutaImg' => '/img/juego2/ranhola.png',
         ],
         [
             'alt' => 'Fotografia de 6 marisqueiros cuatro de ellos con una espacie de rastrillo con red, utensilio que usan para desenpeñar su labor',
