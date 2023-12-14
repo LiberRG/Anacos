@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('coleccions', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 60);
-            $table->string('descripcion', 300);
+            $table->string('descripcion', 400);
         });
     }
 

@@ -36,9 +36,9 @@
                     <img class="rounded-xl h-full" src="{{ $collection->getImgPortada->getRutaImg() }}" alt="{{ $collection->getImgPortada->getAlt() }}">
                 </div>
                 <div class="col-span-2 row-span-1 self-end  font-normal">
-                    <p>{{ $collection->getDescripcion() }}</p>
+                    <p class="p text-justify">{{ $collection->getDescripcion() }}</p>
                 </div>
-                <div class="flex flex-wrap justify-center lg:justify-start items-end gap-3 col-span-2 sm:col-span-3 md:col-span-2 row-span-1 h-[300px] sm:h-[150px] overflow-y-auto">
+                <div class="flex flex-wrap justify-center lg:justify-start gap-3 col-span-2 sm:col-span-3 md:col-span-2 row-span-1 h-[300px] sm:h-[150px] overflow-y-auto">
                     @foreach ($collection->getImagenesColeccion as $product)
                     <img class="rounded-xl h-2/3" src="{{ $product->getRutaImg() }}" alt="{{ $product->getAlt() }}">
                     @endforeach
