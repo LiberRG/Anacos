@@ -1,6 +1,6 @@
-<div class="h-[81.6vh]" id="map">
+<div class="h-[84vh] md:h-[89.4vh]" id="map">
     <div id="modal"
-        class="flex justify-center items-center w-full h-[89.4vh] absolute inset-0 z-40 bg-imagen-map bg-cover">
+        class="flex justify-center items-center w-full h-[84vh] md:h-[89.4vh] absolute inset-0 z-40 bg-imagen-map bg-cover">
         <div class="flex flex-col justify-center items-center bg-blanco rounded-xl w-[90%] lg:w-[80%] min-h-[65%] m-auto p-4 md:p-8 pt-4 text-center">
             <div class="my-0 h-fit">
                 <h1 class="text-7xl sm:text-8xl md:text-9xl font-bold text-azul-oscuro pb-3">Explora</h1>
