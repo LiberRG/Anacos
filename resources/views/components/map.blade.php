@@ -9,8 +9,8 @@
                     @svg("ico-position-map", "w-7 h-auto")
                 </div>
                 <div x-cloak x-show="mostrar" class="fixed md:absolute top-[40px] left-0 h-[85%] 
-                <?php if($sitio->getPosicionLeft() > 70){ ?> -translate-x-full  <?php }  ?>
-                <?php if($sitio->getPosicionTop() > 70){ ?> -translate-y-full -top-[10px] <?php }  ?>
+                <?php if($sitio->getPosicionLeft() > 70){ ?> md:-translate-x-full  <?php }  ?>
+                <?php if($sitio->getPosicionTop() > 70){ ?> md:-translate-y-full md:-top-[10px] <?php }  ?>
                 md:h-auto md:w-80 p-5 md:p-2 m-3 md:m-0 rounded-lg bg-blanco z-[100]">
                     <div class="md:hidden flex justify-end" @click="mostrar = false">@svg("ico-close", "w-3 h-auto")</div>
                     <h2 class="h2 capitalize text-magenta-oscuro text-center mb-3">{{ $sitio->getNombre() }}</h2>

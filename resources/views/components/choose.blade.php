@@ -1,4 +1,4 @@
-<div class="h-[89.4vh]" id="map">
+<div class="h-[81.6vh]" id="map">
     <div id="modal"
         class="flex justify-center items-center w-full h-[89.4vh] absolute inset-0 z-40 bg-imagen-map bg-cover">
         <div class="flex flex-col justify-center items-center bg-blanco rounded-xl w-[90%] lg:w-[80%] min-h-[65%] m-auto p-4 md:p-8 pt-4 text-center">
