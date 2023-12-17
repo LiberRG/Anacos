@@ -2,6 +2,11 @@
 * {
     transition: all 0.5s;
 }
+.area-card{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
 
 .card {
     transform-style: preserve-3d;
